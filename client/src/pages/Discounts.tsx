@@ -4,7 +4,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
-import PageHaiku from "@/components/PageHaiku";
 import Footer from "@/components/Footer";
 import DiscountCard from "@/components/DiscountCard";
 import { DISCOUNT_DATA } from "@/lib/discountData";
