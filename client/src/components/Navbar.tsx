@@ -97,15 +97,13 @@ export default function Navbar() {
                     Get Started Free
                   </Button>
                   <Button
-                    variant="ghost"
+                    style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
                     size="sm"
                     onClick={openLogin}
-                    className="text-[oklch(0.45_0.03_60)] hover:text-[oklch(0.22_0.02_50)]"
-                  >
+              >
                     Sign In
                   </Button>
-                </>
-              )}
+                
             </div>
 
             {/* Mobile menu toggle */}
