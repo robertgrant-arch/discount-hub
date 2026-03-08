@@ -84,28 +84,18 @@ export default function Navbar() {
             </nav>
 
             {/* Right side */}
-            <div className="hidden xl:flex flex-col items-end gap-0.5 shrink-0">
+            <div className="hidden xl:flex items-center gap-2 shrink-0">
               {user ? (
                 <UserMenu />
               ) : (
-                <>
-                  <Button
-                    size="sm"
-                    onClick={openSignup}
-                    style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
-                  >
-                    Get Started Free
-                  </Button>
-                  <Button
-                    style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
-                    size="sm"
-                    onClick={openLogin}
-              >
-                    Sign In
-                  </Button>
-                                  </>
-                    )}
-                
+                <Button
+                  size="sm"
+                  onClick={openSignup}
+                  style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                >
+                  Get Started Free or Sign In
+                </Button>
+              )}
             </div>
 
             {/* Mobile menu toggle */}
@@ -145,22 +135,13 @@ export default function Navbar() {
                 {user ? (
                   <UserMenu />
                 ) : (
-                  <>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => { openLogin(); setMobileOpen(false); }}
-                    >
-                      Sign In
-                    </Button>
-                    <Button
-                      size="sm"
-                      onClick={() => { openSignup(); setMobileOpen(false); }}
-                      style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
-                    >
-                      Get Started Free
-                    </Button>
-                  </>
+                  <Button
+                    size="sm"
+                    onClick={() => { openSignup(); setMobileOpen(false); }}
+                    style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                  >
+                    Get Started Free or Sign In
+                  </Button>
                 )}
               </div>
             </div>
