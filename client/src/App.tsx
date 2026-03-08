@@ -16,6 +16,8 @@ import SocialPrograms from "./pages/SocialPrograms";
 import Disclosures from "./pages/Disclosures";
 import MedicareGuide from "./pages/MedicareGuide";
 import LifeMart from "./pages/LifeMart";
+import BenefitsCheckerPage from "./pages/BenefitsCheckerPage";
+import AccessibilityToolbar from "./components/AccessibilityToolbar";
 import { useEffect } from "react";
 
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
@@ -51,6 +53,7 @@ function AppRoutes() {
       <Route path="/pricing" component={Pricing} />
       <Route path="/checkout/:tier" component={Checkout} />
       <Route path="/404" component={NotFound} />
+              <Route path="/benefits-checker" component={BenefitsCheckerPage} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -68,6 +71,7 @@ function App() {
               <Router base={basePath}>
                 <AppRoutes />
               </Router>
+                            <AccessibilityToolbar />
             </TooltipProvider>
           </MembershipProvider>
         </AuthProvider>
