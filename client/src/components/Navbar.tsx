@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import AuthModal from "@/components/AuthModal";
 import UserMenu from "@/components/UserMenu";
-import { Tag, Menu, X, Scissors, BookOpen, HeartPulse, Star } from "lucide-react";
+import { Tag, Menu, X, Scissors, BookOpen, HeartPulse, Star, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 const NAV_LINKS = [
@@ -17,6 +17,7 @@ const NAV_LINKS = [
   { href: "/medicare-guide", label: "Medicare Guide", icon: HeartPulse },
   { href: "/lifemart", label: "LifeMart Savings", icon: Star, badge: "NEW" },
   { href: "/benefits-checker", label: "Benefits Checker", icon: HeartPulse, badge: "NEW" },
+    { href: "/ask-claude", label: "Ask Claude", icon: MessageCircle },
   { href: "/pricing", label: "Membership" },
 ];
 
