@@ -28,9 +28,9 @@ jobs:
           cache: pnpm
       - run: pnpm install --no-frozen-lockfile
       - name: Build
-              run: pnpm run build
-                      env:
-                                          VITE_BASE_PATH: /discount-hub/
+        run: pnpm run build
+        env:
+          VITE_BASE_PATH: /discount-hub/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/public
