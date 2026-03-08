@@ -11,7 +11,7 @@ import {
   UtensilsCrossed, ShoppingBag, Hotel, Plane, Ticket,
   HeartPulse, ShoppingCart, Home as HomeIcon, DollarSign, Laptop,
   Tag, ArrowRight, CheckCircle2, Users, Accessibility, Scissors,
-  BookOpen, Scale, MapPin, Star
+  BookOpen, Scale, MapPin, Star, MessageCircle
 } from "lucide-react";
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -46,6 +46,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.22_0.02_50/0.82)] via-[oklch(0.22_0.02_50/0.55)] to-transparent" />
         <div className="relative container py-24 md:py-32">
           <div className="max-w-xl">
+                          <Link href="/ask-claude">
+                <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-3 border border-white/20 hover:bg-white/25 transition-colors cursor-pointer">
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  Ask Claude — Benefits & Medicare AI Assistant
+                </div>
+              </Link>
             <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-5 border border-white/20">
               <Tag className="w-3.5 h-3.5" />
               {TOTAL_PROGRAMS}+ Discount Programs
