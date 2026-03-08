@@ -130,12 +130,12 @@ export default function Coupons() {
               <button
                 key={t}
                 onClick={() => setTypeFilter(t)}
-                className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all border ${
+                                className={"px-3 py-1.5 rounded-full text-xs font-semibold transition-all border " + (
                   typeFilter === t
                     ? "border-[oklch(0.55_0.13_42)] bg-[oklch(0.93_0.04_42)] text-[oklch(0.40_0.13_42)]"
                     : "border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)] hover:border-[oklch(0.72_0.04_60)]"
-                }`}
-              >
+                )}
+
                 {t}
               </button>
             ))}
