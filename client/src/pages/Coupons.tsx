@@ -107,18 +107,12 @@ export default function Coupons() {
               </div>
             <div className="bg-white">
         <div className="container py-8">
-          {/* ZIP filter */}
-          <div className="mt-4">
+                    {/* ZIP filter + Search row */}
+          <div className="mt-6 flex flex-wrap gap-3 items-center">
             <ZipFilter
               value={zipFilter}
               onChange={(v) => { setZipFilter(v); if (v.active) setShowRegional(true); }}
-              placeholder="Enter ZIP to see local deals (e.g. 90210)"
-              compact={false}
             />
-          </div>
-
-          {/* Search + type filter row */}
-          <div className="mt-4 flex flex-wrap gap-3 items-center">
             <div className="relative flex-1 min-w-[200px] max-w-sm">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[oklch(0.60_0.03_60)]" />
               <Input
@@ -128,23 +122,24 @@ export default function Coupons() {
                 className="pl-9 bg-[oklch(0.97_0.01_80)] border-[oklch(0.88_0.02_75)]"
               />
             </div>
-            <div className="flex items-center gap-2 flex-wrap">
-              {TYPE_FILTERS.map((t) => (
-                <button
-                  key={t}
-                  onClick={() => setTypeFilter(t)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all border ${
-                    typeFilter === t
-                      ? "border-[oklch(0.55_0.13_42)] bg-[oklch(0.93_0.04_42)] text-[oklch(0.40_0.13_42)]"
-                      : "border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)] hover:border-[oklch(0.72_0.04_60)]"
-                  }`}
-                >
-                  {t}
-                </button>
-              ))}
-            </div>
           </div>
-        </div>
+
+          {/* Type filter pills */}
+          <div className="mt-3 flex items-center gap-2 flex-wrap">
+            {TYPE_FILTERS.map((t) => (
+              <button
+                key={t}
+                onClick={() => setTypeFilter(t)}
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all border ${
+                  typeFilter === t
+                    ? "border-[oklch(0.55_0.13_42)] bg-[oklch(0.93_0.04_42)] text-[oklch(0.40_0.13_42)]"
+                    : "border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)] hover:border-[oklch(0.72_0.04_60)]"
+                }`}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
 
         {/* Audience tabs */}
         <div className="container pb-0">
