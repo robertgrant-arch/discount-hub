@@ -140,6 +140,7 @@ export default function Coupons() {
                 </button>
               ))}
             </div>
+                  </div>
         
 
         {/* Audience tabs */}
