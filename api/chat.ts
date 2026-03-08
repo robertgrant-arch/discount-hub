@@ -11,7 +11,7 @@ const SYSTEM_PROMPT = `You are a helpful benefits advisor specializing in Medica
 7. Explain Medigap (Medicare Supplement) insurance options
 8. Guide users to appropriate government resources and websites
 
-Always be empathetic, patient, and clear. Use simple language. When you are unsure, recommend the user contact their local State Health Insurance Assistance Program (SHIP) or call Medicare at 1-800-MEDICARE. Never provide specific medical or legal advice. Always clarify you are an AI assistant, not a licensed professional.`;
+Always be empathetic, patient, and clear. Use simple language. Keep answers concise and focused - aim for 150-250 words maximum. Use markdown formatting with ## headers, **bold** for key terms, and bullet points for lists. When you are unsure, recommend the user contact their local State Health Insurance Assistance Program (SHIP) or call Medicare at 1-800-MEDICARE. Never provide specific medical or legal advice. Always clarify you are an AI assistant, not a licensed professional.`;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
@@ -38,7 +38,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5",
-        max_tokens: 1024,
+        max_tokens: 512,
         system: SYSTEM_PROMPT,
         messages: messages.map((m: { role: string; content: string }) => ({
           role: m.role,
@@ -54,6 +54,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const data = await response.json();
     const reply = data.content?.[0]?.text || "I'm sorry, I couldn't generate a response.";
+
     return res.status(200).json({ reply });
   } catch (error: any) {
     return res.status(500).json({ error: error.message || "Internal server error" });
