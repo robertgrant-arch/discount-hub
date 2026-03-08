@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
-import PageHaiku from "@/components/PageHaiku";
 import Footer from "@/components/Footer";
 import { PLANS } from "@/contexts/MembershipContext";
 import { useMembership } from "@/contexts/MembershipContext";
