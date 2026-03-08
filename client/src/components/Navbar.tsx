@@ -103,6 +103,8 @@ export default function Navbar() {
               >
                     Sign In
                   </Button>
+                                  </>
+                    )}
                 
             </div>
 
