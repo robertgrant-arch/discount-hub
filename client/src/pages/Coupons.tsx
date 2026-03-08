@@ -4,7 +4,6 @@
  */
 import { useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
-import PageHaiku from "@/components/PageHaiku";
 import Footer from "@/components/Footer";
 import CouponCard from "@/components/CouponCard";
 import { COUPON_DATA, TOTAL_COUPONS } from "@/lib/couponData";
