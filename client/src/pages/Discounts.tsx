@@ -11,7 +11,7 @@ import { DISCOUNT_DATA } from "@/lib/discountData";
 import {
   UtensilsCrossed, ShoppingBag, Hotel, Plane, Ticket,
   HeartPulse, ShoppingCart, Home as HomeIcon, DollarSign, Laptop, Tag,
-  Search, SlidersHorizontal
+    Search, SlidersHorizontal, Users
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import ZipFilter, { useZipFilter } from "@/components/ZipFilter";
@@ -60,15 +60,44 @@ export default function Discounts() {
       <Navbar />
 
       {/* Page header */}
-      <div className="bg-white border-b border-[oklch(0.88_0.02_75)]">
-        <div className="container py-8">
-          <h1 className="text-3xl font-bold text-[oklch(0.22_0.02_50)] mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Browse All Discounts
-          </h1>
-              <PageHaiku lines={["Discounts wait like fruit", "Ripe upon the autumn bough", "Reach and save today"]} />
-          <p className="text-[oklch(0.52_0.04_60)]">
-            {totalVisible} programs across {filteredData.length} categories
-          </p>
+      <div
+            className="relative border-b border-[oklch(0.88_0.02_75)]"
+            style={{ background: "linear-gradient(135deg, oklch(0.22 0.02 50) 0%, oklch(0.32 0.06 42) 100%)" }}
+          >
+            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+            <div className="relative container py-12">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 bg-white/15 text-white/90 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+                  <Tag className="w-3.5 h-3.5" />
+                  Discount Programs Directory
+                </div>
+                <h1
+                  className="text-4xl font-bold text-white mb-3 leading-tight"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  Browse All Discounts
+                </h1>
+                <p className="text-white/80 text-base leading-relaxed mb-6">
+                  {totalVisible} programs across {filteredData.length} categories — senior and disability discounts from restaurants, retailers, travel, and more.
+                </p>
+                {/* Quick stat pills */}
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: `${totalVisible} Discounts`, icon: Tag },
+                    { label: `${filteredData.length} Categories`, icon: SlidersHorizontal },
+                    { label: "Senior & Disability", icon: Users },
+                  ].map((stat) => (
+                    <div key={stat.label} className="inline-flex items-center gap-1.5 bg-white/15 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full">
+                      <stat.icon className="w-3 h-3" />
+                      {stat.label}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white border-b border-[oklch(0.88_0.02_75)]">
+          <div className="container py-8">
 
           {/* ZIP filter + Search row */}
           <div className="mt-4 flex flex-wrap gap-3 items-start">
