@@ -42,7 +42,7 @@ export default function Navbar() {
         Skip to main content
       </a>
       <header className="sticky top-0 z-50 bg-[oklch(0.98_0.012_80)] border-b border-[oklch(0.88_0.02_75)] shadow-sm">
-        <div className="container">
+        <div className="w-full px-2 sm:px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group shrink-0">
@@ -61,7 +61,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden xl:flex items-center flex-wrap gap-x-3 gap-y-1 flex-1 min-w-0 mx-4 justify-center">
+            <nav className="hidden xl:flex items-center flex-wrap gap-x-3 gap-y-1 flex-1 min-w-0 ml-2 justify-center">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
