@@ -68,15 +68,43 @@ export default function Pricing() {
       <Navbar />
 
       {/* Header */}
-      <div className="bg-white border-b border-[oklch(0.88_0.02_75)]">
-        <div className="container py-12 text-center">
-          <h1 className="text-4xl font-bold text-[oklch(0.22_0.02_50)] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Simple, Transparent Pricing
-          </h1>
-              <PageHaiku lines={["Value meets the need", "Each tier a stepping stone laid", "Savings for all lives"]} />
-          <p className="text-[oklch(0.52_0.04_60)] text-lg max-w-lg mx-auto">
-            Start free. Upgrade when you're ready to unlock every discount.
-          </p>
+      <div
+            className="relative border-b border-[oklch(0.88_0.02_75)]"
+            style={{ background: "linear-gradient(135deg, oklch(0.22 0.02 50) 0%, oklch(0.32 0.06 42) 100%)" }}
+          >
+            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+            <div className="relative container py-12 text-center">
+              <div className="max-w-2xl mx-auto">
+                <div className="inline-flex items-center gap-2 bg-white/15 text-white/90 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+                  <Zap className="w-3.5 h-3.5" />
+                  Membership Plans
+                </div>
+                <h1
+                  className="text-4xl font-bold text-white mb-3 leading-tight"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  Simple, Transparent Pricing
+                </h1>
+                <p className="text-white/80 text-base leading-relaxed mb-6">
+                  Start free. Upgrade when you're ready to unlock every discount.
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {[
+                    { label: "Free Tier", icon: CheckCircle2 },
+                    { label: "Cancel Anytime", icon: XCircle },
+                    { label: "Instant Access", icon: Zap },
+                  ].map((stat) => (
+                    <div key={stat.label} className="inline-flex items-center gap-1.5 bg-white/15 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full">
+                      <stat.icon className="w-3 h-3" />
+                      {stat.label}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white border-b border-[oklch(0.88_0.02_75)]">
+          <div className="container py-12 text-center">
 
           {/* Billing toggle */}
           <div className="mt-6 inline-flex items-center gap-3 bg-[oklch(0.95_0.015_80)] rounded-full p-1">
