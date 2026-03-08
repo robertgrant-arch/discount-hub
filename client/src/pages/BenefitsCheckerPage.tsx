@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import PageHaiku from "@/components/PageHaiku";
 import BenefitsChecklist from "@/components/BenefitsChecklist";
 import EmergencyResources from "@/components/EmergencyResources";
 import { HeartPulse, CheckCircle2, ShieldCheck, ClipboardList } from "lucide-react";
