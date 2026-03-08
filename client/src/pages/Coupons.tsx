@@ -72,26 +72,40 @@ export default function Coupons() {
       <Navbar />
 
       {/* Page header */}
-      <div className="bg-white border-b border-[oklch(0.88_0.02_75)]">
-        <div className="container py-8">
-          <div className="flex items-start gap-4">
-            <div
-              className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 mt-1"
-              style={{ background: "linear-gradient(135deg, oklch(0.55 0.13 42), oklch(0.40 0.13 42))" }}
-            >
-              <Scissors className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h1
-                className="text-3xl font-bold text-[oklch(0.22_0.02_50)] mb-1"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                Coupons & Savings Deals
-              </h1>
-              <PageHaiku lines={["Scissors meet the page", "Each clipped coupon saves a dream", "Small cuts, large blessings"]} />
-              <p className="text-[oklch(0.52_0.04_60)]">
-                {totalVisible} coupons across {filteredData.length} categories — printable, digital, and promo codes for seniors and disabled Americans
-              </p>
+      <div
+            className="relative border-b border-[oklch(0.88_0.02_75)]"
+            style={{ background: "linear-gradient(135deg, oklch(0.22 0.02 50) 0%, oklch(0.32 0.06 42) 100%)" }}
+          >
+            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+            <div className="relative container py-12">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 bg-white/15 text-white/90 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+                  <Scissors className="w-3.5 h-3.5" />
+                  Coupons & Savings Hub
+                </div>
+                <h1
+                  className="text-4xl font-bold text-white mb-3 leading-tight"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  Coupons & Savings Deals
+                </h1>
+                <p className="text-white/80 text-base leading-relaxed mb-6">
+                  {totalVisible} coupons across {filteredData.length} categories — printable, digital, and promo codes for seniors and disabled Americans.
+                </p>
+                {/* Quick stat pills */}
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: `${totalVisible} Coupons`, icon: Scissors },
+                    { label: `${filteredData.length} Categories`, icon: Tag },
+                    { label: "Printable & Digital", icon: Globe },
+                  ].map((stat) => (
+                    <div key={stat.label} className="inline-flex items-center gap-1.5 bg-white/15 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full">
+                      <stat.icon className="w-3 h-3" />
+                      {stat.label}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
