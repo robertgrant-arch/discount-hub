@@ -84,11 +84,18 @@ export default function Navbar() {
             </nav>
 
             {/* Right side */}
-            <div className="hidden xl:flex items-center gap-2 shrink-0">
+            <div className="hidden xl:flex flex-col items-end gap-0.5 shrink-0">
               {user ? (
                 <UserMenu />
               ) : (
                 <>
+                  <Button
+                    size="sm"
+                    onClick={openSignup}
+                    style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                  >
+                    Get Started Free
+                  </Button>
                   <Button
                     variant="ghost"
                     size="sm"
@@ -96,13 +103,6 @@ export default function Navbar() {
                     className="text-[oklch(0.45_0.03_60)] hover:text-[oklch(0.22_0.02_50)]"
                   >
                     Sign In
-                  </Button>
-                  <Button
-                    size="sm"
-                    onClick={openSignup}
-                    style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
-                  >
-                    Get Started Free
                   </Button>
                 </>
               )}
