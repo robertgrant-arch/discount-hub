@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { href: "/social-programs", label: "Benefits Hub", icon: BookOpen },
   { href: "/medicare-guide", label: "Medicare Guide", icon: HeartPulse },
   { href: "/lifemart", label: "LifeMart Savings", icon: Star, badge: "NEW" },
+    { href: "/benefits-checker", label: "Benefits Checker", icon: HeartPulse, badge: "NEW" },
   { href: "/pricing", label: "Membership" },
 ];
 
