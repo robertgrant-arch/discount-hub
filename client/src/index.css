@@ -1,0 +1,208 @@
+/* DiscountHub — "Warm Abundance" Design System
+ * Movement: Modern lifestyle editorial meets SaaS product
+ * Palette: Terracotta (#C4622D), Cream (#FDF6EC), Forest Green (#2D5016)
+ * Typography: Playfair Display (headings) + DM Sans (body)
+ * Layout: Asymmetric editorial grid, masonry-style listings
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-terracotta: var(--terracotta);
+  --color-cream: var(--cream);
+  --color-forest: var(--forest);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Brand palette */
+  --terracotta: oklch(0.55 0.13 42);
+  --terracotta-light: oklch(0.72 0.09 42);
+  --terracotta-dark: oklch(0.40 0.13 42);
+  --cream: oklch(0.98 0.015 80);
+  --cream-dark: oklch(0.93 0.02 80);
+  --forest: oklch(0.32 0.09 140);
+  --forest-light: oklch(0.48 0.09 140);
+
+  /* Semantic tokens */
+  --background: oklch(0.98 0.012 80);
+  --foreground: oklch(0.22 0.02 50);
+  --card: oklch(1 0.008 80);
+  --card-foreground: oklch(0.22 0.02 50);
+  --popover: oklch(1 0.008 80);
+  --popover-foreground: oklch(0.22 0.02 50);
+  --primary: oklch(0.55 0.13 42);
+  --primary-foreground: oklch(0.99 0.005 80);
+  --secondary: oklch(0.93 0.02 80);
+  --secondary-foreground: oklch(0.35 0.04 50);
+  --muted: oklch(0.95 0.015 80);
+  --muted-foreground: oklch(0.52 0.04 60);
+  --accent: oklch(0.32 0.09 140);
+  --accent-foreground: oklch(0.99 0.005 80);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.02 75);
+  --input: oklch(0.88 0.02 75);
+  --ring: oklch(0.55 0.13 42);
+
+  --chart-1: oklch(0.55 0.13 42);
+  --chart-2: oklch(0.32 0.09 140);
+  --chart-3: oklch(0.72 0.09 42);
+  --chart-4: oklch(0.48 0.09 140);
+  --chart-5: oklch(0.40 0.13 42);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Discount card blur overlay for gated content */
+  .content-locked {
+    position: relative;
+    overflow: hidden;
+  }
+  .content-locked::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    background: linear-gradient(to bottom, transparent 0%, oklch(0.98 0.012 80 / 0.7) 40%, oklch(0.98 0.012 80 / 0.95) 100%);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Pill badge */
+  .badge-discount {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .badge-senior {
+    background-color: oklch(0.92 0.04 42);
+    color: oklch(0.40 0.13 42);
+  }
+
+  .badge-disability {
+    background-color: oklch(0.88 0.04 140);
+    color: oklch(0.28 0.09 140);
+  }
+
+  /* Membership tier card */
+  .tier-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .tier-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px oklch(0 0 0 / 0.12);
+  }
+  .tier-card.featured {
+    background: linear-gradient(135deg, oklch(0.55 0.13 42), oklch(0.40 0.13 42));
+    color: white;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.95 0.015 80);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.72 0.09 42);
+  border-radius: 3px;
+}
