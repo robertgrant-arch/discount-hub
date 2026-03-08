@@ -18,6 +18,8 @@ import MedicareGuide from "./pages/MedicareGuide";
 import LifeMart from "./pages/LifeMart";
 import { useEffect } from "react";
 
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
 // Syncs the logged-in user's tier into the MembershipContext
 function TierSync() {
   const { user } = useAuth();
@@ -63,7 +65,7 @@ function App() {
             <TierSync />
             <TooltipProvider>
               <Toaster />
-              <Router base={import.meta.env.BASE_URL}>
+              <Router base={basePath}>
                 <AppRoutes />
               </Router>
             </TooltipProvider>
