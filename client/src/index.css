@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Design Tokens ──────────────────────────────────────────────── */
+/* —— Design Tokens ———————————————————————— */
 :root {
   /* Brand palette (oklch) */
   --color-terracotta:       oklch(52% 0.14 35);
@@ -18,10 +18,10 @@
   --color-charcoal:         oklch(22% 0.03 35);
   --color-muted:            oklch(55% 0.04 35);
 
-  /* ─── Accessibility: font scale ─────────────────────────────────
-     The AccessibilityToolbar writes --font-scale as 0.9 | 1 | 1.2.
-     Every font-size in the app should use calc(Xrem * var(--font-scale))
-     or rely on the html font-size override below.
+  /* —— Accessibility: font scale ——————————————————————
+      The AccessibilityToolbar writes --font-scale as 0.9 | 1 | 1.2.
+      Every font-size in the app should use calc(Xrem * var(--font-scale))
+      or rely on the html font-size override below.
   */
   --font-scale: 1;
 
@@ -36,7 +36,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ─── Base styles ─────────────────────────────────────────────── */
+/* —— Base styles ———————————————————————————— */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -53,113 +53,153 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
   line-height: 1.25;
-  letter-spacing: -0.01em;
+  color: var(--color-charcoal);
 }
 
-/* Focus visible — accessible keyboard ring */
-:focus-visible {
-  outline: 3px solid var(--color-terracotta);
-  outline-offset: 3px;
-  border-radius: 4px;
+a {
+  color: var(--color-terracotta);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--color-terracotta-dark);
 }
 
-/* ─── High Contrast Mode ──────────────────────────────────────── */
-html.high-contrast {
-  --color-terracotta:       oklch(45% 0.18 35);
-  --color-terracotta-light: oklch(45% 0.18 35);
-  --color-cream:            #ffffff;
-  --color-cream-mid:        #f0f0f0;
-  --color-charcoal:         #000000;
-  --color-muted:            #111111;
-  --color-forest:           oklch(30% 0.12 145);
+/* —— Reusable component classes ———————————— */
+.section-container {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
 }
 
-html.high-contrast body {
-  background: #ffffff;
-  color: #000000;
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: var(--color-terracotta);
+  color: #fff;
+  transition: background-color 0.2s, transform 0.15s;
+}
+.btn-primary:hover {
+  background-color: var(--color-terracotta-dark);
+  transform: translateY(-1px);
 }
 
-html.high-contrast a {
-  color: oklch(30% 0.18 260);
-  text-decoration: underline;
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 1.5px solid var(--color-forest);
+  color: var(--color-forest);
+  transition: background-color 0.2s, transform 0.15s;
+}
+.btn-outline:hover {
+  background-color: var(--color-forest);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
-html.high-contrast button,
-html.high-contrast [role="button"] {
-  border: 2px solid #000 !important;
+/* Tier cards */
+.tier-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px oklch(22% 0.03 35 / 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.tier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px oklch(22% 0.03 35 / 0.12);
 }
 
-html.high-contrast img {
-  filter: contrast(1.1);
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+.badge-terracotta {
+  background-color: oklch(72% 0.10 35 / 0.25);
+  color: var(--color-terracotta-dark);
+}
+.badge-forest {
+  background-color: oklch(62% 0.08 145 / 0.2);
+  color: var(--color-forest);
 }
 
-/* ─── Simplified Mode ─────────────────────────────────────────── */
-/* Reduces decorative complexity to help users with cognitive load */
-html.simplified .decorative-bg,
-html.simplified .decorative-pattern,
-html.simplified [aria-hidden="true"][class*="absolute"],
-html.simplified .animate-pulse,
-html.simplified .animate-bounce {
-  display: none !important;
+/* —— Utility helpers ——————————————————————— */
+.text-balance {
+  text-wrap: balance;
 }
 
-html.simplified * {
-  animation: none !important;
-  transition-duration: 0.05s !important;
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
-html.simplified body {
-  background: var(--color-cream);
+/* —— Smooth page transitions (optional) ——— */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
 }
 
-html.simplified section,
-html.simplified article,
-html.simplified .card {
-  border: 1px solid oklch(80% 0.04 35);
-  border-radius: 8px;
-  box-shadow: none !important;
+/* ===== High-Contrast Mode ===== */
+.high-contrast {
+  --color-cream: oklch(100% 0 0);
+  --color-cream-mid: oklch(95% 0 0);
+  --color-charcoal: oklch(0% 0 0);
+  --color-terracotta: oklch(45% 0.18 30);
+  --color-terracotta-dark: oklch(30% 0.15 30);
+  --color-forest: oklch(35% 0.13 145);
+  --color-muted: oklch(40% 0.05 35);
+  --primary: oklch(0.35 0.13 42);
+  --muted-foreground: oklch(0.2 0 0);
+}
+.high-contrast img {
+  filter: contrast(1.2);
 }
 
-/* ─── Print styles (used by PrintableChecklist) ───────────────── */
+/* ===== Simplified Mode ===== */
+.simplified * {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+.simplified .tier-card:hover {
+  transform: none;
+}
+
+/* ===== Print Styles ===== */
 @media print {
-  .no-print {
+  nav, footer, .tier-card, button,
+  [role="navigation"], [aria-label="accessibility options"] {
     display: none !important;
   }
-
-  .print-only {
-    display: block !important;
-  }
-
   body {
-    background: white;
-    color: black;
-    font-size: 12pt;
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
   }
-
-  h1, h2, h3 {
-    color: black;
-    page-break-after: avoid;
-  }
-
-  .print-section {
-    page-break-inside: avoid;
-    border: 1px solid #ccc;
-    padding: 12pt;
-    margin-bottom: 12pt;
-  }
-
   a[href]::after {
     content: " (" attr(href) ")";
-    font-size: 9pt;
+    font-size: 0.8em;
     color: #555;
   }
-}
-
-/* ─── Utility classes ─────────────────────────────────────────── */
-.font-heading { font-family: var(--font-heading); }
-.font-body    { font-family: var(--font-body); }
-
-/* Smooth scroll anchor offset (sticky nav) */
-[id] {
-  scroll-margin-top: 5rem;
 }
