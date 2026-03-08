@@ -16,7 +16,7 @@ const NAV_LINKS = [
   { href: "/social-programs", label: "Benefits Hub", icon: BookOpen },
   { href: "/medicare-guide", label: "Medicare Guide", icon: HeartPulse },
   { href: "/lifemart", label: "LifeMart Savings", icon: Star, badge: "NEW" },
-    { href: "/benefits-checker", label: "Benefits Checker", icon: HeartPulse, badge: "NEW" },
+  { href: "/benefits-checker", label: "Benefits Checker", icon: HeartPulse, badge: "NEW" },
   { href: "/pricing", label: "Membership" },
 ];
 
@@ -34,13 +34,13 @@ export default function Navbar() {
 
   return (
     <>
-  {/* Skip to main content for keyboard/screen reader users */}
-  <a
-    href="#main-content"
-    className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#C17A4A] focus:text-white focus:rounded focus:text-sm focus:font-bold"
-  >
-    Skip to main content
-  </a>
+      {/* Skip to main content for keyboard/screen reader users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#C17A4A] focus:text-white focus:rounded focus:text-sm focus:font-bold"
+      >
+        Skip to main content
+      </a>
       <header className="sticky top-0 z-50 bg-[oklch(0.98_0.012_80)] border-b border-[oklch(0.88_0.02_75)] shadow-sm">
         <div className="container">
           <div className="flex items-center justify-between h-16">
@@ -61,12 +61,12 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-4">
+            <nav className="hidden xl:flex items-center flex-wrap gap-x-3 gap-y-1 flex-1 min-w-0 mx-4 justify-center">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-[oklch(0.55_0.13_42)] flex items-center gap-1.5 ${
+                  className={`text-sm font-medium transition-colors hover:text-[oklch(0.55_0.13_42)] flex items-center gap-1 whitespace-nowrap ${
                     location === link.href
                       ? "text-[oklch(0.55_0.13_42)]"
                       : "text-[oklch(0.45_0.03_60)]"
@@ -84,7 +84,7 @@ export default function Navbar() {
             </nav>
 
             {/* Right side */}
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden xl:flex items-center gap-2 shrink-0">
               {user ? (
                 <UserMenu />
               ) : (
@@ -110,7 +110,7 @@ export default function Navbar() {
 
             {/* Mobile menu toggle */}
             <button
-              className="lg:hidden p-2 rounded-md"
+              className="xl:hidden p-2 rounded-md"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
@@ -120,7 +120,7 @@ export default function Navbar() {
 
           {/* Mobile menu */}
           {mobileOpen && (
-            <div className="lg:hidden border-t border-[oklch(0.88_0.02_75)] py-4 space-y-1">
+            <div className="xl:hidden border-t border-[oklch(0.88_0.02_75)] py-4 space-y-1">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
@@ -167,7 +167,6 @@ export default function Navbar() {
           )}
         </div>
       </header>
-
       <AuthModal
         open={authModal.open}
         onClose={() => setAuthModal((s) => ({ ...s, open: false }))}
