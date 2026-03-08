@@ -106,20 +106,16 @@ export default function Coupons() {
                 </div>
               </div>
             <div>
-        <div className="container py-8">
-          {/* ZIP filter */}
-          <div className="mt-4">
+        <div className="container pt-10 pb-6">
+          {/* ZIP filter + Search row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ZipFilter
               value={zipFilter}
               onChange={(v) => { setZipFilter(v); if (v.active) setShowRegional(true); }}
               placeholder="Enter ZIP to see local deals (e.g. 90210)"
               compact={false}
             />
-          </div>
-
-          {/* Search + type filter row */}
-          <div className="mt-4 flex flex-wrap gap-3 items-center">
-            <div className="relative flex-1 min-w-[200px] max-w-sm">
+                        <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[oklch(0.60_0.03_60)]" />
               <Input
                 placeholder="Search coupons..."
@@ -128,7 +124,8 @@ export default function Coupons() {
                 className="pl-9 bg-[oklch(0.97_0.01_80)] border-[oklch(0.88_0.02_75)]"
               />
             </div>
-            <div className="flex items-center gap-2 flex-wrap">
+                      </div>
+            <div className="flex items-center gap-2 flex-wrap mt-4">
               {TYPE_FILTERS.map((t) => (
                 <button
                   key={t}
@@ -143,8 +140,7 @@ export default function Coupons() {
                 </button>
               ))}
             </div>
-          </div>
-        </div>
+        
 
         {/* Audience tabs */}
         <div className="container pb-0">
