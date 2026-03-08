@@ -317,6 +317,8 @@ export default function Coupons() {
         </div>
       )}
 
+      </div>
+      </div>
       <Footer />
     </div>
   );
