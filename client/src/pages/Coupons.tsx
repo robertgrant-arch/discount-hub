@@ -73,22 +73,22 @@ export default function Coupons() {
       {/* Page header */}
       <div
             className="relative border-b border-[oklch(0.88_0.02_75)]"
-            style={{ background: "linear-gradient(135deg, oklch(0.22 0.02 50) 0%, oklch(0.32 0.06 42) 100%)" }}
+            style={{ background: "oklch(0.96 0.03 75)" }}
           >
-            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+            <div className="hidden" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
             <div className="relative container py-12">
               <div className="max-w-2xl">
-                <div className="inline-flex items-center gap-2 bg-white/15 text-white/90 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+                <div className="inline-flex items-center gap-2 bg-[oklch(0.93_0.04_42)] text-[oklch(0.40_0.13_42)] text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
                   <Scissors className="w-3.5 h-3.5" />
                   Coupons & Savings Hub
                 </div>
                 <h1
-                  className="text-4xl font-bold text-white mb-3 leading-tight"
+                  className="text-4xl font-bold text-[oklch(0.22_0.02_50)] mb-3 leading-tight"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   Coupons & Savings Deals
                 </h1>
-                <p className="text-white/80 text-base leading-relaxed mb-6">
+                <p className="text-[oklch(0.45_0.04_60)] text-base leading-relaxed mb-6">
                   {totalVisible} coupons across {filteredData.length} categories — printable, digital, and promo codes for seniors and disabled Americans.
                 </p>
                 {/* Quick stat pills */}
@@ -98,7 +98,7 @@ export default function Coupons() {
                     { label: `${filteredData.length} Categories`, icon: Tag },
                     { label: "Printable & Digital", icon: Globe },
                   ].map((stat) => (
-                    <div key={stat.label} className="inline-flex items-center gap-1.5 bg-white/15 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full">
+                    <div key={stat.label} className="inline-flex items-center gap-1.5 bg-[oklch(0.93_0.04_42)] text-[oklch(0.40_0.13_42)] text-xs font-medium px-3 py-1.5 rounded-full">
                       <stat.icon className="w-3 h-3" />
                       {stat.label}
                     </div>
