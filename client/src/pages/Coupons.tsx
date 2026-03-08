@@ -105,7 +105,7 @@ export default function Coupons() {
                   ))}
                 </div>
               </div>
-            <div className="bg-white">
+            <div>
         <div className="container py-8">
           {/* ZIP filter */}
           <div className="mt-4">
