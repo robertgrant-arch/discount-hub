@@ -30,13 +30,13 @@ const NAV_LINKS = [
  */
 const PRIORITY_LINKS = [
   "/coupons",
+    "/discounts",
   "/social-programs",
   "/ask-claude",
   "/lifemart",
   "/medicare-guide",
   "/benefits-checker",
   "/pricing",
-  "/discounts",
 ];
 
 /* Get the link objects in priority order (excluding Home) */
