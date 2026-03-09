@@ -56,6 +56,7 @@ function AppRoutes() {
       <Route path="/404" component={NotFound} />
                 <Route path="/ask-claude" component={AskClaude} />
               <Route path="/benefits-checker" component={BenefitsCheckerPage} />
+                <Route path="/benefits-hub" component={BenefitsCheckerPage} />
       <Route component={NotFound} />
     </Switch>
   );
