@@ -1,5 +1,6 @@
 /* DiscountHub Navbar — Warm Abundance design
  * Sticky top nav with auth-aware right side: login/signup or UserMenu
+ * Desktop nav uses priority-based responsive visibility
  */
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -7,8 +8,9 @@ import { useAuth } from "@/contexts/AuthContext";
 import AuthModal from "@/components/AuthModal";
 import UserMenu from "@/components/UserMenu";
 import { Tag, Menu, X, Scissors, BookOpen, HeartPulse, Star, MessageCircle } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 
+/* All nav links in their default display order */
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/discounts", label: "Browse Discounts" },
@@ -17,9 +19,26 @@ const NAV_LINKS = [
   { href: "/medicare-guide", label: "Medicare Guide", icon: HeartPulse },
   { href: "/lifemart", label: "LifeMart Savings", icon: Star, badge: "NEW" },
   { href: "/benefits-checker", label: "Benefits Checker", icon: HeartPulse, badge: "NEW" },
-    { href: "/ask-claude", label: "Ask Claude", icon: MessageCircle },
+  { href: "/ask-claude", label: "Ask Claude", icon: MessageCircle },
   { href: "/pricing", label: "Membership" },
 ];
+
+/*
+ * Priority order for which links stay visible when space is limited.
+ * Lower number = higher priority = stays visible longer.
+ * Links not in this map get lowest priority.
+ */
+const LINK_PRIORITY: Record<string, number> = {
+  "/coupons": 1,
+  "/social-programs": 2,
+  "/ask-claude": 3,
+  "/lifemart": 4,
+  "/medicare-guide": 5,
+  "/benefits-checker": 6,
+  "/pricing": 7,
+  "/": 8,
+  "/discounts": 9,
+};
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -29,6 +48,46 @@ export default function Navbar() {
     open: false,
     tab: "login",
   });
+
+  /* ---- Priority-based responsive desktop nav ---- */
+  const navRef = useRef<HTMLDivElement>(null);
+  const [visibleCount, setVisibleCount] = useState(NAV_LINKS.length);
+
+  // Sort links by priority for the desktop nav
+  const sortedByPriority = [...NAV_LINKS].sort(
+    (a, b) => (LINK_PRIORITY[a.href] ?? 99) - (LINK_PRIORITY[b.href] ?? 99)
+  );
+
+  const calcVisible = useCallback(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+    // Temporarily show all to measure
+    const children = Array.from(nav.children) as HTMLElement[];
+    children.forEach((c) => (c.style.display = ""));
+    const navWidth = nav.offsetWidth;
+    let usedWidth = 0;
+    let count = 0;
+    for (const child of children) {
+      const childWidth = child.scrollWidth + 12; // 12px for gap
+      if (usedWidth + childWidth > navWidth && count > 0) break;
+      usedWidth += childWidth;
+      count++;
+    }
+    // Hide overflow
+    children.forEach((c, i) => {
+      c.style.display = i < count ? "" : "none";
+    });
+    setVisibleCount(count);
+  }, []);
+
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+    const ro = new ResizeObserver(() => calcVisible());
+    ro.observe(nav);
+    calcVisible();
+    return () => ro.disconnect();
+  }, [calcVisible]);
 
   const openLogin = () => setAuthModal({ open: true, tab: "login" });
   const openSignup = () => setAuthModal({ open: true, tab: "signup" });
@@ -61,13 +120,16 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Desktop nav */}
-            <nav className="hidden xl:flex items-center flex-wrap gap-x-3 gap-y-1 flex-1 min-w-0 ml-2 justify-center">
-              {NAV_LINKS.map((link) => (
+            {/* Desktop nav — shows links by priority, hiding lowest priority first */}
+            <nav
+              ref={navRef}
+              className="hidden xl:flex items-center gap-x-3 gap-y-1 flex-1 min-w-0 ml-2 justify-center overflow-hidden"
+            >
+              {sortedByPriority.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-[oklch(0.55_0.13_42)] flex items-center gap-1 whitespace-nowrap ${
+                  className={`text-sm font-medium transition-colors hover:text-[oklch(0.55_0.13_42)] flex items-center gap-1 whitespace-nowrap shrink-0 ${
                     location === link.href
                       ? "text-[oklch(0.55_0.13_42)]"
                       : "text-[oklch(0.45_0.03_60)]"
@@ -109,10 +171,10 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile menu */}
+          {/* Mobile menu — always shows ALL links in priority order */}
           {mobileOpen && (
             <div className="xl:hidden border-t border-[oklch(0.88_0.02_75)] py-4 space-y-1">
-              {NAV_LINKS.map((link) => (
+              {sortedByPriority.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
