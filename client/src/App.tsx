@@ -18,6 +18,7 @@ import MedicareGuide from "./pages/MedicareGuide";
 import LifeMart from "./pages/LifeMart";
 import BenefitsCheckerPage from "./pages/BenefitsCheckerPage";
 import AskClaude from "./pages/AskClaude";
+import SavingsBlueprint from "./pages/SavingsBlueprint";
 import AccessibilityToolbar from "./components/AccessibilityToolbar";
 import { useEffect } from "react";
 
@@ -57,6 +58,7 @@ function AppRoutes() {
                 <Route path="/ask-claude" component={AskClaude} />
               <Route path="/benefits-checker" component={BenefitsCheckerPage} />
                 <Route path="/benefits-hub" component={BenefitsCheckerPage} />
+                    <Route path="/savings-blueprint" component={SavingsBlueprint} />
       <Route component={NotFound} />
     </Switch>
   );
