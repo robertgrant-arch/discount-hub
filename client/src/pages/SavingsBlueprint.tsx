@@ -14,6 +14,11 @@ import {
   TrendingUp,
   ShieldCheck,
   ShoppingCart,
+    ExternalLink,
+  Star,
+  Clipboard,
+  MapPin,
+  Info,
 } from "lucide-react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -837,6 +842,202 @@ export default function SavingsBlueprint() {
               </div>
             </div>
 
+
+                          {/* ══════════════════════════════════════
+                 LIFEMART EXCLUSIVE SAVINGS
+              ══════════════════════════════════════ */}
+              <div className="bg-white rounded-2xl shadow-md p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <Star size={20} style={{ color: "oklch(0.48 0.12 55)" }} />
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.28 0.04 55)" }}
+                  >
+                    LifeMart Exclusive Savings
+                  </h3>
+                </div>
+                <p className="text-sm mb-4" style={{ color: "oklch(0.52 0.04 60)" }}>
+                  As a DiscountHub member, you also have access to LifeMart by Care.com — a members-only platform with 19,000+ savings opportunities from 1,300+ trusted brands.
+                </p>
+                <div className="rounded-xl p-4 mb-4" style={{ backgroundColor: "oklch(0.95 0.03 200)" }}>
+                  <div className="flex items-start gap-2">
+                    <Info size={16} className="mt-0.5 shrink-0" style={{ color: "oklch(0.40 0.12 200)" }} />
+                    <p className="text-xs" style={{ color: "oklch(0.35 0.08 200)" }}>
+                      <strong>How to access LifeMart:</strong> Visit{" "}
+                      <a href="https://www.care.com/lifemart/" target="_blank" rel="noopener noreferrer" className="underline font-semibold">care.com/lifemart</a>{" "}
+                      and sign up directly, or check if your employer offers it as a free benefit through your HR portal. Many professional associations and unions also provide access.
+                    </p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                  {[
+                    { name: "Priceline.com", discount: "Up to 40% off hotels & flights", category: "Travel" },
+                    { name: "Restaurant.com", discount: "Up to 80% off dining", category: "Dining" },
+                    { name: "Ticketsatwork.com", discount: "Up to 50% off events", category: "Entertainment" },
+                    { name: "Best Buy", discount: "15% off + free shipping", category: "Electronics" },
+                    { name: "Globalfit Gym Network", discount: "Discounted gym memberships", category: "Health" },
+                    { name: "Liberty Mutual", discount: "Exclusive insurance rates", category: "Financial" },
+                  ].map((prog, i) => (
+                    <a
+                      key={`lm-${i}`}
+                      href="https://www.care.com/lifemart/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-3 p-4 rounded-xl border-2 transition-all duration-200 hover:shadow-md no-underline"
+                      style={{ borderColor: "oklch(0.92 0.02 80)" }}
+                    >
+                      <Star
+                        size={18}
+                        className="mt-0.5 shrink-0"
+                        style={{ color: "oklch(0.55 0.13 42)" }}
+                      />
+                      <div>
+                        <p className="font-semibold text-sm" style={{ color: "oklch(0.30 0.04 55)" }}>
+                          {prog.name}
+                        </p>
+                        <p className="text-xs mt-0.5" style={{ color: "oklch(0.55 0.06 70)" }}>
+                          {prog.discount}
+                        </p>
+                        <span
+                          className="text-xs font-medium px-2 py-0.5 rounded-full mt-1.5 inline-block"
+                          style={{ backgroundColor: "oklch(0.96 0.03 42)", color: "oklch(0.45 0.13 42)" }}
+                        >
+                          {prog.category}
+                        </span>
+                      </div>
+                      <ExternalLink size={14} className="ml-auto mt-1 shrink-0" style={{ color: "oklch(0.65 0.04 60)" }} />
+                    </a>
+                  ))}
+                </div>
+                <a
+                  href="https://www.care.com/lifemart/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-white text-sm transition-all duration-200 hover:opacity-90 no-underline"
+                  style={{ backgroundColor: "oklch(0.45 0.13 42)" }}
+                >
+                  Explore All 19,000+ LifeMart Savings <ExternalLink size={16} />
+                </a>
+              </div>
+
+              {/* ══════════════════════════════════════
+                 HOW TO ACCESS YOUR SAVINGS
+              ══════════════════════════════════════ */}
+              <div className="bg-white rounded-2xl shadow-md p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <Clipboard size={20} style={{ color: "oklch(0.48 0.12 55)" }} />
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.28 0.04 55)" }}
+                  >
+                    How to Access Your Savings
+                  </h3>
+                </div>
+                <p className="text-sm mb-5" style={{ color: "oklch(0.52 0.04 60)" }}>
+                  Follow these step-by-step instructions to start saving today:
+                </p>
+                <div className="space-y-4">
+                  {/* Step 1 */}
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "oklch(0.48 0.12 55)" }}>1</div>
+                      <div>
+                        <p className="font-semibold text-sm" style={{ color: "oklch(0.30 0.04 55)" }}>Print Your Coupon Checklist</p>
+                        <p className="text-xs mt-1" style={{ color: "oklch(0.52 0.04 60)" }}>
+                          Click the "Print / Save Blueprint" button above to print this entire savings plan. Keep it on your fridge or in your wallet for easy reference when shopping.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Step 2 */}
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "oklch(0.48 0.12 55)" }}>2</div>
+                      <div>
+                        <p className="font-semibold text-sm" style={{ color: "oklch(0.30 0.04 55)" }}>Claim Your Store Discounts</p>
+                        <p className="text-xs mt-1" style={{ color: "oklch(0.52 0.04 60)" }}>
+                          Visit each recommended store on their designated senior discount day (see the Savings Calendar above). Simply show your ID at checkout — most stores accept a driver's license or state ID as proof of age. No coupon needed for age-based discounts.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Step 3 */}
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "oklch(0.48 0.12 55)" }}>3</div>
+                      <div>
+                        <p className="font-semibold text-sm" style={{ color: "oklch(0.30 0.04 55)" }}>Print Coupons from Our Coupons Page</p>
+                        <p className="text-xs mt-1" style={{ color: "oklch(0.52 0.04 60)" }}>
+                          Visit our{" "}
+                          <Link href="/coupons" className="underline font-semibold" style={{ color: "oklch(0.48 0.12 55)" }}>Coupons page</Link>{" "}
+                          to find printable coupons for grocery stores, pharmacies, and retail shops. Print them before your next shopping trip to stack savings on top of your senior discounts.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Step 4 */}
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "oklch(0.48 0.12 55)" }}>4</div>
+                      <div>
+                        <p className="font-semibold text-sm" style={{ color: "oklch(0.30 0.04 55)" }}>Enroll in Benefit Programs</p>
+                        <p className="text-xs mt-1" style={{ color: "oklch(0.52 0.04 60)" }}>
+                          For each benefit program listed above under "Benefits You May Qualify For," visit our{" "}
+                          <Link href="/social-programs" className="underline font-semibold" style={{ color: "oklch(0.48 0.12 55)" }}>Benefits Hub</Link>{" "}
+                          for direct application links and eligibility details. Many programs can be applied for online or by calling 1-800-MEDICARE (1-800-633-4227).
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Step 5 */}
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "oklch(0.48 0.12 55)" }}>5</div>
+                      <div>
+                        <p className="font-semibold text-sm" style={{ color: "oklch(0.30 0.04 55)" }}>Activate Your LifeMart Access</p>
+                        <p className="text-xs mt-1" style={{ color: "oklch(0.52 0.04 60)" }}>
+                          Go to{" "}
+                          <a href="https://www.care.com/lifemart/" target="_blank" rel="noopener noreferrer" className="underline font-semibold" style={{ color: "oklch(0.48 0.12 55)" }}>care.com/lifemart</a>{" "}
+                          to create your account. Check with your employer's HR department first — many companies provide free LifeMart access as an employee benefit. Once enrolled, browse by category and click through to merchants for automatic discounts.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Step 6 */}
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "oklch(0.48 0.12 55)" }}>6</div>
+                      <div>
+                        <p className="font-semibold text-sm" style={{ color: "oklch(0.30 0.04 55)" }}>Download Savings Apps</p>
+                        <p className="text-xs mt-1" style={{ color: "oklch(0.52 0.04 60)" }}>
+                          Download the <strong>GoodRx</strong> app for prescription savings, the <strong>LifeMart mobile app</strong> for on-the-go member discounts, and the <strong>AARP app</strong> if you're a member. These free apps can save you money at the point of purchase with no clipping required.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Quick reference box */}
+                <div className="mt-5 p-4 rounded-xl border-2" style={{ borderColor: "oklch(0.52 0.12 80)", backgroundColor: "oklch(0.95 0.025 80)" }}>
+                  <p className="font-bold text-sm mb-2" style={{ color: "oklch(0.30 0.04 55)" }}>
+                    📋 Quick Reference — What to Bring When Shopping
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                    {[
+                      "Valid photo ID showing your date of birth",
+                      "Printed coupons from DiscountHub Coupons page",
+                      "AARP or membership cards (if applicable)",
+                      "Smartphone with GoodRx & LifeMart apps installed",
+                      "This printed Savings Blueprint for reference",
+                      "SNAP/EBT card (if applicable) for Double Up Food Bucks",
+                    ].map((item) => (
+                      <div key={item} className="flex items-start gap-2 text-xs" style={{ color: "oklch(0.35 0.04 55)" }}>
+                        <CheckCircle2 size={14} className="mt-0.5 shrink-0" style={{ color: "oklch(0.52 0.12 80)" }} />
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             {/* Start over */}
             <div className="text-center pb-4">
               <button
