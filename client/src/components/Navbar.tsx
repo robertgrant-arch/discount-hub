@@ -32,14 +32,7 @@ const NAV_LINKS = [
 const PRIORITY_LINKS = [
   "/ask-claude",
     "/savings-blueprint",
-  "/coupons",
-  "/discounts",
-  "/social-programs",
-  "/lifemart",
-  "/medicare-guide",
-  "/benefits-checker",
-  "/pricing",
-];
+  ];
 
 /* Get the link objects in priority order (excluding Home) */
 const prioritySorted = PRIORITY_LINKS.map((href) =>
@@ -192,7 +185,7 @@ export default function Navbar() {
           {/* Expanded menu — shows ALL links in priority order */}
           {mobileOpen && (
             <div className="border-t border-[oklch(0.88_0.02_75)] py-4 space-y-1">
-              {[NAV_LINKS[0], ...prioritySorted].map((link) => (
+              {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
