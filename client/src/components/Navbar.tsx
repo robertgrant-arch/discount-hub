@@ -30,14 +30,14 @@ const NAV_LINKS = [
  * Home is always rendered separately on the left, not part of this list.
  */
 const PRIORITY_LINKS = [
-  "/coupons",
-    "/discounts",
-  "/social-programs",
   "/ask-claude",
+    "/savings-blueprint",
+  "/coupons",
+  "/discounts",
+  "/social-programs",
   "/lifemart",
   "/medicare-guide",
   "/benefits-checker",
-    "/savings-blueprint",
   "/pricing",
 ];
 
