@@ -10,7 +10,7 @@ interface PageHeroProps {
   badgeIcon: LucideIcon;
   title: string;
   description: string;
-  stats: StatPill[];
+  stats?: StatPill[];
 }
 
 export default function PageHero({ badge, badgeIcon: BadgeIcon, title, description, stats }: PageHeroProps) {
@@ -36,7 +36,7 @@ export default function PageHero({ badge, badgeIcon: BadgeIcon, title, descripti
             {description}
           </p>
           <div className="flex flex-wrap gap-2">
-            {stats.map((stat) => (
+                      {stats?.map((stat) => (
               <div key={stat.label} className="inline-flex items-center gap-1.5 bg-white/15 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full">
                 <stat.icon className="w-3 h-3" />
                 {stat.label}
