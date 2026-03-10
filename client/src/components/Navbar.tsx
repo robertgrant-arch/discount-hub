@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import AuthModal from "@/components/AuthModal";
 import UserMenu from "@/components/UserMenu";
-import { Tag, Menu, X, Scissors, BookOpen, HeartPulse, Star, MessageCircle } from "lucide-react";
+import { Tag, Menu, X, Scissors, BookOpen, HeartPulse, Star, MessageCircle, Calculator } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
 
 /* All nav links */
@@ -20,6 +20,7 @@ const NAV_LINKS = [
   { href: "/lifemart", label: "LifeMart Savings", icon: Star, badge: "NEW" },
   { href: "/benefits-checker", label: "Benefits Checker", icon: HeartPulse, badge: "NEW" },
   { href: "/ask-claude", label: "Ask Claude", icon: MessageCircle },
+    { href: "/savings-blueprint", label: "Savings Blueprint", icon: Calculator, badge: "NEW" },
   { href: "/pricing", label: "Membership" },
 ];
 
@@ -36,6 +37,7 @@ const PRIORITY_LINKS = [
   "/lifemart",
   "/medicare-guide",
   "/benefits-checker",
+    "/savings-blueprint",
   "/pricing",
 ];
 
