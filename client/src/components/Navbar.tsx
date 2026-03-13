@@ -1,5 +1,5 @@
 /* Healthcare Select Benefits Hub Navbar — Official HCS Brand
- * White navbar with black HealthCare Select text
+ * White navbar with official Healthcare Select logo from healthcareselect.com
  * Sora font for logo | Responsive priority nav
  */
 import { Link, useLocation } from "wouter";
@@ -32,6 +32,35 @@ const PRIORITY_LINKS = [
 const prioritySorted = PRIORITY_LINKS.map((href) =>
   NAV_LINKS.find((l) => l.href === href)!
 ).filter(Boolean);
+
+/* Official Healthcare Select logo mark SVG — matches healthcareselect.com */
+function HCSLogoMark({ size = 40 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+      {/* Cross/plus shape: top arm */}
+      <rect x="18" y="0" width="24" height="16" rx="2" fill="#2B7A78" />
+      {/* Cross/plus shape: left arm */}
+      <rect x="0" y="18" width="16" height="24" rx="2" fill="#C67B4B" />
+      {/* Cross/plus shape: center */}
+      <rect x="18" y="18" width="24" height="24" rx="2" fill="#2B7A78" />
+      {/* Cross/plus shape: right arm */}
+      <rect x="44" y="18" width="16" height="24" rx="2" fill="#2B7A78" />
+      {/* Cross/plus shape: bottom arm */}
+      <rect x="18" y="44" width="24" height="16" rx="2" fill="#5BB5C0" />
+      {/* Orange accent: top-right of top arm */}
+      <rect x="34" y="0" width="8" height="16" rx="1" fill="#C67B4B" />
+      {/* Light blue accent: bottom-left of bottom arm */}
+      <rect x="18" y="44" width="8" height="16" rx="1" fill="#5BB5C0" />
+      {/* Orange accent: bottom-right of right arm */}
+      <rect x="44" y="34" width="16" height="8" rx="1" fill="#C67B4B" />
+      {/* White circle */}
+      <circle cx="30" cy="30" r="13" fill="none" stroke="white" strokeWidth="3" />
+      {/* White plus/cross inside circle */}
+      <line x1="30" y1="22" x2="30" y2="38" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="22" y1="30" x2="38" y2="30" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -96,29 +125,15 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Left: Logo + nav */}
             <div className="flex items-center gap-3 sm:gap-4 md:gap-6 min-w-0 flex-1">
-              {/* HCS Logo mark + wordmark */}
+              {/* Official HCS Logo + wordmark */}
               <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-                {/* HCS Cross logo mark */}<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0"> {/* HCS Official Logo Mark */}
-                  {/* Top row */}
-                  <rect x="0" y="0" width="11" height="11" rx="1" fill="#0E5659"/>
-                  <rect x="13" y="0" width="11" height="11" rx="1" fill="#0E5659"/>
-                  <rect x="25" y="0" width="11" height="11" rx="1" fill="#4CC0AE"/>
-                  {/* Middle row */}
-                  <rect x="0" y="13" width="11" height="11" rx="1" fill="#0E5659"/>
-                  <rect x="13" y="13" width="11" height="11" rx="2" fill="#0E5659"/>
-                  <circle cx="18" cy="18" r="3.5" fill="none" stroke="#0E5659" strokeWidth="1.5"/>
-                  <rect x="25" y="13" width="11" height="11" rx="1" fill="#4CC0AE"/>
-                  {/* Bottom row */}
-                  <rect x="0" y="25" width="11" height="11" rx="1" fill="#C05824"/>
-                  <rect x="13" y="25" width="11" height="11" rx="1" fill="#0E5659"/>
-                  <rect x="25" y="25" width="11" height="11" rx="1" fill="#4CC0AE"/>
-                </svg>
+                <HCSLogoMark size={40} />
                 <span
                   className="font-bold text-base tracking-tight hidden sm:inline leading-tight"
                   style={{ fontFamily: "'Sora', 'Open Sans', sans-serif", color: "#000000" }}
                 >
-                  HealthCare Select{" "}
-                  <span style={{ color: "rgba(0,0,0,0.55)" }}>Benefits Hub</span>
+                  Healthcare{" "}
+                  <span style={{ color: "#000000" }}>Select</span>
                 </span>
               </Link>
 
