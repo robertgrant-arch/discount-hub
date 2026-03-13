@@ -102,7 +102,7 @@ export default function Navbar() {
         Skip to main content
       </a>
 
-      <header className="sticky top-0 z-50 bg-[oklch(1_0_0)] border-b border-[oklch(0.90_0_0)] shadow-sm">
+      <header className="sticky top-0 z-50 bg-[#2b6b62] shadow-sm">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
 
@@ -118,19 +118,19 @@ export default function Navbar() {
                 </div>
                 <span
                   className="font-bold text-lg tracking-tight hidden sm:inline"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.33 0.08 175)" }}
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: "white" }}
                 >
-                  HealthCare Select Benefits <span style={{ color: "oklch(0.45 0.08 175)" }}>Hub</span>
+                  HealthCare Select Benefits <span style={{ color: "rgba(255,255,255,0.8)" }}>Hub</span>
                 </span>
               </Link>
 
               {/* Home link — always visible on the left */}
               <Link
                 href="/"
-                className={`text-sm font-medium transition-colors hover:text-[oklch(0.45 0.08 175)] whitespace-nowrap shrink-0 ${
+                className={`text-sm font-medium transition-colors hover:text-white whitespace-nowrap shrink-0 ${
                   location === "/"
-                    ? "text-[oklch(0.45 0.08 175)]"
-                    : "text-[oklch(0.45_0.03_60)]"
+                    ? "text-white"
+                    : "text-white/75"
                 }`}
               >
                 Home
@@ -145,10 +145,10 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-sm font-medium transition-colors hover:text-[oklch(0.45 0.08 175)] flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
+                    className={`text-sm font-medium transition-colors hover:text-white flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
                       location === link.href
-                        ? "text-[oklch(0.45 0.08 175)]"
-                        : "text-[oklch(0.45_0.03_60)]"
+                        ? "text-white"
+                        : "text-white/75"
                     }`}
                   >
                     {link.icon && <link.icon className="w-3.5 h-3.5" />}
@@ -172,7 +172,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={openSignup}
-                    style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
+                    className="border border-white/50 text-white bg-transparent hover:bg-white/20"
                   >
                     Get Started Free or Sign In
                   </Button>
@@ -181,7 +181,7 @@ export default function Navbar() {
 
               {/* Hamburger — always available for full menu access */}
               <button
-                className="p-2 rounded-md hover:bg-[oklch(0.94_0.02_75)] transition-colors"
+                className="p-2 rounded-md hover:bg-white/10 transition-colors"
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label="Toggle menu"
               >
@@ -192,15 +192,15 @@ export default function Navbar() {
 
           {/* Expanded menu — shows ALL links in priority order */}
           {mobileOpen && (
-            <div className="border-t border-[oklch(0.90_0_0)] py-4 space-y-1">
+            <div className="border-t border-white/20 py-4 space-y-1">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={`flex items-center gap-2.5 text-sm font-medium py-2.5 px-3 rounded-lg transition-colors ${
                     location === link.href
-                      ? "text-[oklch(0.45 0.08 175)] bg-[oklch(0.95_0_0)]"
-                      : "text-[oklch(0.45_0.03_60)] hover:text-[oklch(0.45 0.08 175)] hover:bg-[oklch(0.97_0.01_80)]"
+                      ? "text-white bg-white/20"
+                      : "text-white/75 hover:text-white hover:bg-white/10"
                   }`}
                   onClick={() => setMobileOpen(false)}
                 >
@@ -220,7 +220,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={() => { openSignup(); setMobileOpen(false); }}
-                    style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
+                    className="border border-white/50 text-white bg-transparent hover:bg-white/20"
                   >
                     Get Started Free or Sign In
                   </Button>

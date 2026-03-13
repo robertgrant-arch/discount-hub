@@ -17,7 +17,7 @@ export default function PageHero({ badge, badgeIcon: BadgeIcon, title, descripti
   return (
     <div
       className="relative border-b border-[oklch(0.90_0_0)]"
-      style={{ background: "linear-gradient(135deg, oklch(0.20 0.04 175) 0%, oklch(0.30 0.06 175) 100%)" }}
+      style={{ background: "linear-gradient(135deg, #1e4d47 0%, #2b6b62 100%)" }}
     >
       <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
       <div className="relative container py-12">
