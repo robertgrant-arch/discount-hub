@@ -96,16 +96,22 @@ export default function Navbar() {
               {/* HCS Logo mark + wordmark */}
               <Link href="/" className="flex items-center gap-2.5 group shrink-0">
                 {/* HCS Cross logo mark */}
-                <div
-                  className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                  style={{ backgroundColor: "#C05824" }}
-                >
-                  {/* Healthcare cross symbol */}
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="8" y="2" width="4" height="16" rx="1" fill="white"/>
-                    <rect x="2" y="8" width="16" height="4" rx="1" fill="white"/>
-                  </svg>
-                </div>
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+              {/* HCS Official Logo Mark */}
+              {/* Top row */}
+              <rect x="0" y="0" width="11" height="11" rx="1" fill="#0E5659"/>
+              <rect x="13" y="0" width="11" height="11" rx="1" fill="#0E5659"/>
+              <rect x="25" y="0" width="11" height="11" rx="1" fill="#4CC0AE"/>
+              {/* Middle row */}
+              <rect x="0" y="13" width="11" height="11" rx="1" fill="#0E5659"/>
+              <rect x="13" y="13" width="11" height="11" rx="2" fill="#0E5659"/>
+              <circle cx="18" cy="18" r="3.5" fill="none" stroke="white" strokeWidth="1.5"/>
+              <rect x="25" y="13" width="11" height="11" rx="1" fill="#4CC0AE"/>
+              {/* Bottom row */}
+              <rect x="0" y="25" width="11" height="11" rx="1" fill="#C05824"/>
+              <rect x="13" y="25" width="11" height="11" rx="1" fill="#0E5659"/>
+              <rect x="25" y="25" width="11" height="11" rx="1" fill="#4CC0AE"/>
+            </svg>
                 <span
                   className="font-bold text-base tracking-tight hidden sm:inline leading-tight"
                   style={{ fontFamily: "'Sora', 'Open Sans', sans-serif", color: "white" }}
