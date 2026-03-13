@@ -3,7 +3,7 @@ import { Tag, Shield } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[oklch(0.88_0.02_75)] bg-[oklch(0.96_0.015_80)] mt-16">
+    <footer className="border-t border-[oklch(0.90_0_0)] bg-[oklch(0.96_0.015_80)] mt-16">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -16,7 +16,7 @@ export default function Footer() {
                 Discount<span style={{ color: "oklch(0.45 0.08 175)" }}>Hub</span>
               </span>
             </Link>
-            <p className="text-sm text-[oklch(0.52_0.04_60)] max-w-xs leading-relaxed">
+            <p className="text-sm text-[oklch(0.45_0_0)] max-w-xs leading-relaxed">
               The most comprehensive directory of senior and disability discount programs, coupons, and benefits in the United States.
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function Footer() {
                 { href: "/medicare-guide", label: "Medicare Guide" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
+                  <Link href={l.href} className="text-sm text-[oklch(0.45_0_0)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -55,7 +55,7 @@ export default function Footer() {
                 { href: "https://www.aplaceformom.com", label: "A Place for Mom" },
               ].map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
+                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm text-[oklch(0.45_0_0)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
                     {l.label} ↗
                   </a>
                 </li>
@@ -74,7 +74,7 @@ export default function Footer() {
                 { href: "/disclosures", label: "Affiliate Disclosures" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
+                  <Link href={l.href} className="text-sm text-[oklch(0.45_0_0)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -84,15 +84,15 @@ export default function Footer() {
         </div>
 
         {/* Affiliate disclosure bar */}
-        <div className="mt-8 p-4 rounded-xl bg-[oklch(0.93_0.02_80)] border border-[oklch(0.88_0.02_75)]">
-          <p className="text-xs text-[oklch(0.52_0.04_60)] leading-relaxed text-center">
+        <div className="mt-8 p-4 rounded-xl bg-[oklch(0.93_0.02_80)] border border-[oklch(0.90_0_0)]">
+          <p className="text-xs text-[oklch(0.45_0_0)] leading-relaxed text-center">
             <Shield className="w-3 h-3 inline mr-1" />
             <strong>Advertising Disclosure:</strong> HealthCare Select Benefits Hub may earn a commission when you click certain links on this site, including affiliate links, pay-per-call numbers, and sponsored program listings. This does not affect our editorial independence or the programs we list. Government program information is provided for educational purposes only.{" "}
-            <Link href="/disclosures" className="underline hover:text-[oklch(0.45_0.13_42)]">Full disclosure policy</Link>
+            <Link href="/disclosures" className="underline hover:text-[oklch(0.45_0.08_175)]">Full disclosure policy</Link>
           </p>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-[oklch(0.88_0.02_75)] flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="mt-6 pt-6 border-t border-[oklch(0.90_0_0)] flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[oklch(0.60_0.03_60)]">
             © {new Date().getFullYear()} HealthCare Select Benefits Hub. All rights reserved.
           </p>

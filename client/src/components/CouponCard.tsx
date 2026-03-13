@@ -108,7 +108,7 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
 
         {/* Company/program name */}
         <h3
-          className="font-bold text-sm text-[oklch(0.22_0.02_50)] leading-snug mb-1"
+          className="font-bold text-sm text-[oklch(0.15_0.04_175)] leading-snug mb-1"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
           {item.name}
@@ -125,7 +125,7 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
         {showFull ? (
           <>
             {/* Eligibility */}
-            <p className="text-xs text-[oklch(0.52_0.04_60)] mb-1.5">
+            <p className="text-xs text-[oklch(0.45_0_0)] mb-1.5">
               <span className="font-semibold text-[oklch(0.40_0.04_50)]">Who qualifies:</span>{" "}
               {item.eligibility}
             </p>
@@ -160,7 +160,7 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
           /* Locked state */
           <div className="relative min-h-[80px]">
             <div className="blur-sm select-none pointer-events-none">
-              <p className="text-xs text-[oklch(0.52_0.04_60)] mb-1.5">Who qualifies: Age 60+ with valid ID</p>
+              <p className="text-xs text-[oklch(0.45_0_0)] mb-1.5">Who qualifies: Age 60+ with valid ID</p>
               <div className="bg-[oklch(0.97_0.01_80)] rounded-lg px-3 py-2 mb-2">
                 <p className="text-xs text-[oklch(0.40_0.04_50)]">How to use: Visit website and enter code at checkout</p>
               </div>

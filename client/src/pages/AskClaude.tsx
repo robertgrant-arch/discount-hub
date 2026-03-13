@@ -71,12 +71,12 @@ export default function AskClaude() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.98_0.012_80)]">
+    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
       <Navbar />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.25_0.04_42)] via-[oklch(0.30_0.06_42)] to-[oklch(0.22_0.03_50)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.25_0_0)] via-[oklch(0.30_0.06_42)] to-[oklch(0.22_0.03_50)]" />
         <div className="relative container py-12 md:py-16">
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-4 border border-white/20">
@@ -111,7 +111,7 @@ export default function AskClaude() {
                   <button
                     key={q}
                     onClick={() => sendMessage(q)}
-                    className="text-left text-sm px-4 py-3 rounded-xl border border-[oklch(0.88_0.02_75)] bg-white hover:bg-[oklch(0.95_0.015_80)] transition-colors text-[oklch(0.40_0.05_50)]"
+                    className="text-left text-sm px-4 py-3 rounded-xl border border-[oklch(0.90_0_0)] bg-white hover:bg-[oklch(0.95_0.015_80)] transition-colors text-[oklch(0.40_0.05_50)]"
                   >
                     {q}
                   </button>
@@ -130,7 +130,7 @@ export default function AskClaude() {
                   className={`rounded-2xl px-5 py-4 max-w-[85%] text-sm leading-relaxed ${
                     msg.role === "user"
                       ? "bg-[oklch(0.45 0.08 175)] text-white rounded-br-md"
-                      : "bg-white border border-[oklch(0.88_0.02_75)] text-[oklch(0.30_0.04_50)] rounded-bl-md shadow-sm"
+                      : "bg-white border border-[oklch(0.90_0_0)] text-[oklch(0.30_0.04_50)] rounded-bl-md shadow-sm"
                   }`}
                 >
                   {msg.role === "assistant" ? (
@@ -155,7 +155,7 @@ export default function AskClaude() {
               <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: "oklch(0.68 0.15 55)" }}>
                 <Bot className="w-4 h-4 text-white" />
               </div>
-              <div className="bg-white border border-[oklch(0.88_0.02_75)] rounded-2xl rounded-bl-md px-5 py-4 shadow-sm">
+              <div className="bg-white border border-[oklch(0.90_0_0)] rounded-2xl rounded-bl-md px-5 py-4 shadow-sm">
                 <Loader2 className="w-5 h-5 animate-spin" style={{ color: "oklch(0.45 0.08 175)" }} />
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function AskClaude() {
         </div>
 
         {/* Input */}
-        <div className="sticky bottom-4 bg-white rounded-2xl border border-[oklch(0.88_0.02_75)] shadow-lg p-2 flex items-center gap-2">
+        <div className="sticky bottom-4 bg-white rounded-2xl border border-[oklch(0.90_0_0)] shadow-lg p-2 flex items-center gap-2">
           <input
             className="flex-1 outline-none text-sm text-[oklch(0.30_0.05_50)] placeholder:text-[oklch(0.65_0.02_60)] px-3 py-2"
             placeholder="Ask about Medicare, disability benefits, retirement..."
@@ -175,7 +175,7 @@ export default function AskClaude() {
           <button
             onClick={() => sendMessage()}
             disabled={loading || !input.trim()}
-            className="w-9 h-9 rounded-xl bg-[oklch(0.45 0.08 175)] hover:bg-[oklch(0.48_0.13_42)] disabled:opacity-40 flex items-center justify-center transition-colors"
+            className="w-9 h-9 rounded-xl bg-[oklch(0.45 0.08 175)] hover:bg-[oklch(0.48_0.08_175)] disabled:opacity-40 flex items-center justify-center transition-colors"
           >
             <Send className="w-4 h-4 text-white" />
           </button>

@@ -27,7 +27,7 @@ export default function CategoryPage() {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <div className="container py-16 text-center">
-          <p className="text-[oklch(0.52_0.04_60)]">Category not found.</p>
+          <p className="text-[oklch(0.45_0_0)]">Category not found.</p>
           <Link href="/discounts" className="text-sm font-medium mt-4 inline-block" style={{ color: "oklch(0.45 0.08 175)" }}>
             ← Back to all discounts
           </Link>
@@ -51,11 +51,11 @@ export default function CategoryPage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.98_0.012_80)]">
+    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
       <Navbar />
 
       {/* Category hero */}
-      <div className="relative bg-white border-b border-[oklch(0.88_0.02_75)] overflow-hidden">
+      <div className="relative bg-white border-b border-[oklch(0.90_0_0)] overflow-hidden">
         {category.image && (
           <>
             <div
@@ -66,14 +66,14 @@ export default function CategoryPage() {
           </>
         )}
         <div className="relative container py-10">
-          <Link href="/discounts" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] mb-4 transition-colors">
+          <Link href="/discounts" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.45_0_0)] hover:text-[oklch(0.45 0.08 175)] mb-4 transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" /> Back to all discounts
           </Link>
-          <h1 className="text-3xl font-bold text-[oklch(0.22_0.02_50)] mb-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <h1 className="text-3xl font-bold text-[oklch(0.15_0.04_175)] mb-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             {category.category}
           </h1>
               <PageHaiku lines={["Each category", "A garden of discounts grows", "Pick what feeds your need"]} />
-          <p className="text-[oklch(0.52_0.04_60)]">
+          <p className="text-[oklch(0.45_0_0)]">
             {category.senior.length} senior discounts · {category.disability.length} disability programs
           </p>
 
@@ -84,14 +84,14 @@ export default function CategoryPage() {
               placeholder="Search within this category..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="pl-9 bg-[oklch(0.97_0.01_80)] border-[oklch(0.88_0.02_75)]"
+              className="pl-9 bg-[oklch(0.97_0.01_80)] border-[oklch(0.90_0_0)]"
             />
           </div>
         </div>
 
         {/* Tabs */}
         <div className="container pb-0">
-          <div className="flex gap-1 border-b border-[oklch(0.88_0.02_75)]">
+          <div className="flex gap-1 border-b border-[oklch(0.90_0_0)]">
             {(["all", "senior", "disability"] as AudienceTab[]).map((tab) => (
               <button
                 key={tab}
@@ -99,7 +99,7 @@ export default function CategoryPage() {
                 className={`px-4 py-2.5 text-sm font-medium capitalize transition-colors border-b-2 -mb-px ${
                   activeTab === tab
                     ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45 0.08 175)]"
-                    : "border-transparent text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.35_0.04_50)]"
+                    : "border-transparent text-[oklch(0.45_0_0)] hover:text-[oklch(0.35_0.04_50)]"
                 }`}
               >
                 {tab === "all"
@@ -119,7 +119,7 @@ export default function CategoryPage() {
           {/* Main grid */}
           <div className="lg:col-span-3">
             {allItems.length === 0 ? (
-              <div className="text-center py-16 text-[oklch(0.52_0.04_60)]">
+              <div className="text-center py-16 text-[oklch(0.45_0_0)]">
                 <p className="font-medium">No results found</p>
                 <p className="text-sm mt-1">Try a different search term or tab</p>
               </div>

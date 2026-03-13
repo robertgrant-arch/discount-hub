@@ -23,7 +23,7 @@ const ENROLLMENT_PERIODS = [
     dates: "3 months before your 65th birthday through 3 months after",
     description: "Your first opportunity to enroll in Medicare. Missing this window can result in permanent late enrollment penalties.",
     color: "oklch(0.45 0.08 175)",
-    bg: "oklch(0.93_0.04_42)",
+    bg: "oklch(0.93_0_0)",
   },
   {
     name: "Annual Enrollment Period (AEP)",
@@ -249,7 +249,7 @@ function MedicarePlanLookup() {
               <a
                 href="https://www.selectquote.com/medicare"
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-[oklch(0.45_0.13_42)] hover:bg-[oklch(0.38_0.13_42)] text-white font-semibold px-4 py-2 rounded-lg transition-colors text-xs"
+                className="inline-flex items-center gap-1.5 bg-[oklch(0.45_0.08_175)] hover:bg-[oklch(0.38_0.08_175)] text-white font-semibold px-4 py-2 rounded-lg transition-colors text-xs"
               >
                 Compare Plans — SelectQuote Senior <ExternalLink className="w-3.5 h-3.5" />
               </a>
@@ -330,7 +330,7 @@ export default function MedicareGuide() {
         <section className="bg-[oklch(0.96_0.02_42)] border-b border-border py-12 md:py-16">
           <div className="container max-w-5xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-xs font-bold uppercase tracking-widest text-[oklch(0.45_0.13_42)] bg-[oklch(0.90_0.04_42)] px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-widest text-[oklch(0.45_0.08_175)] bg-[oklch(0.90_0_0)] px-3 py-1 rounded-full">
                 Medicare Guide
               </span>
               <span className="text-xs font-bold uppercase tracking-widest text-[oklch(0.50_0.15_15)] bg-[oklch(0.95_0.04_15)] px-3 py-1 rounded-full flex items-center gap-1">
@@ -347,7 +347,7 @@ export default function MedicareGuide() {
               <a
                 href="https://www.selectquote.com/medicare"
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[oklch(0.45_0.13_42)] hover:bg-[oklch(0.38_0.13_42)] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="inline-flex items-center gap-2 bg-[oklch(0.45_0.08_175)] hover:bg-[oklch(0.38_0.08_175)] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 Compare Medicare Plans Free — SelectQuote
                 <ExternalLink className="w-4 h-4" />
@@ -478,7 +478,7 @@ export default function MedicareGuide() {
                   <a
                     href="https://www.selectquote.com/medicare"
                     target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[oklch(0.45_0.13_42)] hover:bg-[oklch(0.38_0.13_42)] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+                    className="inline-flex items-center gap-2 bg-[oklch(0.45_0.08_175)] hover:bg-[oklch(0.38_0.08_175)] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
                   >
                     Compare Plans — SelectQuote Senior <ExternalLink className="w-4 h-4" />
                   </a>
@@ -525,9 +525,9 @@ export default function MedicareGuide() {
                       target="_blank" rel="noopener noreferrer"
                       className="flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-[oklch(0.45 0.08 175)] hover:shadow-sm transition-all group"
                     >
-                      <ExternalLink className="w-4 h-4 text-muted-foreground mt-0.5 shrink-0 group-hover:text-[oklch(0.45_0.13_42)]" />
+                      <ExternalLink className="w-4 h-4 text-muted-foreground mt-0.5 shrink-0 group-hover:text-[oklch(0.45_0.08_175)]" />
                       <div>
-                        <p className="text-sm font-semibold text-foreground group-hover:text-[oklch(0.45_0.13_42)] transition-colors">{r.name}</p>
+                        <p className="text-sm font-semibold text-foreground group-hover:text-[oklch(0.45_0.08_175)] transition-colors">{r.name}</p>
                         <p className="text-xs text-muted-foreground">{r.desc}</p>
                       </div>
                     </a>
@@ -570,7 +570,7 @@ export default function MedicareGuide() {
 
               {/* Back to Benefits Hub */}
               <Link href="/social-programs">
-                <div className="flex items-center gap-2 text-sm text-[oklch(0.45_0.13_42)] hover:underline cursor-pointer">
+                <div className="flex items-center gap-2 text-sm text-[oklch(0.45_0.08_175)] hover:underline cursor-pointer">
                   <ArrowRight className="w-4 h-4" />
                   Back to Benefits Hub
                 </div>

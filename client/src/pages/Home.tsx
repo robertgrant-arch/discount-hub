@@ -32,7 +32,7 @@ const CATEGORY_UNSPLASH: Record<string, string> = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.98_0.012_80)]">
+    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
       <Navbar />
 
       {/* Hero */}
@@ -43,7 +43,7 @@ export default function Home() {
             backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663319813187/Mm4cCnjCEhGr2U6GXNthjR/hero-banner-ZwjnkZuUe9WpiFKL3Afqhv.webp)`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.22_0.02_50/0.82)] via-[oklch(0.22_0.02_50/0.55)] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.15_0.04_175/0.82)] via-[oklch(0.15_0.04_175/0.55)] to-transparent" />
         <div className="relative container py-24 md:py-32">
           <div className="max-w-xl">
                           <Link href="/ask-claude">
@@ -61,7 +61,7 @@ export default function Home() {
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Every Senior &amp; Disability Discount,{" "}
-              <span style={{ color: "oklch(0.85 0.08 60)" }}>One Place.</span>
+              <span style={{ color: "oklch(0.78 0.11 55)" }}>One Place.</span>
             </h1>
               <PageHaiku lines={["Golden years bring gifts", "Savings bloom like autumn leaves", "Wisdom finds the deals"]} />
             <p className="text-white/85 text-lg leading-relaxed mb-8">
@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* Stats bar */}
-      <section className="bg-white border-b border-[oklch(0.88_0.02_75)] shadow-sm">
+      <section className="bg-white border-b border-[oklch(0.90_0_0)] shadow-sm">
         <div className="container py-5">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
@@ -106,7 +106,7 @@ export default function Home() {
                 <span className="text-2xl font-bold" style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.15 0 0)" }}>
                   {stat.value}
                 </span>
-                <span className="text-xs text-[oklch(0.52_0.04_60)]">{stat.label}</span>
+                <span className="text-xs text-[oklch(0.45_0_0)]">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -114,17 +114,17 @@ export default function Home() {
       </section>
 
       {/* ZIP Finder CTA */}
-      <section className="bg-[oklch(0.96_0.03_42)] border-b border-[oklch(0.88_0.04_42)]">
+      <section className="bg-[oklch(0.96_0_0)] border-b border-[oklch(0.88_0_0)]">
         <div className="container py-8">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
                 <MapPin className="w-5 h-5 text-[oklch(0.45 0.08 175)]" />
-                <h2 className="text-xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <h2 className="text-xl font-bold text-[oklch(0.15_0.04_175)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   Find Programs Near You
                 </h2>
               </div>
-              <p className="text-sm text-[oklch(0.45_0.06_50)] leading-relaxed">
+              <p className="text-sm text-[oklch(0.45_0_0)] leading-relaxed">
                 Enter your ZIP code to instantly see federal programs + state-specific benefits + local deals available in your area — from state pharmaceutical assistance to local senior center programs.
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function Home() {
                       <MapPin className="w-4.5 h-4.5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-[oklch(0.22_0.02_50)]">Open Benefits Hub</p>
+                      <p className="text-sm font-bold text-[oklch(0.15_0.04_175)]">Open Benefits Hub</p>
                       <p className="text-xs text-muted-foreground">Enter ZIP to filter by location</p>
                     </div>
                   </div>
@@ -155,10 +155,10 @@ export default function Home() {
       <section className="container py-16">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <h2 className="text-3xl font-bold text-[oklch(0.15_0.04_175)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Browse by Category
             </h2>
-            <p className="text-[oklch(0.52_0.04_60)] mt-1">
+            <p className="text-[oklch(0.45_0_0)] mt-1">
               Explore discounts across every area of daily life
             </p>
           </div>
@@ -200,12 +200,12 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="bg-white border-y border-[oklch(0.88_0.02_75)]">
+      <section className="bg-white border-y border-[oklch(0.90_0_0)]">
         <div className="container py-16">
-          <h2 className="text-3xl font-bold text-center text-[oklch(0.22_0.02_50)] mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <h2 className="text-3xl font-bold text-center text-[oklch(0.15_0.04_175)] mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             How HealthCare Select Benefits Hub Works
           </h2>
-          <p className="text-center text-[oklch(0.52_0.04_60)] mb-12">Simple, fast, and always up to date</p>
+          <p className="text-center text-[oklch(0.45_0_0)] mb-12">Simple, fast, and always up to date</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -234,10 +234,10 @@ export default function Home() {
                 >
                   {step.step}
                 </div>
-                <h3 className="font-bold text-lg text-[oklch(0.22_0.02_50)] mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <h3 className="font-bold text-lg text-[oklch(0.15_0.04_175)] mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   {step.title}
                 </h3>
-                <p className="text-sm text-[oklch(0.52_0.04_60)] leading-relaxed">{step.desc}</p>
+                <p className="text-sm text-[oklch(0.45_0_0)] leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -284,7 +284,7 @@ export default function Home() {
       </section>
 
       {/* Social Programs teaser */}
-      <section className="bg-white border-y border-[oklch(0.88_0.02_75)]">
+      <section className="bg-white border-y border-[oklch(0.90_0_0)]">
         <div className="container py-12">
           <div className="flex items-end justify-between mb-6">
             <div>
@@ -292,10 +292,10 @@ export default function Home() {
                 <BookOpen className="w-4 h-4" style={{ color: "oklch(0.35 0.08 250)" }} />
                 <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "oklch(0.35 0.08 250)" }}>Benefits Education Hub</span>
               </div>
-              <h2 className="text-3xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              <h2 className="text-3xl font-bold text-[oklch(0.15_0.04_175)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 Social Programs for Disabled Americans
               </h2>
-              <p className="text-[oklch(0.52_0.04_60)] mt-1 max-w-xl">
+              <p className="text-[oklch(0.45_0_0)] mt-1 max-w-xl">
                 Step-by-step guides to 16 federal programs — how to apply, update income, and connect to official portals.
               </p>
             </div>
@@ -311,11 +311,11 @@ export default function Home() {
               { label: "ADA & Legal Rights", desc: "Protections & advocacy", icon: Scale, color: "oklch(0.35 0.08 250)", bg: "oklch(0.92 0.03 250)" },
             ].map((item) => (
               <Link key={item.label} href="/social-programs">
-                <div className="group p-4 rounded-xl border border-[oklch(0.88_0.02_75)] bg-[oklch(0.98_0.012_80)] hover:shadow-md transition-all cursor-pointer">
+                <div className="group p-4 rounded-xl border border-[oklch(0.90_0_0)] bg-[oklch(1_0_0)] hover:shadow-md transition-all cursor-pointer">
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center mb-2.5" style={{ background: item.bg }}>
                     <item.icon className="w-4.5 h-4.5" style={{ color: item.color }} />
                   </div>
-                  <p className="text-sm font-bold text-[oklch(0.22_0.02_50)] leading-snug" style={{ fontFamily: "'DM Sans', sans-serif" }}>{item.label}</p>
+                  <p className="text-sm font-bold text-[oklch(0.15_0.04_175)] leading-snug" style={{ fontFamily: "'DM Sans', sans-serif" }}>{item.label}</p>
                   <p className="text-xs text-[oklch(0.55_0.03_60)] mt-0.5">{item.desc}</p>
                 </div>
               </Link>
@@ -325,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* LifeMart teaser */}
-      <section className="border-y border-[oklch(0.88_0.02_75)]" style={{ background: "oklch(0.18 0.04 42)" }}>
+      <section className="border-y border-[oklch(0.90_0_0)]" style={{ background: "oklch(0.18 0.04 42)" }}>
         <div className="container py-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
@@ -361,7 +361,7 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-[oklch(0.22_0.02_50/0.75)]" />
+          <div className="absolute inset-0 bg-[oklch(0.15_0.04_175/0.75)]" />
           <div className="relative px-8 py-12 md:py-16 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Unlock Every Discount Today

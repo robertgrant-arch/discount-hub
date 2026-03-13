@@ -45,7 +45,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
   return (
     <div
       className={`relative bg-white rounded-xl border transition-all duration-200 hover:shadow-md group ${
-        showFull ? "border-[oklch(0.88_0.02_75)]" : "border-[oklch(0.92_0.015_75)]"
+        showFull ? "border-[oklch(0.90_0_0)]" : "border-[oklch(0.92_0.015_75)]"
       }`}
     >
       {/* Audience badge */}
@@ -60,7 +60,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
             onClick={handleFavorite}
             className={`p-1.5 rounded-lg transition-colors ${
               isFavorited
-                ? "text-[oklch(0.45 0.08 175)] bg-[oklch(0.95_0.03_42)]"
+                ? "text-[oklch(0.45 0.08 175)] bg-[oklch(0.95_0_0)]"
                 : "text-[oklch(0.65_0.03_60)] hover:bg-[oklch(0.95_0.015_80)]"
             }`}
             title="Save to favorites"
@@ -79,7 +79,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
 
       <div className="px-4 pt-2 pb-4">
         {/* Company name */}
-        <h3 className="font-semibold text-[oklch(0.22_0.02_50)] text-sm leading-tight mb-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+        <h3 className="font-semibold text-[oklch(0.15_0.04_175)] text-sm leading-tight mb-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>
           {item.name}
         </h3>
 
@@ -92,14 +92,14 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
           <>
             {/* Age/eligibility */}
             {(item.age_requirement || item.eligibility) && (
-              <p className="text-xs text-[oklch(0.52_0.04_60)] mb-1">
+              <p className="text-xs text-[oklch(0.45_0_0)] mb-1">
                 <span className="font-medium">Eligibility:</span>{" "}
                 {item.age_requirement || item.eligibility}
               </p>
             )}
 
             {/* Conditions */}
-            <p className="text-xs text-[oklch(0.52_0.04_60)] mb-3 line-clamp-2">
+            <p className="text-xs text-[oklch(0.45_0_0)] mb-3 line-clamp-2">
               {item.conditions}
             </p>
 
@@ -124,8 +124,8 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
           /* Locked state */
           <div className="relative">
             <div className="blur-sm select-none pointer-events-none">
-              <p className="text-xs text-[oklch(0.52_0.04_60)] mb-1">Eligibility: Age 55+</p>
-              <p className="text-xs text-[oklch(0.52_0.04_60)] mb-3">Must present valid ID at time of purchase</p>
+              <p className="text-xs text-[oklch(0.45_0_0)] mb-1">Eligibility: Age 55+</p>
+              <p className="text-xs text-[oklch(0.45_0_0)] mb-3">Must present valid ID at time of purchase</p>
               <p className="text-xs text-[oklch(0.40_0.04_50)] mb-3 bg-[oklch(0.97_0.01_80)] rounded-lg px-3 py-2">
                 How to access: Ask at register
               </p>

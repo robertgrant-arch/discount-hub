@@ -93,7 +93,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
         </div>
 
         {/* Tabs */}
-        <div className="flex border-b border-[oklch(0.88_0.02_75)] bg-white">
+        <div className="flex border-b border-[oklch(0.90_0_0)] bg-white">
           {(["login", "signup"] as const).map((t) => (
             <button
               key={t}
@@ -101,7 +101,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
               className={`flex-1 py-3 text-sm font-semibold transition-colors border-b-2 -mb-px ${
                 tab === t
                   ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45 0.08 175)]"
-                  : "border-transparent text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.35_0.04_50)]"
+                  : "border-transparent text-[oklch(0.45_0_0)] hover:text-[oklch(0.35_0.04_50)]"
               }`}
             >
               {t === "login" ? "Sign In" : "Create Account"}
@@ -126,7 +126,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                     value={loginEmail}
                     onChange={(e) => setLoginEmail(e.target.value)}
                     required
-                    className="pl-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.88_0.02_75)]"
+                    className="pl-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.90_0_0)]"
                   />
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                     value={loginPass}
                     onChange={(e) => setLoginPass(e.target.value)}
                     required
-                    className="pl-9 pr-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.88_0.02_75)]"
+                    className="pl-9 pr-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.90_0_0)]"
                   />
                   <button
                     type="button"
@@ -172,7 +172,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
 
               <div className="relative my-2">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-[oklch(0.88_0.02_75)]" />
+                  <div className="w-full border-t border-[oklch(0.90_0_0)]" />
                 </div>
                 <div className="relative flex justify-center">
                   <span className="bg-white px-3 text-xs text-[oklch(0.60_0.03_60)]">or</span>
@@ -182,7 +182,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
               <button
                 type="button"
                 onClick={fillDemo}
-                className="w-full py-2.5 rounded-lg text-sm font-medium border border-dashed border-[oklch(0.72_0.09_42)] text-[oklch(0.40_0.13_42)] bg-[oklch(0.97_0.02_42)] hover:bg-[oklch(0.93_0.04_42)] transition-colors"
+                className="w-full py-2.5 rounded-lg text-sm font-medium border border-dashed border-[oklch(0.72_0.09_42)] text-[oklch(0.40_0.08_175)] bg-[oklch(0.97_0.02_42)] hover:bg-[oklch(0.93_0_0)] transition-colors"
               >
                 Use Demo Premium Account
               </button>
@@ -208,7 +208,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                     value={signupName}
                     onChange={(e) => setSignupName(e.target.value)}
                     required
-                    className="pl-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.88_0.02_75)]"
+                    className="pl-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.90_0_0)]"
                   />
                 </div>
               </div>
@@ -226,7 +226,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                     value={signupEmail}
                     onChange={(e) => setSignupEmail(e.target.value)}
                     required
-                    className="pl-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.88_0.02_75)]"
+                    className="pl-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.90_0_0)]"
                   />
                 </div>
               </div>
@@ -244,7 +244,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                     value={signupPass}
                     onChange={(e) => setSignupPass(e.target.value)}
                     required
-                    className="pl-9 pr-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.88_0.02_75)]"
+                    className="pl-9 pr-9 bg-[oklch(0.98_0.008_80)] border-[oklch(0.90_0_0)]"
                   />
                   <button
                     type="button"

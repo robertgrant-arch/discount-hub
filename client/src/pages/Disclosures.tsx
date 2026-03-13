@@ -19,7 +19,7 @@ export default function Disclosures() {
               <div className="w-10 h-10 rounded-full bg-[oklch(0.45 0.08 175)] flex items-center justify-center">
                 <Shield className="w-5 h-5 text-white" />
               </div>
-              <span className="text-sm font-semibold text-[oklch(0.45_0.13_42)] uppercase tracking-widest">
+              <span className="text-sm font-semibold text-[oklch(0.45_0.08_175)] uppercase tracking-widest">
                 Legal & Transparency
               </span>
             </div>
@@ -156,7 +156,7 @@ export default function Disclosures() {
               </p>
               <a
                 href="mailto:admin@discounthub.com"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[oklch(0.45_0.13_42)] hover:underline"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[oklch(0.45_0.08_175)] hover:underline"
               >
                 <Mail className="w-4 h-4" />
                 admin@discounthub.com

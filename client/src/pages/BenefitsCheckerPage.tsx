@@ -11,7 +11,7 @@ export default function BenefitsCheckerPage() {
 
               {/* Page hero */}
         <div
-          className="relative border-b border-[oklch(0.88_0.02_75)]"
+          className="relative border-b border-[oklch(0.90_0_0)]"
           style={{ background: "linear-gradient(135deg, oklch(0.15 0 0) 0%, oklch(0.30 0.06 175) 100%)" }}
         >
           <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />

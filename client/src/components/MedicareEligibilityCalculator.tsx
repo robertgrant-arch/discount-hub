@@ -397,7 +397,7 @@ function ResultCard({ result, defaultOpen = false }: { result: EligResult; defau
 
           {result.nextWindow && (
             <div className="flex items-start gap-2 text-xs text-muted-foreground bg-muted/60 rounded-lg px-3 py-2">
-              <CalendarDays className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[oklch(0.45_0.13_42)]" />
+              <CalendarDays className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[oklch(0.45_0.08_175)]" />
               <span>{result.nextWindow}</span>
             </div>
           )}
@@ -417,9 +417,9 @@ function ResultCard({ result, defaultOpen = false }: { result: EligResult; defau
           )}
 
           {result.warning && (
-            <div className="flex items-start gap-2 text-xs bg-[oklch(0.96_0.04_42)] border border-[oklch(0.85_0.07_42)] rounded-lg px-3 py-2">
-              <AlertCircle className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[oklch(0.50_0.13_42)]" />
-              <span className="text-[oklch(0.35_0.10_42)] leading-relaxed">{result.warning}</span>
+            <div className="flex items-start gap-2 text-xs bg-[oklch(0.96_0_0)] border border-[oklch(0.85_0.07_42)] rounded-lg px-3 py-2">
+              <AlertCircle className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[oklch(0.50_0.08_175)]" />
+              <span className="text-[oklch(0.35_0_0)] leading-relaxed">{result.warning}</span>
             </div>
           )}
         </div>
@@ -545,7 +545,7 @@ export default function MedicareEligibilityCalculator() {
 
         {/* ── Left: Input Form ───────────────────────────────────────────── */}
         <div className="p-6 space-y-5">
-          <p className="text-xs font-bold uppercase tracking-widest text-[oklch(0.45_0.13_42)]">
+          <p className="text-xs font-bold uppercase tracking-widest text-[oklch(0.45_0.08_175)]">
             Your Information
           </p>
 
@@ -559,7 +559,7 @@ export default function MedicareEligibilityCalculator() {
               value={form.dob}
               onChange={(e) => set("dob", e.target.value)}
               max={new Date().toISOString().split("T")[0]}
-              className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-[oklch(0.45_0.13_42)] transition"
+              className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-[oklch(0.45_0.08_175)] transition"
             />
             {results.age !== null && (
               <p className="text-xs text-muted-foreground mt-1">
@@ -595,7 +595,7 @@ export default function MedicareEligibilityCalculator() {
                 value={form.partBStartDate}
                 onChange={(e) => set("partBStartDate", e.target.value)}
                 max={new Date().toISOString().split("T")[0]}
-                className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-[oklch(0.45_0.13_42)] transition"
+                className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-[oklch(0.45_0.08_175)] transition"
               />
             </div>
           )}
@@ -642,7 +642,7 @@ export default function MedicareEligibilityCalculator() {
                     type="checkbox"
                     checked={!!form.seps[sep.id]}
                     onChange={(e) => setSEP(sep.id, e.target.checked)}
-                    className="mt-0.5 w-4 h-4 rounded border-border accent-[oklch(0.45_0.13_42)] shrink-0"
+                    className="mt-0.5 w-4 h-4 rounded border-border accent-[oklch(0.45_0.08_175)] shrink-0"
                   />
                   <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-snug">
                     {sep.label}
@@ -668,7 +668,7 @@ export default function MedicareEligibilityCalculator() {
         {/* ── Right: Results ─────────────────────────────────────────────── */}
         <div className="p-6 space-y-4">
           <div className="flex items-center justify-between">
-            <p className="text-xs font-bold uppercase tracking-widest text-[oklch(0.45_0.13_42)]">
+            <p className="text-xs font-bold uppercase tracking-widest text-[oklch(0.45_0.08_175)]">
               Your Eligibility Results
             </p>
             {showResults && (
@@ -706,11 +706,11 @@ export default function MedicareEligibilityCalculator() {
 
           {/* Part D Penalty Warning Banner */}
           {results.partD.warning && (
-            <div className="rounded-xl border border-[oklch(0.80_0.10_42)] bg-[oklch(0.96_0.04_42)] px-4 py-3 flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-[oklch(0.50_0.13_42)] shrink-0 mt-0.5" />
+            <div className="rounded-xl border border-[oklch(0.80_0_0)] bg-[oklch(0.96_0_0)] px-4 py-3 flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-[oklch(0.50_0.08_175)] shrink-0 mt-0.5" />
               <div>
-                <p className="text-xs font-bold text-[oklch(0.35_0.10_42)] mb-1">Part D Late Enrollment Penalty</p>
-                <p className="text-xs text-[oklch(0.40_0.10_42)] leading-relaxed">{results.partD.warning}</p>
+                <p className="text-xs font-bold text-[oklch(0.35_0_0)] mb-1">Part D Late Enrollment Penalty</p>
+                <p className="text-xs text-[oklch(0.40_0_0)] leading-relaxed">{results.partD.warning}</p>
               </div>
             </div>
           )}

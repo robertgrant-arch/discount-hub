@@ -21,7 +21,7 @@ function FindhelpProgramCard({ program }: { program: FindhelpProgram }) {
     : null;
 
   return (
-    <div className="bg-white rounded-xl border border-[oklch(0.88_0.02_75)] shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-xl border border-[oklch(0.90_0_0)] shadow-sm overflow-hidden hover:shadow-md transition-shadow">
       <button
         className="w-full text-left p-4 flex items-start gap-3"
         onClick={() => setExpanded(!expanded)}

@@ -34,11 +34,11 @@ function AffiliateProgramCard({ program }: { program: AffiliateProgram }) {
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1 flex-wrap">
-            <span className="font-semibold text-sm text-foreground group-hover:text-[oklch(0.45_0.13_42)] transition-colors">
+            <span className="font-semibold text-sm text-foreground group-hover:text-[oklch(0.45_0.08_175)] transition-colors">
               {program.name}
             </span>
             {program.badge && (
-              <span className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-[oklch(0.93_0.04_42)] text-[oklch(0.45_0.13_42)]">
+              <span className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-[oklch(0.93_0_0)] text-[oklch(0.45_0.08_175)]">
                 {program.badge}
               </span>
             )}
@@ -47,7 +47,7 @@ function AffiliateProgramCard({ program }: { program: AffiliateProgram }) {
           <span className="text-xs text-muted-foreground">via {program.network}</span>
         </div>
         <div className="flex flex-col items-end gap-2 shrink-0">
-          <Button size="sm" className="text-xs bg-[oklch(0.45_0.13_42)] hover:bg-[oklch(0.38_0.13_42)] text-white whitespace-nowrap">
+          <Button size="sm" className="text-xs bg-[oklch(0.45_0.08_175)] hover:bg-[oklch(0.38_0.08_175)] text-white whitespace-nowrap">
             {program.cta}
             <ExternalLink className="w-3 h-3 ml-1" />
           </Button>

@@ -216,7 +216,7 @@ export default function LifeMart() {
       <main className="flex-1">
 
         {/* ─── Hero ─── */}
-        <section className="relative overflow-hidden bg-[oklch(0.18_0.04_42)] text-white py-14 md:py-20">
+        <section className="relative overflow-hidden bg-[oklch(0.18_0_0)] text-white py-14 md:py-20">
           <div className="absolute inset-0 opacity-10"
             style={{ backgroundImage: "radial-gradient(circle at 20% 50%, oklch(0.65 0.15 42) 0%, transparent 60%), radial-gradient(circle at 80% 20%, oklch(0.55 0.12 200) 0%, transparent 50%)" }} />
           <div className="container relative z-10">

@@ -50,7 +50,7 @@ export default function UserMenu() {
           {initials}
         </div>
         <div className="hidden md:block text-left">
-          <p className="text-xs font-semibold text-[oklch(0.22_0.02_50)] leading-tight">{user.name}</p>
+          <p className="text-xs font-semibold text-[oklch(0.15_0.04_175)] leading-tight">{user.name}</p>
           <p
             className="text-[10px] font-semibold leading-tight"
             style={{ color: tier.color }}
@@ -58,15 +58,15 @@ export default function UserMenu() {
             {tier.label}
           </p>
         </div>
-        <ChevronDown className={`w-3.5 h-3.5 text-[oklch(0.52_0.04_60)] transition-transform ${open ? "rotate-180" : ""}`} />
+        <ChevronDown className={`w-3.5 h-3.5 text-[oklch(0.45_0_0)] transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl border border-[oklch(0.88_0.02_75)] shadow-xl z-50 overflow-hidden">
+        <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl border border-[oklch(0.90_0_0)] shadow-xl z-50 overflow-hidden">
           {/* User info header */}
-          <div className="px-4 py-3 border-b border-[oklch(0.88_0.02_75)] bg-[oklch(0.98_0.01_80)]">
-            <p className="text-sm font-semibold text-[oklch(0.22_0.02_50)]">{user.name}</p>
-            <p className="text-xs text-[oklch(0.52_0.04_60)] truncate">{user.email}</p>
+          <div className="px-4 py-3 border-b border-[oklch(0.90_0_0)] bg-[oklch(0.98_0.01_80)]">
+            <p className="text-sm font-semibold text-[oklch(0.15_0.04_175)]">{user.name}</p>
+            <p className="text-xs text-[oklch(0.45_0_0)] truncate">{user.email}</p>
             <span
               className="inline-block mt-1.5 text-[10px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: tier.bg, color: tier.color }}
@@ -108,10 +108,10 @@ export default function UserMenu() {
             </Link>
           </div>
 
-          <div className="border-t border-[oklch(0.88_0.02_75)] py-1.5">
+          <div className="border-t border-[oklch(0.90_0_0)] py-1.5">
             <button
               onClick={() => { logout(); setOpen(false); }}
-              className="flex items-center gap-2.5 w-full px-4 py-2.5 text-sm text-[oklch(0.52_0.04_60)] hover:bg-[oklch(0.97_0.01_80)] hover:text-[oklch(0.577_0.245_27.325)] transition-colors"
+              className="flex items-center gap-2.5 w-full px-4 py-2.5 text-sm text-[oklch(0.45_0_0)] hover:bg-[oklch(0.97_0.01_80)] hover:text-[oklch(0.577_0.245_27.325)] transition-colors"
             >
               <LogOut className="w-4 h-4" />
               Sign Out

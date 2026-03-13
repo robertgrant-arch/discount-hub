@@ -15,12 +15,12 @@ const TIER_STYLES: Record<string, { bg: string; text: string; border: string; bt
   free: {
     bg: "bg-white",
     text: "text-[oklch(0.35_0.04_50)]",
-    border: "border-[oklch(0.88_0.02_75)]",
-    btn: "bg-[oklch(0.93_0.02_80)] text-[oklch(0.35_0.04_50)] hover:bg-[oklch(0.88_0.02_75)]",
+    border: "border-[oklch(0.90_0_0)]",
+    btn: "bg-[oklch(0.93_0.02_80)] text-[oklch(0.35_0.04_50)] hover:bg-[oklch(0.90_0_0)]",
   },
   basic: {
     bg: "bg-white",
-    text: "text-[oklch(0.40_0.13_42)]",
+    text: "text-[oklch(0.40_0.08_175)]",
     border: "border-[oklch(0.72_0.09_42)]",
     btn: "text-white hover:opacity-90",
   },
@@ -31,10 +31,10 @@ const TIER_STYLES: Record<string, { bg: string; text: string; border: string; bt
     btn: "text-white hover:opacity-90",
   },
   premium: {
-    bg: "bg-gradient-to-br from-[oklch(0.45 0.08 175)] to-[oklch(0.40_0.13_42)]",
+    bg: "bg-gradient-to-br from-[oklch(0.45 0.08 175)] to-[oklch(0.40_0.08_175)]",
     text: "text-white",
     border: "border-transparent",
-    btn: "bg-white text-[oklch(0.40_0.13_42)] hover:bg-white/90",
+    btn: "bg-white text-[oklch(0.40_0.08_175)] hover:bg-white/90",
   },
 };
 
@@ -63,12 +63,12 @@ export default function Pricing() {
   const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.98_0.012_80)]">
+    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
       <Navbar />
 
       {/* Header */}
       <div
-            className="relative border-b border-[oklch(0.88_0.02_75)]"
+            className="relative border-b border-[oklch(0.90_0_0)]"
             style={{ background: "linear-gradient(135deg, oklch(0.15 0 0) 0%, oklch(0.30 0.06 175) 100%)" }}
           >
             <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
@@ -102,7 +102,7 @@ export default function Pricing() {
               </div>
             </div>
           </div>
-          <div className="bg-white border-b border-[oklch(0.88_0.02_75)]">
+          <div className="bg-white border-b border-[oklch(0.90_0_0)]">
           <div className="container py-12 text-center">
 
           {/* Billing toggle */}
@@ -110,7 +110,7 @@ export default function Pricing() {
             <button
               onClick={() => setBilling("monthly")}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
-                billing === "monthly" ? "bg-white shadow-sm text-[oklch(0.22_0.02_50)]" : "text-[oklch(0.52_0.04_60)]"
+                billing === "monthly" ? "bg-white shadow-sm text-[oklch(0.15_0.04_175)]" : "text-[oklch(0.45_0_0)]"
               }`}
             >
               Monthly
@@ -118,7 +118,7 @@ export default function Pricing() {
             <button
               onClick={() => setBilling("yearly")}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all flex items-center gap-1.5 ${
-                billing === "yearly" ? "bg-white shadow-sm text-[oklch(0.22_0.02_50)]" : "text-[oklch(0.52_0.04_60)]"
+                billing === "yearly" ? "bg-white shadow-sm text-[oklch(0.15_0.04_175)]" : "text-[oklch(0.45_0_0)]"
               }`}
             >
               Yearly
@@ -158,26 +158,26 @@ export default function Pricing() {
 
                 <div className="mb-4">
                   <h3
-                    className={`text-xl font-bold mb-1 ${plan.id === "premium" ? "text-white" : "text-[oklch(0.22_0.02_50)]"}`}
+                    className={`text-xl font-bold mb-1 ${plan.id === "premium" ? "text-white" : "text-[oklch(0.15_0.04_175)]"}`}
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
                     {plan.name}
                   </h3>
                   <div className="flex items-end gap-1">
                     <span
-                      className={`text-4xl font-bold ${plan.id === "premium" ? "text-white" : "text-[oklch(0.22_0.02_50)]"}`}
+                      className={`text-4xl font-bold ${plan.id === "premium" ? "text-white" : "text-[oklch(0.15_0.04_175)]"}`}
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
                       ${price}
                     </span>
                     {plan.price > 0 && (
-                      <span className={`text-sm mb-1.5 ${plan.id === "premium" ? "text-white/70" : "text-[oklch(0.52_0.04_60)]"}`}>
+                      <span className={`text-sm mb-1.5 ${plan.id === "premium" ? "text-white/70" : "text-[oklch(0.45_0_0)]"}`}>
                         /mo
                       </span>
                     )}
                   </div>
                   {billing === "yearly" && plan.price > 0 && (
-                    <p className={`text-xs mt-0.5 ${plan.id === "premium" ? "text-white/70" : "text-[oklch(0.52_0.04_60)]"}`}>
+                    <p className={`text-xs mt-0.5 ${plan.id === "premium" ? "text-white/70" : "text-[oklch(0.45_0_0)]"}`}>
                       Billed ${plan.yearlyPrice}/year
                     </p>
                   )}
@@ -199,7 +199,7 @@ export default function Pricing() {
 
                 {isCurrent ? (
                   <div className={`text-center text-sm font-semibold py-2.5 rounded-xl border ${
-                    plan.id === "premium" ? "border-white/30 text-white" : "border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)]"
+                    plan.id === "premium" ? "border-white/30 text-white" : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)]"
                   }`}>
                     Current Plan
                   </div>
@@ -227,13 +227,13 @@ export default function Pricing() {
 
         {/* Comparison table */}
         <div className="mt-16">
-          <h2 className="text-2xl font-bold text-center text-[oklch(0.22_0.02_50)] mb-8" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <h2 className="text-2xl font-bold text-center text-[oklch(0.15_0.04_175)] mb-8" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             Full Feature Comparison
           </h2>
-          <div className="bg-white rounded-2xl border border-[oklch(0.88_0.02_75)] overflow-hidden shadow-sm">
+          <div className="bg-white rounded-2xl border border-[oklch(0.90_0_0)] overflow-hidden shadow-sm">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[oklch(0.88_0.02_75)]">
+                <tr className="border-b border-[oklch(0.90_0_0)]">
                   <th className="text-left px-6 py-4 text-[oklch(0.35_0.04_50)] font-semibold">Feature</th>
                   {PLANS.map((p) => (
                     <th key={p.id} className="px-4 py-4 text-center font-semibold" style={{ color: TIER_ACCENT[p.id] === "white" ? "oklch(0.45 0.08 175)" : TIER_ACCENT[p.id] }}>
@@ -264,7 +264,7 @@ export default function Pricing() {
 
         {/* FAQ */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-[oklch(0.52_0.04_60)]">
+          <p className="text-sm text-[oklch(0.45_0_0)]">
             All plans include a 7-day free trial. Cancel anytime. No hidden fees.
           </p>
         </div>

@@ -41,7 +41,7 @@ function StateProgramCard({ program }: { program: StateProgram }) {
     : <Building2 className="w-3 h-3" />;
 
   return (
-    <div className="bg-white rounded-xl border border-[oklch(0.88_0.02_75)] shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-xl border border-[oklch(0.90_0_0)] shadow-sm overflow-hidden hover:shadow-md transition-shadow">
       <button
         className="w-full text-left p-4 flex items-start gap-3"
         onClick={() => setExpanded(!expanded)}
@@ -54,7 +54,7 @@ function StateProgramCard({ program }: { program: StateProgram }) {
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2">
-            <h3 className="font-semibold text-sm text-[oklch(0.22_0.02_50)] leading-snug pr-2">{program.name}</h3>
+            <h3 className="font-semibold text-sm text-[oklch(0.15_0.04_175)] leading-snug pr-2">{program.name}</h3>
             {expanded ? <ChevronUp className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" /> : <ChevronDown className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />}
           </div>
           <div className="flex items-center gap-2 mt-1 flex-wrap">
@@ -99,7 +99,7 @@ function StateProgramCard({ program }: { program: StateProgram }) {
               <a
                 href={program.website}
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border border-[oklch(0.45 0.08 175)] text-[oklch(0.45_0.13_42)] hover:bg-[oklch(0.93_0.04_42)] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border border-[oklch(0.45 0.08 175)] text-[oklch(0.45_0.08_175)] hover:bg-[oklch(0.93_0_0)] transition-colors"
               >
                 <ExternalLink className="w-3 h-3" /> Visit Website
               </a>
@@ -156,7 +156,7 @@ export default function StateProgramsSection({
     <div className="space-y-4">
       <div className="flex items-center justify-between flex-wrap gap-3">
         <div>
-          <h2 className="font-['Playfair_Display'] text-xl font-bold text-[oklch(0.22_0.02_50)]">
+          <h2 className="font-['Playfair_Display'] text-xl font-bold text-[oklch(0.15_0.04_175)]">
             {title}
           </h2>
           <p className="text-xs text-muted-foreground mt-0.5">
@@ -168,7 +168,7 @@ export default function StateProgramsSection({
       </div>
 
       {showZipFilter && (
-        <div className="bg-[oklch(0.96_0.02_42)] rounded-xl border border-[oklch(0.88_0.04_42)] p-4">
+        <div className="bg-[oklch(0.96_0.02_42)] rounded-xl border border-[oklch(0.88_0_0)] p-4">
           <div className="flex items-center gap-2 mb-3">
             <MapPin className="w-4 h-4 text-[oklch(0.45 0.08 175)]" />
             <span className="text-sm font-semibold text-[oklch(0.35_0.06_42)]">
@@ -200,7 +200,7 @@ export default function StateProgramsSection({
       {hasMore && (
         <button
           onClick={() => setShowAll(true)}
-          className="w-full py-2.5 text-sm font-semibold text-[oklch(0.45_0.13_42)] border border-[oklch(0.82_0.06_42)] rounded-lg hover:bg-[oklch(0.93_0.04_42)] transition-colors"
+          className="w-full py-2.5 text-sm font-semibold text-[oklch(0.45_0.08_175)] border border-[oklch(0.82_0.06_42)] rounded-lg hover:bg-[oklch(0.93_0_0)] transition-colors"
         >
           Show {programs.length - (maxItems || 0)} more programs
         </button>

@@ -102,7 +102,7 @@ export default function Navbar() {
         Skip to main content
       </a>
 
-      <header className="sticky top-0 z-50 bg-[oklch(0.98_0.012_80)] border-b border-[oklch(0.88_0.02_75)] shadow-sm">
+      <header className="sticky top-0 z-50 bg-[oklch(1_0_0)] border-b border-[oklch(0.90_0_0)] shadow-sm">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
 
@@ -192,14 +192,14 @@ export default function Navbar() {
 
           {/* Expanded menu — shows ALL links in priority order */}
           {mobileOpen && (
-            <div className="border-t border-[oklch(0.88_0.02_75)] py-4 space-y-1">
+            <div className="border-t border-[oklch(0.90_0_0)] py-4 space-y-1">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={`flex items-center gap-2.5 text-sm font-medium py-2.5 px-3 rounded-lg transition-colors ${
                     location === link.href
-                      ? "text-[oklch(0.45 0.08 175)] bg-[oklch(0.95_0.03_42)]"
+                      ? "text-[oklch(0.45 0.08 175)] bg-[oklch(0.95_0_0)]"
                       : "text-[oklch(0.45_0.03_60)] hover:text-[oklch(0.45 0.08 175)] hover:bg-[oklch(0.97_0.01_80)]"
                   }`}
                   onClick={() => setMobileOpen(false)}

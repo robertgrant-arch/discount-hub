@@ -45,7 +45,7 @@ export default function Checkout() {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <div className="container py-16 text-center">
-          <p className="text-[oklch(0.52_0.04_60)]">Invalid plan selected.</p>
+          <p className="text-[oklch(0.45_0_0)]">Invalid plan selected.</p>
           <Link href="/pricing" className="text-sm font-medium mt-4 inline-block" style={{ color: "oklch(0.45 0.08 175)" }}>
             ← Back to pricing
           </Link>
@@ -102,11 +102,11 @@ export default function Checkout() {
           <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg" style={{ background: "oklch(0.88 0.04 140)" }}>
             <CheckCircle2 className="w-8 h-8" style={{ color: "oklch(0.32 0.09 140)" }} />
           </div>
-          <h1 className="text-3xl font-bold text-[oklch(0.22_0.02_50)] mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <h1 className="text-3xl font-bold text-[oklch(0.15_0.04_175)] mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             You're all set!
           </h1>
               <PageHaiku lines={["One small step today", "Unlocks a world of savings", "Membership blooms bright"]} />
-          <p className="text-[oklch(0.52_0.04_60)] mb-2">
+          <p className="text-[oklch(0.45_0_0)] mb-2">
             Welcome to <strong>HealthCare Select Benefits Hub {plan.name}</strong>. Your membership is now active.
           </p>
           <p className="text-sm text-[oklch(0.60_0.03_60)] mb-8">
@@ -124,18 +124,18 @@ export default function Checkout() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.98_0.012_80)]">
+    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
       <Navbar />
 
       <div className="container py-10 max-w-4xl mx-auto">
-        <Link href="/pricing" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] mb-6 transition-colors">
+        <Link href="/pricing" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.45_0_0)] hover:text-[oklch(0.45 0.08 175)] mb-6 transition-colors">
           <ArrowLeft className="w-3.5 h-3.5" /> Back to pricing
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Order summary */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl border border-[oklch(0.88_0.02_75)] p-6 shadow-sm sticky top-24">
+            <div className="bg-white rounded-2xl border border-[oklch(0.90_0_0)] p-6 shadow-sm sticky top-24">
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.68 0.15 55)" }}>
                   <Tag className="w-4 h-4 text-white" />
@@ -153,8 +153,8 @@ export default function Checkout() {
                     onClick={() => setBilling(b)}
                     className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-all border ${
                       billing === b
-                        ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.40_0.13_42)] bg-[oklch(0.95_0.03_42)]"
-                        : "border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)]"
+                        ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.40_0.08_175)] bg-[oklch(0.95_0_0)]"
+                        : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)]"
                     }`}
                   >
                     {b === "monthly" ? "Monthly" : "Yearly (Save 20%)"}
@@ -162,20 +162,20 @@ export default function Checkout() {
                 ))}
               </div>
 
-              <div className="border-t border-[oklch(0.88_0.02_75)] pt-4 mb-4">
+              <div className="border-t border-[oklch(0.90_0_0)] pt-4 mb-4">
                 <div className="flex justify-between text-sm mb-2">
-                  <span className="text-[oklch(0.52_0.04_60)]">{plan.name} Plan ({billing})</span>
-                  <span className="font-semibold text-[oklch(0.22_0.02_50)]">${price.toFixed(2)}</span>
+                  <span className="text-[oklch(0.45_0_0)]">{plan.name} Plan ({billing})</span>
+                  <span className="font-semibold text-[oklch(0.15_0.04_175)]">${price.toFixed(2)}</span>
                 </div>
                 {billing === "yearly" && (
-                  <div className="flex justify-between text-xs text-[oklch(0.52_0.04_60)]">
+                  <div className="flex justify-between text-xs text-[oklch(0.45_0_0)]">
                     <span>That's ${monthlyEquiv}/mo</span>
                     <span className="text-[oklch(0.32_0.09_140)] font-medium">Save ${(plan.price * 12 - plan.yearlyPrice).toFixed(2)}/yr</span>
                   </div>
                 )}
               </div>
 
-              <div className="border-t border-[oklch(0.88_0.02_75)] pt-4 flex justify-between font-bold">
+              <div className="border-t border-[oklch(0.90_0_0)] pt-4 flex justify-between font-bold">
                 <span>Total today</span>
                 <span style={{ color: "oklch(0.45 0.08 175)" }}>${price.toFixed(2)}</span>
               </div>
@@ -198,10 +198,10 @@ export default function Checkout() {
 
           {/* Payment form */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-2xl border border-[oklch(0.88_0.02_75)] p-6 shadow-sm">
+            <div className="bg-white rounded-2xl border border-[oklch(0.90_0_0)] p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-6">
-                <Lock className="w-4 h-4 text-[oklch(0.52_0.04_60)]" />
-                <h2 className="font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <Lock className="w-4 h-4 text-[oklch(0.45_0_0)]" />
+                <h2 className="font-bold text-[oklch(0.15_0.04_175)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   Secure Payment
                 </h2>
                 <span className="ml-auto text-xs text-[oklch(0.60_0.03_60)] flex items-center gap-1">
@@ -223,7 +223,7 @@ export default function Checkout() {
                       value={form.email}
                       onChange={handleInput}
                       required
-                      className="bg-[oklch(0.98_0.008_80)] border-[oklch(0.88_0.02_75)]"
+                      className="bg-[oklch(0.98_0.008_80)] border-[oklch(0.90_0_0)]"
                     />
                   </div>
                   <div>
@@ -237,18 +237,18 @@ export default function Checkout() {
                       value={form.name}
                       onChange={handleInput}
                       required
-                      className="bg-[oklch(0.98_0.008_80)] border-[oklch(0.88_0.02_75)]"
+                      className="bg-[oklch(0.98_0.008_80)] border-[oklch(0.90_0_0)]"
                     />
                   </div>
                 </div>
 
-                <div className="border border-[oklch(0.88_0.02_75)] rounded-xl p-4 space-y-3 bg-[oklch(0.99_0.005_80)]">
+                <div className="border border-[oklch(0.90_0_0)] rounded-xl p-4 space-y-3 bg-[oklch(0.99_0.005_80)]">
                   <div className="flex items-center gap-2 mb-1">
-                    <CreditCard className="w-4 h-4 text-[oklch(0.52_0.04_60)]" />
+                    <CreditCard className="w-4 h-4 text-[oklch(0.45_0_0)]" />
                     <span className="text-xs font-semibold text-[oklch(0.40_0.04_50)]">Card Details</span>
                     <div className="ml-auto flex gap-1.5">
                       {["VISA", "MC", "AMEX"].map((brand) => (
-                        <span key={brand} className="text-[9px] font-bold px-1.5 py-0.5 rounded border border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)]">
+                        <span key={brand} className="text-[9px] font-bold px-1.5 py-0.5 rounded border border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)]">
                           {brand}
                         </span>
                       ))}
@@ -256,7 +256,7 @@ export default function Checkout() {
                   </div>
 
                   <div>
-                    <Label htmlFor="cardNumber" className="text-xs font-medium text-[oklch(0.52_0.04_60)] mb-1 block">
+                    <Label htmlFor="cardNumber" className="text-xs font-medium text-[oklch(0.45_0_0)] mb-1 block">
                       Card Number *
                     </Label>
                     <Input
@@ -266,13 +266,13 @@ export default function Checkout() {
                       value={form.cardNumber}
                       onChange={handleInput}
                       required
-                      className="bg-white border-[oklch(0.88_0.02_75)] font-mono"
+                      className="bg-white border-[oklch(0.90_0_0)] font-mono"
                     />
                   </div>
 
                   <div className="grid grid-cols-3 gap-3">
                     <div className="col-span-2">
-                      <Label htmlFor="expiry" className="text-xs font-medium text-[oklch(0.52_0.04_60)] mb-1 block">
+                      <Label htmlFor="expiry" className="text-xs font-medium text-[oklch(0.45_0_0)] mb-1 block">
                         Expiry *
                       </Label>
                       <Input
@@ -282,11 +282,11 @@ export default function Checkout() {
                         value={form.expiry}
                         onChange={handleInput}
                         required
-                        className="bg-white border-[oklch(0.88_0.02_75)] font-mono"
+                        className="bg-white border-[oklch(0.90_0_0)] font-mono"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="cvc" className="text-xs font-medium text-[oklch(0.52_0.04_60)] mb-1 block">
+                      <Label htmlFor="cvc" className="text-xs font-medium text-[oklch(0.45_0_0)] mb-1 block">
                         CVC *
                       </Label>
                       <Input
@@ -296,7 +296,7 @@ export default function Checkout() {
                         value={form.cvc}
                         onChange={handleInput}
                         required
-                        className="bg-white border-[oklch(0.88_0.02_75)] font-mono"
+                        className="bg-white border-[oklch(0.90_0_0)] font-mono"
                       />
                     </div>
                   </div>
@@ -312,7 +312,7 @@ export default function Checkout() {
                     placeholder="12345"
                     value={form.zip}
                     onChange={handleInput}
-                    className="bg-[oklch(0.98_0.008_80)] border-[oklch(0.88_0.02_75)] max-w-[160px]"
+                    className="bg-[oklch(0.98_0.008_80)] border-[oklch(0.90_0_0)] max-w-[160px]"
                   />
                 </div>
 
