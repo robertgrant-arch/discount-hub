@@ -1,15 +1,13 @@
-120
-/* HealthCare Select Benefits Hub Navbar — Warm Abundance design
- * Sticky top nav with auth-aware right side: login/signup or UserMenu
- * Nav shows priority-ordered links at ALL screen sizes, fitting as many as possible
- * Properly spaced and responsive
+/* Healthcare Select Benefits Hub Navbar — Official HCS Brand
+ * HCS Deep Sea Green #0E5659 navbar | Red Fox #C05824 accents
+ * Sora font for logo | Responsive priority nav
  */
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import AuthModal from "@/components/AuthModal";
 import UserMenu from "@/components/UserMenu";
-import { Tag, Menu, X, Scissors, BookOpen, HeartPulse, Star, MessageCircle, Calculator } from "lucide-react";
+import { Menu, X, Scissors, BookOpen, HeartPulse, Star, MessageCircle, Calculator } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
 
 /* All nav links */
@@ -26,17 +24,11 @@ const NAV_LINKS = [
   { href: "/pricing", label: "Membership" },
 ];
 
-/*
- * Priority order for which links stay visible when space is limited.
- * Lower index = higher priority = stays visible longer.
- * Home is always rendered separately on the left, not part of this list.
- */
 const PRIORITY_LINKS = [
   "/ask-claude",
   "/savings-blueprint",
 ];
 
-/* Get the link objects in priority order (excluding Home) */
 const prioritySorted = PRIORITY_LINKS.map((href) =>
   NAV_LINKS.find((l) => l.href === href)!
 ).filter(Boolean);
@@ -49,27 +41,22 @@ export default function Navbar() {
     open: false,
     tab: "login",
   });
-
-  /* ---- Priority-based responsive nav ---- */
   const navRef = useRef<HTMLElement>(null);
   const [visibleCount, setVisibleCount] = useState(prioritySorted.length);
-
   const calcVisible = useCallback(() => {
     const nav = navRef.current;
     if (!nav) return;
     const children = Array.from(nav.children) as HTMLElement[];
-    // Show all to measure
     children.forEach((c) => (c.style.visibility = "hidden", c.style.display = "", c.style.position = "absolute"));
     const navWidth = nav.offsetWidth;
     let usedWidth = 0;
     let count = 0;
     for (const child of children) {
-      const w = child.offsetWidth + 24; // gap between items
+      const w = child.offsetWidth + 24;
       if (usedWidth + w > navWidth && count > 0) break;
       usedWidth += w;
       count++;
     }
-    // Apply visibility
     children.forEach((c, i) => {
       c.style.position = "";
       c.style.visibility = "";
@@ -77,7 +64,6 @@ export default function Navbar() {
     });
     setVisibleCount(count);
   }, []);
-
   useEffect(() => {
     const nav = navRef.current;
     if (!nav) return;
@@ -94,49 +80,51 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Skip to main content for keyboard/screen reader users */}
+      {/* Skip to main content */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#C17A4A] focus:text-white focus:rounded focus:text-sm focus:font-bold"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:rounded focus:text-sm focus:font-bold"
+        style={{ backgroundColor: "#C05824", color: "white" }}
       >
         Skip to main content
       </a>
-
-      <header className="sticky top-0 z-50 bg-[#2b6b62] shadow-sm">
+      <header className="sticky top-0 z-50 shadow-md" style={{ backgroundColor: "#0E5659" }}>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-
-            {/* Left side: Logo + Home + Priority nav links */}
+            {/* Left: Logo + nav */}
             <div className="flex items-center gap-3 sm:gap-4 md:gap-6 min-w-0 flex-1">
-              {/* Logo */}
-              <Link href="/" className="flex items-center gap-2 group shrink-0">
+              {/* HCS Logo mark + wordmark */}
+              <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+                {/* HCS Cross logo mark */}
                 <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center"
-                  style={{ background: "oklch(0.68 0.15 55)" }}
+                  className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+                  style={{ backgroundColor: "#C05824" }}
                 >
-                  <Tag className="w-4 h-4 text-white" />
+                  {/* Healthcare cross symbol */}
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="2" width="4" height="16" rx="1" fill="white"/>
+                    <rect x="2" y="8" width="16" height="4" rx="1" fill="white"/>
+                  </svg>
                 </div>
                 <span
-                  className="font-bold text-lg tracking-tight hidden sm:inline"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "white" }}
+                  className="font-bold text-base tracking-tight hidden sm:inline leading-tight"
+                  style={{ fontFamily: "'Sora', 'Open Sans', sans-serif", color: "white" }}
                 >
-                  HealthCare Select Benefits <span style={{ color: "rgba(255,255,255,0.8)" }}>Hub</span>
+                  HealthCare Select{" "}
+                  <span style={{ color: "rgba(255,255,255,0.75)" }}>Benefits Hub</span>
                 </span>
               </Link>
-
-              {/* Home link — always visible on the left */}
+              {/* Home link */}
               <Link
                 href="/"
                 className={`text-sm font-medium transition-colors hover:text-white whitespace-nowrap shrink-0 ${
-                  location === "/"
-                    ? "text-white"
-                    : "text-white/75"
+                  location === "/" ? "text-white" : "text-white/70"
                 }`}
+                style={{ fontFamily: "'Manrope', sans-serif" }}
               >
                 Home
               </Link>
-
-              {/* Priority nav — shows as many links as fit, in priority order, at ALL screen sizes */}
+              {/* Priority nav links */}
               <nav
                 ref={navRef}
                 className="flex items-center gap-x-4 sm:gap-x-5 md:gap-x-6 flex-1 min-w-0 overflow-hidden"
@@ -146,15 +134,17 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={`text-sm font-medium transition-colors hover:text-white flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
-                      location === link.href
-                        ? "text-white"
-                        : "text-white/75"
+                      location === link.href ? "text-white" : "text-white/70"
                     }`}
+                    style={{ fontFamily: "'Manrope', sans-serif" }}
                   >
                     {link.icon && <link.icon className="w-3.5 h-3.5" />}
                     {link.label}
                     {link.badge && (
-                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.68 0.15 55)" }}>
+                      <span
+                        className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white"
+                        style={{ backgroundColor: "#C05824" }}
+                      >
                         {link.badge}
                       </span>
                     )}
@@ -162,8 +152,7 @@ export default function Navbar() {
                 ))}
               </nav>
             </div>
-
-            {/* Right side: auth + hamburger */}
+            {/* Right: auth + hamburger */}
             <div className="flex items-center gap-3 sm:gap-4 shrink-0 ml-4">
               <div className="hidden sm:flex items-center">
                 {user ? (
@@ -172,16 +161,15 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={openSignup}
-                    className="border border-white/50 text-white bg-transparent hover:bg-white/20"
+                    className="border border-white/40 text-white bg-transparent hover:bg-white/15"
+                    style={{ fontFamily: "'Manrope', sans-serif" }}
                   >
                     Get Started Free or Sign In
                   </Button>
                 )}
               </div>
-
-              {/* Hamburger — always available for full menu access */}
               <button
-                className="p-2 rounded-md hover:bg-white/10 transition-colors"
+                className="p-2 rounded-md hover:bg-white/10 transition-colors text-white"
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label="Toggle menu"
               >
@@ -189,8 +177,7 @@ export default function Navbar() {
               </button>
             </div>
           </div>
-
-          {/* Expanded menu — shows ALL links in priority order */}
+          {/* Expanded menu */}
           {mobileOpen && (
             <div className="border-t border-white/20 py-4 space-y-1">
               {NAV_LINKS.map((link) => (
@@ -202,12 +189,16 @@ export default function Navbar() {
                       ? "text-white bg-white/20"
                       : "text-white/75 hover:text-white hover:bg-white/10"
                   }`}
+                  style={{ fontFamily: "'Manrope', sans-serif" }}
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.icon && <link.icon className="w-4 h-4" />}
                   {link.label}
                   {link.badge && (
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.68 0.15 55)" }}>
+                    <span
+                      className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white"
+                      style={{ backgroundColor: "#C05824" }}
+                    >
                       {link.badge}
                     </span>
                   )}
@@ -220,7 +211,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={() => { openSignup(); setMobileOpen(false); }}
-                    className="border border-white/50 text-white bg-transparent hover:bg-white/20"
+                    className="border border-white/40 text-white bg-transparent hover:bg-white/15"
                   >
                     Get Started Free or Sign In
                   </Button>
@@ -230,7 +221,6 @@ export default function Navbar() {
           )}
         </div>
       </header>
-
       <AuthModal
         open={authModal.open}
         onClose={() => setAuthModal((s) => ({ ...s, open: false }))}
