@@ -114,7 +114,7 @@ function BadgeChip({
           ? "oklch(0.93 0.05 80)"
           : "oklch(0.95 0.008 80)",
         color: earned ? "oklch(0.35 0.08 55)" : "oklch(0.68 0.02 60)",
-        border: `1.5px solid ${earned ? "oklch(0.78 0.08 75)" : "oklch(0.90 0.01 80)"}`,
+        border: `1.5px solid ${earned ? "oklch(0.78 0.08 75)" : "oklch(0.90 0 0)"}`,
         opacity: earned ? 1 : 0.6,
       }}
       title={badge.description}
@@ -249,7 +249,7 @@ export default function SavingsTracker() {
       {/* Header bar */}
       <div
         className="px-5 py-4 flex items-center justify-between"
-        style={{ backgroundColor: "oklch(0.22 0.02 50)" }}
+        style={{ backgroundColor: "oklch(0.15 0 0)" }}
       >
         <div>
           <p
@@ -260,7 +260,7 @@ export default function SavingsTracker() {
           </p>
           <p
             className="text-sm font-semibold mt-0.5"
-            style={{ color: "oklch(0.92 0.015 80)" }}
+            style={{ color: "oklch(0.92 0 0)" }}
           >
             HealthCare Select Benefits Hub Tracker
           </p>
@@ -346,7 +346,7 @@ export default function SavingsTracker() {
         <div
           className="text-center py-2 px-4 rounded-xl mb-5 text-xs font-medium"
           style={{
-            backgroundColor: "oklch(0.96 0.015 80)",
+            backgroundColor: "oklch(0.96 0 0)",
             color: "oklch(0.48 0.06 60)",
           }}
         >

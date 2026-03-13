@@ -19,11 +19,11 @@ const SUGGESTED_QUESTIONS = [
 
 function renderMarkdown(text: string): string {
   return text
-    .replace(/^### (.+)$/gm, '<h3 class="text-lg font-bold mt-4 mb-2" style="font-family: \'Playfair Display\', serif; color: oklch(0.22 0.02 50)">$1</h3>')
-    .replace(/^## (.+)$/gm, '<h2 class="text-xl font-bold mt-5 mb-2" style="font-family: \'Playfair Display\', serif; color: oklch(0.22 0.02 50)">$1</h2>')
-    .replace(/^# (.+)$/gm, '<h1 class="text-2xl font-bold mt-5 mb-3" style="font-family: \'Playfair Display\', serif; color: oklch(0.22 0.02 50)">$1</h1>')
+    .replace(/^### (.+)$/gm, '<h3 class="text-lg font-bold mt-4 mb-2" style="font-family: \'Playfair Display\', serif; color: oklch(0.15 0 0)">$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2 class="text-xl font-bold mt-5 mb-2" style="font-family: \'Playfair Display\', serif; color: oklch(0.15 0 0)">$1</h2>')
+    .replace(/^# (.+)$/gm, '<h1 class="text-2xl font-bold mt-5 mb-3" style="font-family: \'Playfair Display\', serif; color: oklch(0.15 0 0)">$1</h1>')
     .replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold" style="color: oklch(0.30 0.04 50)">$1</strong>')
-    .replace(/^[-*] (.+)$/gm, '<li class="ml-4 mb-1 flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background: oklch(0.47 0.08 185)"></span><span>$1</span></li>')
+    .replace(/^[-*] (.+)$/gm, '<li class="ml-4 mb-1 flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background: oklch(0.45 0.08 175)"></span><span>$1</span></li>')
     .replace(/^\d+\. (.+)$/gm, '<li class="ml-4 mb-1">$1</li>')
     .replace(/^---$/gm, '<hr class="my-4 border-t" style="border-color: oklch(0.88 0.02 75)" />')
     .replace(/\n{2,}/g, '</p><p class="mb-3 leading-relaxed">')
@@ -83,7 +83,7 @@ export default function AskClaude() {
               <MessageCircle className="w-3.5 h-3.5" />
               Ask Claude
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Benefits & Medicare Assistant
             </h1>
             <p className="text-white/80 text-base">
@@ -99,8 +99,8 @@ export default function AskClaude() {
         <div ref={scrollRef} className="mb-6 space-y-5 max-h-[60vh] overflow-y-auto scroll-smooth">
           {messages.length === 0 ? (
             <div className="text-center py-10">
-              <MessageCircle className="w-10 h-10 mx-auto mb-3" style={{ color: "oklch(0.47 0.08 185)" }} />
-              <h2 className="text-xl font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.22 0.02 50)" }}>
+              <MessageCircle className="w-10 h-10 mx-auto mb-3" style={{ color: "oklch(0.45 0.08 175)" }} />
+              <h2 className="text-xl font-bold mb-2" style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.15 0 0)" }}>
                 How can I help you today?
               </h2>
               <p className="text-sm text-[oklch(0.55_0.03_60)] mb-6">
@@ -129,7 +129,7 @@ export default function AskClaude() {
                 <div
                   className={`rounded-2xl px-5 py-4 max-w-[85%] text-sm leading-relaxed ${
                     msg.role === "user"
-                      ? "bg-[oklch(0.47 0.08 185)] text-white rounded-br-md"
+                      ? "bg-[oklch(0.45 0.08 175)] text-white rounded-br-md"
                       : "bg-white border border-[oklch(0.88_0.02_75)] text-[oklch(0.30_0.04_50)] rounded-bl-md shadow-sm"
                   }`}
                 >
@@ -156,7 +156,7 @@ export default function AskClaude() {
                 <Bot className="w-4 h-4 text-white" />
               </div>
               <div className="bg-white border border-[oklch(0.88_0.02_75)] rounded-2xl rounded-bl-md px-5 py-4 shadow-sm">
-                <Loader2 className="w-5 h-5 animate-spin" style={{ color: "oklch(0.47 0.08 185)" }} />
+                <Loader2 className="w-5 h-5 animate-spin" style={{ color: "oklch(0.45 0.08 175)" }} />
               </div>
             </div>
           )}
@@ -175,7 +175,7 @@ export default function AskClaude() {
           <button
             onClick={() => sendMessage()}
             disabled={loading || !input.trim()}
-            className="w-9 h-9 rounded-xl bg-[oklch(0.47 0.08 185)] hover:bg-[oklch(0.48_0.13_42)] disabled:opacity-40 flex items-center justify-center transition-colors"
+            className="w-9 h-9 rounded-xl bg-[oklch(0.45 0.08 175)] hover:bg-[oklch(0.48_0.13_42)] disabled:opacity-40 flex items-center justify-center transition-colors"
           >
             <Send className="w-4 h-4 text-white" />
           </button>

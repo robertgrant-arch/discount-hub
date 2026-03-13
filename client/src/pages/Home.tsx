@@ -58,7 +58,7 @@ export default function Home() {
             </div>
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Every Senior &amp; Disability Discount,{" "}
               <span style={{ color: "oklch(0.85 0.08 60)" }}>One Place.</span>
@@ -102,8 +102,8 @@ export default function Home() {
               { value: "10", label: "Categories", icon: ShoppingBag },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col items-center gap-1">
-                <stat.icon className="w-5 h-5 mb-1" style={{ color: "oklch(0.47 0.08 185)" }} />
-                <span className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.22 0.02 50)" }}>
+                <stat.icon className="w-5 h-5 mb-1" style={{ color: "oklch(0.45 0.08 175)" }} />
+                <span className="text-2xl font-bold" style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.15 0 0)" }}>
                   {stat.value}
                 </span>
                 <span className="text-xs text-[oklch(0.52_0.04_60)]">{stat.label}</span>
@@ -119,8 +119,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
-                <MapPin className="w-5 h-5 text-[oklch(0.47 0.08 185)]" />
-                <h2 className="text-xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <MapPin className="w-5 h-5 text-[oklch(0.45 0.08 175)]" />
+                <h2 className="text-xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   Find Programs Near You
                 </h2>
               </div>
@@ -141,8 +141,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-[oklch(0.47 0.08 185)] font-semibold">283+ state & local programs</span>
-                    <ArrowRight className="w-4 h-4 text-[oklch(0.47 0.08 185)]" />
+                    <span className="text-xs text-[oklch(0.45 0.08 175)] font-semibold">283+ state & local programs</span>
+                    <ArrowRight className="w-4 h-4 text-[oklch(0.45 0.08 175)]" />
                   </div>
                 </div>
               </Link>
@@ -155,14 +155,14 @@ export default function Home() {
       <section className="container py-16">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-3xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Browse by Category
             </h2>
             <p className="text-[oklch(0.52_0.04_60)] mt-1">
               Explore discounts across every area of daily life
             </p>
           </div>
-          <Link href="/discounts" className="hidden md:flex items-center gap-1 text-sm font-medium hover:underline" style={{ color: "oklch(0.47 0.08 185)" }}>
+          <Link href="/discounts" className="hidden md:flex items-center gap-1 text-sm font-medium hover:underline" style={{ color: "oklch(0.45 0.08 175)" }}>
             View all <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -186,7 +186,7 @@ export default function Home() {
                       <IconComp className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-white font-semibold text-xs leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      <p className="text-white font-semibold text-xs leading-tight" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                         {cat.category}
                       </p>
                       <p className="text-white/70 text-xs mt-0.5">{total} programs</p>
@@ -202,7 +202,7 @@ export default function Home() {
       {/* How it works */}
       <section className="bg-white border-y border-[oklch(0.88_0.02_75)]">
         <div className="container py-16">
-          <h2 className="text-3xl font-bold text-center text-[oklch(0.22_0.02_50)] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-3xl font-bold text-center text-[oklch(0.22_0.02_50)] mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             How HealthCare Select Benefits Hub Works
           </h2>
           <p className="text-center text-[oklch(0.52_0.04_60)] mb-12">Simple, fast, and always up to date</p>
@@ -212,7 +212,7 @@ export default function Home() {
                 step: "1",
                 title: "Browse Categories",
                 desc: "Explore 10 categories covering every aspect of daily life — from dining and travel to healthcare and technology.",
-                color: "oklch(0.47 0.08 185)",
+                color: "oklch(0.45 0.08 175)",
               },
               {
                 step: "2",
@@ -224,17 +224,17 @@ export default function Home() {
                 step: "3",
                 title: "Access & Save",
                 desc: "Click directly to the provider's website or note how to claim your discount in-store. Save favorites with Premium.",
-                color: "oklch(0.47 0.08 185)",
+                color: "oklch(0.45 0.08 175)",
               },
             ].map((step) => (
               <div key={step.step} className="text-center">
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4"
-                  style={{ background: step.color, fontFamily: "'Playfair Display', serif" }}
+                  style={{ background: step.color, fontFamily: "'DM Sans', sans-serif" }}
                 >
                   {step.step}
                 </div>
-                <h3 className="font-bold text-lg text-[oklch(0.22_0.02_50)] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="font-bold text-lg text-[oklch(0.22_0.02_50)] mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   {step.title}
                 </h3>
                 <p className="text-sm text-[oklch(0.52_0.04_60)] leading-relaxed">{step.desc}</p>
@@ -248,7 +248,7 @@ export default function Home() {
       <section className="container py-14">
         <div
           className="rounded-2xl overflow-hidden relative"
-          style={{ background: "linear-gradient(135deg, oklch(0.47 0.08 185), oklch(0.40 0.10 42))" }}
+          style={{ background: "linear-gradient(135deg, oklch(0.45 0.08 175), oklch(0.40 0.10 42))" }}
         >
           <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-10" style={{ background: "radial-gradient(circle at 80% 50%, white 0%, transparent 70%)" }} />
           <div className="relative px-8 py-10 md:flex items-center justify-between gap-8">
@@ -257,7 +257,7 @@ export default function Home() {
                 <Scissors className="w-5 h-5 text-white/80" />
                 <span className="text-white/80 text-sm font-semibold uppercase tracking-wider">New Feature</span>
               </div>
-              <h2 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h2 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 212+ Coupons &amp; Deals
               </h2>
               <p className="text-white/80 text-base leading-relaxed max-w-lg">
@@ -273,7 +273,7 @@ export default function Home() {
             </div>
             <div className="shrink-0">
               <Link href="/coupons">
-                <Button size="lg" className="font-bold shadow-lg bg-white hover:bg-white/90" style={{ color: "oklch(0.47 0.08 185)" }}>
+                <Button size="lg" className="font-bold shadow-lg bg-white hover:bg-white/90" style={{ color: "oklch(0.45 0.08 175)" }}>
                   <Scissors className="w-4 h-4 mr-2" />
                   Browse Coupons
                 </Button>
@@ -292,7 +292,7 @@ export default function Home() {
                 <BookOpen className="w-4 h-4" style={{ color: "oklch(0.35 0.08 250)" }} />
                 <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "oklch(0.35 0.08 250)" }}>Benefits Education Hub</span>
               </div>
-              <h2 className="text-3xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h2 className="text-3xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 Social Programs for Disabled Americans
               </h2>
               <p className="text-[oklch(0.52_0.04_60)] mt-1 max-w-xl">
@@ -305,7 +305,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
-              { label: "SSDI & SSI", desc: "Monthly cash benefits", icon: DollarSign, color: "oklch(0.47 0.08 185)", bg: "oklch(0.93 0.04 42)" },
+              { label: "SSDI & SSI", desc: "Monthly cash benefits", icon: DollarSign, color: "oklch(0.45 0.08 175)", bg: "oklch(0.93 0.04 42)" },
               { label: "Medicaid & Medicare", desc: "Health coverage guides", icon: HeartPulse, color: "oklch(0.50 0.15 15)", bg: "oklch(0.95 0.04 15)" },
               { label: "Housing & SNAP", desc: "Section 8, food assistance", icon: HomeIcon, color: "oklch(0.45 0.12 200)", bg: "oklch(0.92 0.04 200)" },
               { label: "ADA & Legal Rights", desc: "Protections & advocacy", icon: Scale, color: "oklch(0.35 0.08 250)", bg: "oklch(0.92 0.03 250)" },
@@ -315,7 +315,7 @@ export default function Home() {
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center mb-2.5" style={{ background: item.bg }}>
                     <item.icon className="w-4.5 h-4.5" style={{ color: item.color }} />
                   </div>
-                  <p className="text-sm font-bold text-[oklch(0.22_0.02_50)] leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>{item.label}</p>
+                  <p className="text-sm font-bold text-[oklch(0.22_0.02_50)] leading-snug" style={{ fontFamily: "'DM Sans', sans-serif" }}>{item.label}</p>
                   <p className="text-xs text-[oklch(0.55_0.03_60)] mt-0.5">{item.desc}</p>
                 </div>
               </Link>
@@ -333,7 +333,7 @@ export default function Home() {
                 <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                 <span className="text-xs font-bold uppercase tracking-wider text-white/60">Exclusive Partner Program</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 LifeMart Exclusive Savings
               </h2>
               <p className="text-white/70 text-sm max-w-md">
@@ -363,7 +363,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-[oklch(0.22_0.02_50/0.75)]" />
           <div className="relative px-8 py-12 md:py-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Unlock Every Discount Today
             </h2>
             <p className="text-white/80 text-lg mb-6 max-w-lg mx-auto">

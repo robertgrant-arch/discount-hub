@@ -456,7 +456,7 @@ function YesNo({
               ? v === "yes"
                 ? "bg-[oklch(0.40_0.10_140)] text-white border-[oklch(0.40_0.10_140)]"
                 : "bg-[oklch(0.50_0.15_15)] text-white border-[oklch(0.50_0.15_15)]"
-              : "bg-background border-border text-muted-foreground hover:border-[oklch(0.47 0.08 185)]"
+              : "bg-background border-border text-muted-foreground hover:border-[oklch(0.45 0.08 175)]"
           }`}
         >
           {v === "yes" ? "Yes" : "No"}
@@ -514,7 +514,7 @@ export default function MedicareEligibilityCalculator() {
           <div>
             <h2
               className="text-xl font-bold text-foreground"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Am I Eligible to Enroll in a Medicare Plan Today?
             </h2>
@@ -723,7 +723,7 @@ export default function MedicareEligibilityCalculator() {
             >
               <p
                 className="text-base font-bold text-white"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
                 Ready to Compare Plans?
               </p>

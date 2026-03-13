@@ -99,7 +99,7 @@ function StateProgramCard({ program }: { program: StateProgram }) {
               <a
                 href={program.website}
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border border-[oklch(0.47 0.08 185)] text-[oklch(0.45_0.13_42)] hover:bg-[oklch(0.93_0.04_42)] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border border-[oklch(0.45 0.08 175)] text-[oklch(0.45_0.13_42)] hover:bg-[oklch(0.93_0.04_42)] transition-colors"
               >
                 <ExternalLink className="w-3 h-3" /> Visit Website
               </a>
@@ -170,7 +170,7 @@ export default function StateProgramsSection({
       {showZipFilter && (
         <div className="bg-[oklch(0.96_0.02_42)] rounded-xl border border-[oklch(0.88_0.04_42)] p-4">
           <div className="flex items-center gap-2 mb-3">
-            <MapPin className="w-4 h-4 text-[oklch(0.47 0.08 185)]" />
+            <MapPin className="w-4 h-4 text-[oklch(0.45 0.08 175)]" />
             <span className="text-sm font-semibold text-[oklch(0.35_0.06_42)]">
               Find programs in your area
             </span>

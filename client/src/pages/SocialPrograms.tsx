@@ -71,7 +71,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
               </span>
               <h3
                 className="text-lg font-bold text-[oklch(0.22_0.02_50)] leading-snug"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
                 {program.program_name}
               </h3>
@@ -437,7 +437,7 @@ export default function SocialPrograms() {
       {/* Page hero */}
       <div
         className="relative border-b border-[oklch(0.88_0.02_75)]"
-        style={{ background: "linear-gradient(135deg, oklch(0.22 0.02 50) 0%, oklch(0.32 0.06 42) 100%)" }}
+        style={{ background: "linear-gradient(135deg, oklch(0.15 0 0) 0%, oklch(0.30 0.06 175) 100%)" }}
       >
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
         <div className="relative container py-12">
@@ -448,7 +448,7 @@ export default function SocialPrograms() {
             </div>
             <h1
               className="text-4xl font-bold text-white mb-3 leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Benefits & Resources for Disabled Americans
             </h1>
@@ -481,7 +481,7 @@ export default function SocialPrograms() {
               onClick={() => setMainTab("federal")}
               className={`px-5 py-3 text-sm font-semibold border-b-2 transition-colors ${
                 mainTab === "federal"
-                  ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.45_0.13_42)]"
+                  ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45_0.13_42)]"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -491,12 +491,12 @@ export default function SocialPrograms() {
               onClick={() => setMainTab("state")}
               className={`px-5 py-3 text-sm font-semibold border-b-2 transition-colors flex items-center gap-1.5 ${
                 mainTab === "state"
-                  ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.45_0.13_42)]"
+                  ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45_0.13_42)]"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
               State & Local Programs ({TOTAL_STATE_PROGRAMS}+)
-              <span className="text-[10px] font-bold bg-[oklch(0.47 0.08 185)] text-white px-1.5 py-0.5 rounded-full">NEW</span>
+              <span className="text-[10px] font-bold bg-[oklch(0.45 0.08 175)] text-white px-1.5 py-0.5 rounded-full">NEW</span>
             </button>
           </div>
         </div>
@@ -598,7 +598,7 @@ export default function SocialPrograms() {
                   >
                     <IconComp className="w-4.5 h-4.5" style={{ color: meta.color }} />
                   </div>
-                  <p className="text-sm font-bold text-[oklch(0.22_0.02_50)] leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <p className="text-sm font-bold text-[oklch(0.22_0.02_50)] leading-snug" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                     {cat}
                   </p>
                   <p className="text-xs text-[oklch(0.55_0.03_60)] mt-0.5">{count} program{count !== 1 ? "s" : ""}</p>
@@ -626,7 +626,7 @@ export default function SocialPrograms() {
                   return (
                     <>
                       <IconComp className="w-5 h-5" style={{ color: meta.color }} />
-                      <h2 className="text-xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      <h2 className="text-xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                         {activeCategory}
                       </h2>
                       <span className="text-xs text-[oklch(0.60_0.03_60)] bg-[oklch(0.93_0.02_80)] px-2 py-0.5 rounded-full">

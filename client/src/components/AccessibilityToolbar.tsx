@@ -106,7 +106,7 @@ export default function AccessibilityToolbar() {
               <span
                 className="flex-1 text-center font-bold text-lg"
                 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   color: "oklch(38% 0.08 35)",
                 }}
                 aria-live="polite"

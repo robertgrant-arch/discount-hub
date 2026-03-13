@@ -46,7 +46,7 @@ export default function Checkout() {
         <Navbar />
         <div className="container py-16 text-center">
           <p className="text-[oklch(0.52_0.04_60)]">Invalid plan selected.</p>
-          <Link href="/pricing" className="text-sm font-medium mt-4 inline-block" style={{ color: "oklch(0.47 0.08 185)" }}>
+          <Link href="/pricing" className="text-sm font-medium mt-4 inline-block" style={{ color: "oklch(0.45 0.08 175)" }}>
             ← Back to pricing
           </Link>
         </div>
@@ -102,7 +102,7 @@ export default function Checkout() {
           <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg" style={{ background: "oklch(0.88 0.04 140)" }}>
             <CheckCircle2 className="w-8 h-8" style={{ color: "oklch(0.32 0.09 140)" }} />
           </div>
-          <h1 className="text-3xl font-bold text-[oklch(0.22_0.02_50)] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-3xl font-bold text-[oklch(0.22_0.02_50)] mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             You're all set!
           </h1>
               <PageHaiku lines={["One small step today", "Unlocks a world of savings", "Membership blooms bright"]} />
@@ -128,7 +128,7 @@ export default function Checkout() {
       <Navbar />
 
       <div className="container py-10 max-w-4xl mx-auto">
-        <Link href="/pricing" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] mb-6 transition-colors">
+        <Link href="/pricing" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] mb-6 transition-colors">
           <ArrowLeft className="w-3.5 h-3.5" /> Back to pricing
         </Link>
 
@@ -140,8 +140,8 @@ export default function Checkout() {
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.68 0.15 55)" }}>
                   <Tag className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  HealthCare Select Benefits Hub <span style={{ color: "oklch(0.47 0.08 185)" }}>{plan.name}</span>
+                <span className="font-bold" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                  HealthCare Select Benefits Hub <span style={{ color: "oklch(0.45 0.08 175)" }}>{plan.name}</span>
                 </span>
               </div>
 
@@ -153,7 +153,7 @@ export default function Checkout() {
                     onClick={() => setBilling(b)}
                     className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-all border ${
                       billing === b
-                        ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.40_0.13_42)] bg-[oklch(0.95_0.03_42)]"
+                        ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.40_0.13_42)] bg-[oklch(0.95_0.03_42)]"
                         : "border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)]"
                     }`}
                   >
@@ -177,7 +177,7 @@ export default function Checkout() {
 
               <div className="border-t border-[oklch(0.88_0.02_75)] pt-4 flex justify-between font-bold">
                 <span>Total today</span>
-                <span style={{ color: "oklch(0.47 0.08 185)" }}>${price.toFixed(2)}</span>
+                <span style={{ color: "oklch(0.45 0.08 175)" }}>${price.toFixed(2)}</span>
               </div>
 
               <ul className="mt-5 space-y-2">
@@ -201,7 +201,7 @@ export default function Checkout() {
             <div className="bg-white rounded-2xl border border-[oklch(0.88_0.02_75)] p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-6">
                 <Lock className="w-4 h-4 text-[oklch(0.52_0.04_60)]" />
-                <h2 className="font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h2 className="font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   Secure Payment
                 </h2>
                 <span className="ml-auto text-xs text-[oklch(0.60_0.03_60)] flex items-center gap-1">

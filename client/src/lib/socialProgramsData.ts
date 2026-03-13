@@ -50,7 +50,7 @@ export interface SocialProgram {
 }
 
 export const CATEGORY_META: Record<ProgramCategory, { icon: string; color: string; bg: string; description: string }> = {
-  'Income Support': { icon: 'DollarSign', color: 'oklch(0.47 0.08 185)', bg: 'oklch(0.93 0.04 42)', description: 'Monthly cash benefits including SSDI and SSI' },
+  'Income Support': { icon: 'DollarSign', color: 'oklch(0.45 0.08 175)', bg: 'oklch(0.93 0.04 42)', description: 'Monthly cash benefits including SSDI and SSI' },
   'Healthcare': { icon: 'HeartPulse', color: 'oklch(0.50 0.15 15)', bg: 'oklch(0.95 0.04 15)', description: 'Medicaid, Medicare, and health coverage programs' },
   'Housing': { icon: 'Home', color: 'oklch(0.45 0.12 200)', bg: 'oklch(0.92 0.04 200)', description: 'Rental assistance, Section 8, and accessible housing' },
   'Food & Nutrition': { icon: 'UtensilsCrossed', color: 'oklch(0.40 0.10 140)', bg: 'oklch(0.90 0.04 140)', description: 'SNAP, food banks, meal delivery programs' },

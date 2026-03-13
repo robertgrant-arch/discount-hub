@@ -60,7 +60,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
             onClick={handleFavorite}
             className={`p-1.5 rounded-lg transition-colors ${
               isFavorited
-                ? "text-[oklch(0.47 0.08 185)] bg-[oklch(0.95_0.03_42)]"
+                ? "text-[oklch(0.45 0.08 175)] bg-[oklch(0.95_0.03_42)]"
                 : "text-[oklch(0.65_0.03_60)] hover:bg-[oklch(0.95_0.015_80)]"
             }`}
             title="Save to favorites"
@@ -79,12 +79,12 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
 
       <div className="px-4 pt-2 pb-4">
         {/* Company name */}
-        <h3 className="font-semibold text-[oklch(0.22_0.02_50)] text-sm leading-tight mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h3 className="font-semibold text-[oklch(0.22_0.02_50)] text-sm leading-tight mb-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>
           {item.name}
         </h3>
 
         {/* Discount amount — always visible */}
-        <div className="text-xl font-bold mb-2" style={{ color: "oklch(0.47 0.08 185)", fontFamily: "'Playfair Display', serif" }}>
+        <div className="text-xl font-bold mb-2" style={{ color: "oklch(0.45 0.08 175)", fontFamily: "'DM Sans', sans-serif" }}>
           {item.discount}
         </div>
 
@@ -114,7 +114,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
                 href={item.website}
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-medium transition-colors hover:underline"
-                style={{ color: "oklch(0.47 0.08 185)" }}
+                style={{ color: "oklch(0.45 0.08 175)" }}
               >
                 Visit Website <ExternalLink className="w-3 h-3" />
               </a>
@@ -132,7 +132,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
               <div className="bg-white rounded-full p-2 shadow-md">
-                <Lock className="w-4 h-4" style={{ color: "oklch(0.47 0.08 185)" }} />
+                <Lock className="w-4 h-4" style={{ color: "oklch(0.45 0.08 175)" }} />
               </div>
               <Link href="/pricing">
                 <button

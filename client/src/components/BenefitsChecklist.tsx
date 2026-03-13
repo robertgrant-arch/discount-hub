@@ -270,7 +270,7 @@ export default function BenefitsChecklist() {
         </div>
         <h1
           className="text-3xl md:text-4xl font-bold mb-2"
-          style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}
+          style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}
         >
           Am I Eligible?
         </h1>
@@ -395,7 +395,7 @@ function StepAge({ value, onChange }: { value: string; onChange: (v: string) => 
   ];
   return (
     <div>
-      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}>
+      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}>
         How old are you?
       </h2>
       <p className="text-sm mb-5" style={{ color: "oklch(50% 0.05 35)" }}>
@@ -425,7 +425,7 @@ function StepIncome({ value, onChange }: { value: string; onChange: (v: string) 
   ];
   return (
     <div>
-      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}>
+      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}>
         Annual household income
       </h2>
       <p className="text-sm mb-5" style={{ color: "oklch(50% 0.05 35)" }}>
@@ -450,7 +450,7 @@ function StepHousehold({ value, onChange }: { value: string; onChange: (v: strin
   const sizes = ["1", "2", "3", "4", "5+"];
   return (
     <div>
-      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}>
+      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}>
         How many people live in your household?
       </h2>
       <p className="text-sm mb-5" style={{ color: "oklch(50% 0.05 35)" }}>
@@ -483,7 +483,7 @@ function StepStatus({
 }) {
   return (
     <div className="space-y-6">
-      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}>
+      <h2 className="text-xl font-bold mb-1" style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}>
         A few more details
       </h2>
       <p className="text-sm -mt-1 mb-4" style={{ color: "oklch(50% 0.05 35)" }}>
@@ -523,7 +523,7 @@ function Results({
 }) {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}>
+      <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}>
         Your likely benefits
       </h2>
       <p className="text-sm mb-6" style={{ color: "oklch(50% 0.05 35)" }}>

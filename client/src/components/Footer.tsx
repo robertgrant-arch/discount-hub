@@ -12,8 +12,8 @@ export default function Footer() {
               <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.68 0.15 55)" }}>
                 <Tag className="w-3.5 h-3.5 text-white" />
               </div>
-              <span className="font-bold text-base" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Discount<span style={{ color: "oklch(0.47 0.08 185)" }}>Hub</span>
+              <span className="font-bold text-base" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                Discount<span style={{ color: "oklch(0.45 0.08 175)" }}>Hub</span>
               </span>
             </Link>
             <p className="text-sm text-[oklch(0.52_0.04_60)] max-w-xs leading-relaxed">
@@ -34,7 +34,7 @@ export default function Footer() {
                 { href: "/medicare-guide", label: "Medicare Guide" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] transition-colors">
+                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -55,7 +55,7 @@ export default function Footer() {
                 { href: "https://www.aplaceformom.com", label: "A Place for Mom" },
               ].map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] transition-colors">
+                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
                     {l.label} ↗
                   </a>
                 </li>
@@ -74,7 +74,7 @@ export default function Footer() {
                 { href: "/disclosures", label: "Affiliate Disclosures" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] transition-colors">
+                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.45 0.08 175)] transition-colors">
                     {l.label}
                   </Link>
                 </li>

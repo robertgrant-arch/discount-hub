@@ -61,7 +61,7 @@ export default function Discounts() {
       {/* Page header */}
       <div
             className="relative border-b border-[oklch(0.88_0.02_75)]"
-            style={{ background: "linear-gradient(135deg, oklch(0.22 0.02 50) 0%, oklch(0.32 0.06 42) 100%)" }}
+            style={{ background: "linear-gradient(135deg, oklch(0.15 0 0) 0%, oklch(0.30 0.06 175) 100%)" }}
           >
             <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
             <div className="relative container py-12">
@@ -72,7 +72,7 @@ export default function Discounts() {
                 </div>
                 <h1
                   className="text-4xl font-bold text-white mb-3 leading-tight"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
                   Browse All Discounts
                 </h1>
@@ -129,7 +129,7 @@ export default function Discounts() {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2.5 text-sm font-medium capitalize transition-colors border-b-2 -mb-px ${
                   activeTab === tab
-                    ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.47 0.08 185)]"
+                    ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45 0.08 175)]"
                     : "border-transparent text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.35_0.04_50)]"
                 }`}
               >
@@ -193,13 +193,13 @@ export default function Discounts() {
               {filteredData.map((cat) => (
                 <section key={cat.id}>
                   <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h2 className="text-xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                       {cat.category}
                     </h2>
                     <Link
                       href={`/discounts/${cat.id}`}
                       className="text-xs font-medium hover:underline"
-                      style={{ color: "oklch(0.47 0.08 185)" }}
+                      style={{ color: "oklch(0.45 0.08 175)" }}
                     >
                       View all {cat.items.length} →
                     </Link>
@@ -214,7 +214,7 @@ export default function Discounts() {
                       <Link href={`/discounts/${cat.id}`}>
                         <button
                           className="text-sm font-medium px-4 py-2 rounded-full border transition-colors hover:bg-[oklch(0.93_0.04_42)]"
-                          style={{ borderColor: "oklch(0.47 0.08 185)", color: "oklch(0.47 0.08 185)" }}
+                          style={{ borderColor: "oklch(0.45 0.08 175)", color: "oklch(0.45 0.08 175)" }}
                         >
                           +{cat.items.length - 6} more in {cat.category}
                         </button>

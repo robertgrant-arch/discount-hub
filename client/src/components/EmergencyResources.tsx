@@ -140,7 +140,7 @@ export default function EmergencyResources({ compact = false }: EmergencyResourc
           <h2
             id="emergency-resources-heading"
             className="text-2xl font-bold"
-            style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}
+            style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}
           >
             Help Is Available
           </h2>

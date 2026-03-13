@@ -393,7 +393,7 @@ export default function LifeMart() {
             {/* Upgrade prompt for free users */}
             {!isPlus && (
               <div className="mt-6 rounded-xl border-2 border-dashed border-[oklch(0.82_0.06_42)] bg-[oklch(0.97_0.02_42)] p-6 text-center">
-                <Lock className="w-8 h-8 mx-auto mb-3" style={{ color: "oklch(0.47 0.08 185)" }} />
+                <Lock className="w-8 h-8 mx-auto mb-3" style={{ color: "oklch(0.45 0.08 175)" }} />
                 <p className="font-semibold text-foreground mb-1">Unlock All LifeMart Programs</p>
                 <p className="text-sm text-muted-foreground mb-4">Upgrade to Plus or Premium to see all {currentCategory.programs.length} programs in this category plus full access to all 19,000+ LifeMart savings opportunities.</p>
                 <Link href="/pricing">

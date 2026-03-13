@@ -122,7 +122,7 @@ export default function PrintableChecklist({
                 <FileText size={20} style={{ color: "oklch(52% 0.14 35)" }} />
                 <h2
                   className="text-xl font-bold"
-                  style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}
                 >
                   Benefits Summary
                 </h2>
@@ -165,7 +165,7 @@ export default function PrintableChecklist({
                 />
                 <h3
                   className="font-bold text-base"
-                  style={{ fontFamily: "'Playfair Display', serif", color: "oklch(22% 0.03 35)" }}
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(22% 0.03 35)" }}
                 >
                   {prog.fullName}
                 </h3>

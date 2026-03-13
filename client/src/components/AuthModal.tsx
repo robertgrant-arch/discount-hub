@@ -77,12 +77,12 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
         {/* Header */}
         <div
           className="px-8 pt-8 pb-6 text-center"
-          style={{ background: "linear-gradient(135deg, oklch(0.47 0.08 185), oklch(0.47 0.08 185))" }}
+          style={{ background: "linear-gradient(135deg, oklch(0.45 0.08 175), oklch(0.45 0.08 175))" }}
         >
           <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3">
             <Tag className="w-6 h-6 text-white" />
           </div>
-          <h2 className="text-2xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-2xl font-bold text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             {tab === "login" ? "Welcome Back" : "Join HealthCare Select Benefits Hub"}
           </h2>
           <p className="text-white/75 text-sm mt-1">
@@ -100,7 +100,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
               onClick={() => setTab(t)}
               className={`flex-1 py-3 text-sm font-semibold transition-colors border-b-2 -mb-px ${
                 tab === t
-                  ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.47 0.08 185)]"
+                  ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45 0.08 175)]"
                   : "border-transparent text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.35_0.04_50)]"
               }`}
             >
@@ -189,7 +189,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
 
               <p className="text-center text-xs text-[oklch(0.60_0.03_60)]">
                 Don't have an account?{" "}
-                <button type="button" onClick={() => setTab("signup")} className="font-semibold hover:underline" style={{ color: "oklch(0.47 0.08 185)" }}>
+                <button type="button" onClick={() => setTab("signup")} className="font-semibold hover:underline" style={{ color: "oklch(0.45 0.08 175)" }}>
                   Sign up free
                 </button>
               </p>
@@ -272,7 +272,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
 
               <p className="text-center text-xs text-[oklch(0.60_0.03_60)]">
                 Already have an account?{" "}
-                <button type="button" onClick={() => setTab("login")} className="font-semibold hover:underline" style={{ color: "oklch(0.47 0.08 185)" }}>
+                <button type="button" onClick={() => setTab("login")} className="font-semibold hover:underline" style={{ color: "oklch(0.45 0.08 175)" }}>
                   Sign in
                 </button>
               </p>

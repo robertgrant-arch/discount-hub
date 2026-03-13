@@ -12,7 +12,7 @@ export default function BenefitsCheckerPage() {
               {/* Page hero */}
         <div
           className="relative border-b border-[oklch(0.88_0.02_75)]"
-          style={{ background: "linear-gradient(135deg, oklch(0.22 0.02 50) 0%, oklch(0.32 0.06 42) 100%)" }}
+          style={{ background: "linear-gradient(135deg, oklch(0.15 0 0) 0%, oklch(0.30 0.06 175) 100%)" }}
         >
           <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
           <div className="relative container py-12">
@@ -23,7 +23,7 @@ export default function BenefitsCheckerPage() {
               </div>
               <h1
                 className="text-4xl font-bold text-white mb-3 leading-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
                 Am I Eligible?
               </h1>

@@ -16,7 +16,7 @@ export default function Disclosures() {
         <section className="bg-[oklch(0.96_0.02_42)] border-b border-border py-12">
           <div className="container max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-[oklch(0.47 0.08 185)] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-[oklch(0.45 0.08 175)] flex items-center justify-center">
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <span className="text-sm font-semibold text-[oklch(0.45_0.13_42)] uppercase tracking-widest">

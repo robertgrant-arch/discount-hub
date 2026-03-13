@@ -122,7 +122,7 @@ export default function ZipFilter({ value, onChange, placeholder = "Enter ZIP co
             onChange={(e) => handleInput(e.target.value)}
             placeholder={placeholder}
             maxLength={5}
-            className="pl-8 pr-7 py-1.5 text-sm border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-[oklch(0.47 0.08 185)] w-36 transition-all"
+            className="pl-8 pr-7 py-1.5 text-sm border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-[oklch(0.45 0.08 175)] w-36 transition-all"
           />
           {inputVal && (
             <button onClick={handleClear} className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
@@ -152,7 +152,7 @@ export default function ZipFilter({ value, onChange, placeholder = "Enter ZIP co
           onChange={(e) => handleInput(e.target.value)}
           placeholder={placeholder}
           maxLength={5}
-          className="w-full pl-10 pr-10 py-2.5 text-sm border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-[oklch(0.47 0.08 185)] transition-all"
+          className="w-full pl-10 pr-10 py-2.5 text-sm border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-[oklch(0.45 0.08 175)] transition-all"
         />
         <div className="absolute right-3 top-1/2 -translate-y-1/2">
           {status === "loading" && <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />}

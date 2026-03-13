@@ -29,7 +29,7 @@ function AffiliateProgramCard({ program }: { program: AffiliateProgram }) {
     <a
       href={program.url}
       target="_blank" rel="noopener noreferrer"
-      className="group block border border-border rounded-lg p-4 hover:border-[oklch(0.47 0.08 185)] hover:shadow-md transition-all duration-200 bg-card"
+      className="group block border border-border rounded-lg p-4 hover:border-[oklch(0.45 0.08 175)] hover:shadow-md transition-all duration-200 bg-card"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
@@ -198,7 +198,7 @@ export default function MonetizationBanner({
     <section className="rounded-xl border border-border bg-card p-5 space-y-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Star className="w-4 h-4 text-[oklch(0.47 0.08 185)]" />
+          <Star className="w-4 h-4 text-[oklch(0.45 0.08 175)]" />
           <h3 className="font-semibold text-sm text-foreground">
             {mapping?.headline || "Recommended Programs & Services"}
           </h3>

@@ -84,7 +84,7 @@ export default function Coupons() {
                 </div>
                 <h1
                   className="text-4xl font-bold text-[oklch(0.22_0.02_50)] mb-3 leading-tight"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
                   Coupons & Savings Deals
                 </h1>
@@ -132,7 +132,7 @@ export default function Coupons() {
                   onClick={() => setTypeFilter(t)}
                   className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all border ${
                     typeFilter === t
-                      ? "border-[oklch(0.47 0.08 185)] bg-[oklch(0.93_0.04_42)] text-[oklch(0.40_0.13_42)]"
+                      ? "border-[oklch(0.45 0.08 175)] bg-[oklch(0.93_0.04_42)] text-[oklch(0.40_0.13_42)]"
                       : "border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)] hover:border-[oklch(0.72_0.04_60)]"
                   }`}
                 >
@@ -152,7 +152,7 @@ export default function Coupons() {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px ${
                   activeTab === tab
-                    ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.47 0.08 185)]"
+                    ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45 0.08 175)]"
                     : "border-transparent text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.35_0.04_50)]"
                 }`}
               >
@@ -206,7 +206,7 @@ export default function Coupons() {
             className="mt-6 rounded-xl p-4 text-center"
             style={{ background: "linear-gradient(135deg, oklch(0.93 0.04 42), oklch(0.90 0.03 80))" }}
           >
-            <Scissors className="w-6 h-6 mx-auto mb-2" style={{ color: "oklch(0.47 0.08 185)" }} />
+            <Scissors className="w-6 h-6 mx-auto mb-2" style={{ color: "oklch(0.45 0.08 175)" }} />
             <p className="text-xs font-semibold text-[oklch(0.35_0.04_50)] mb-2">
               Unlock all {TOTAL_COUPONS}+ coupons
             </p>
@@ -237,11 +237,11 @@ export default function Coupons() {
                     <div className="flex items-center gap-2">
                       {(() => {
                         const IconComp = ICON_MAP[cat.icon] || Tag;
-                        return <IconComp className="w-4 h-4" style={{ color: "oklch(0.47 0.08 185)" }} />;
+                        return <IconComp className="w-4 h-4" style={{ color: "oklch(0.45 0.08 175)" }} />;
                       })()}
                       <h2
                         className="text-xl font-bold text-[oklch(0.22_0.02_50)]"
-                        style={{ fontFamily: "'Playfair Display', serif" }}
+                        style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
                         {cat.category}
                       </h2>
@@ -297,7 +297,7 @@ export default function Coupons() {
                     {p.state === "Federal" ? "National" : p.stateName}
                   </span>
                 </div>
-                <p className="text-xs text-[oklch(0.47 0.08 185)] font-semibold mb-1">{p.benefit}</p>
+                <p className="text-xs text-[oklch(0.45 0.08 175)] font-semibold mb-1">{p.benefit}</p>
                 <p className="text-xs text-muted-foreground mb-3 line-clamp-2">{p.eligibility}</p>
                 <div className="flex gap-2">
                   {p.website && p.website.startsWith("http") && (
