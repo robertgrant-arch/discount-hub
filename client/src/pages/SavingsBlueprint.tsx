@@ -313,7 +313,7 @@ function SectionHeader({ icon, title, subtitle }: SectionHeaderProps) {
         </div>
         <h2
           className="text-2xl font-bold"
-          style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.25 0.06 170)" }}
+          style={{ fontFamily: "'Sora', sans-serif", color: "oklch(0.25 0.06 170)" }}
         >
           {title}
         </h2>
@@ -354,7 +354,7 @@ function NavButtons({ onBack, onNext, nextLabel = "Continue", nextIcon, nextDisa
         disabled={nextDisabled}
         onClick={onNext}
         className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-white transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
-        style={{ backgroundColor: "#2b6b62" }}
+        style={{ backgroundColor: "#C05824" }}
       >
         {nextIcon}
         {nextLabel}
@@ -413,13 +413,13 @@ export default function SavingsBlueprint() {
       {/* ══════════════════════════════════════
           INLINE HERO
       ══════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#1e4d47" }}>
+      <section style={{ backgroundColor: "#0E5659" }}>
         <div className="max-w-4xl mx-auto px-6 py-16 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Calculator size={34} style={{ color: "oklch(0.75 0.08 170)" }} />
             <h1
               className="text-4xl md:text-5xl font-bold text-white"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              style={{ fontFamily: "'Sora', sans-serif" }}
             >
               My Savings Blueprint
             </h1>
@@ -522,7 +522,7 @@ export default function SavingsBlueprint() {
               disabled={!canProceedStep1}
               onClick={() => setStep(2)}
               className="mt-4 w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-white transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
-              style={{ backgroundColor: "#2b6b62" }}
+              style={{ backgroundColor: "#C05824" }}
             >
               Continue <ArrowRight size={18} />
             </button>
@@ -601,7 +601,7 @@ export default function SavingsBlueprint() {
             {/* Savings hero card */}
             <div
               className="rounded-2xl p-8 text-white relative overflow-hidden"
-              style={{ backgroundColor: "#1e4d47" }}
+              style={{ backgroundColor: "#0E5659" }}
             >
               <div
                 className="absolute rounded-full pointer-events-none"
@@ -621,7 +621,7 @@ export default function SavingsBlueprint() {
                 </p>
                 <h2
                   className="text-3xl font-bold mb-6"
-                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  style={{ fontFamily: "'Sora', sans-serif" }}
                 >
                   Savings Blueprint
                 </h2>
@@ -669,10 +669,10 @@ export default function SavingsBlueprint() {
             {recommendedPrograms.length > 0 && (
               <div className="bg-white rounded-2xl shadow-md p-6">
                 <div className="flex items-center gap-2 mb-5">
-                  <Target size={20} style={{ color: "#2b6b62" }} />
+                  <Target size={20} style={{ color: "#C05824" }} />
                   <h3
                     className="text-xl font-bold"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.25 0.06 170)" }}
+                    style={{ fontFamily: "'Sora', sans-serif", color: "oklch(0.25 0.06 170)" }}
                   >
                     Recommended Discount Programs
                   </h3>
@@ -714,10 +714,10 @@ export default function SavingsBlueprint() {
             {(qualifiedBenefits.length > 0 || ageQualified.length > 0) && (
               <div className="bg-white rounded-2xl shadow-md p-6">
                 <div className="flex items-center gap-2 mb-5">
-                  <ShieldCheck size={20} style={{ color: "#2b6b62" }} />
+                  <ShieldCheck size={20} style={{ color: "#C05824" }} />
                   <h3
                     className="text-xl font-bold"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.25 0.06 170)" }}
+                    style={{ fontFamily: "'Sora', sans-serif", color: "oklch(0.25 0.06 170)" }}
                   >
                     Benefits You May Qualify For
                   </h3>
@@ -774,10 +774,10 @@ export default function SavingsBlueprint() {
             {/* Savings Calendar */}
             <div className="bg-white rounded-2xl shadow-md p-6">
               <div className="flex items-center gap-2 mb-2">
-                <Calendar size={20} style={{ color: "#2b6b62" }} />
+                <Calendar size={20} style={{ color: "#C05824" }} />
                 <h3
                   className="text-xl font-bold"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.25 0.06 170)" }}
+                  style={{ fontFamily: "'Sora', sans-serif", color: "oklch(0.25 0.06 170)" }}
                 >
                   Your Savings Calendar
                 </h3>
@@ -814,7 +814,7 @@ export default function SavingsBlueprint() {
               <div className="flex-1">
                 <h4
                   className="font-bold text-lg"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.25 0.06 170)" }}
+                  style={{ fontFamily: "'Sora', sans-serif", color: "oklch(0.25 0.06 170)" }}
                 >
                   Have deeper questions?
                 </h4>
@@ -826,7 +826,7 @@ export default function SavingsBlueprint() {
                 <Link
                   href="/ask-claude"
                   className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm transition-all duration-200 hover:opacity-90 no-underline"
-                  style={{ backgroundColor: "#2b6b62" }}
+                  style={{ backgroundColor: "#C05824" }}
                 >
                   Ask the AI Advisor <ArrowRight size={16} />
                 </Link>
@@ -848,10 +848,10 @@ export default function SavingsBlueprint() {
               ══════════════════════════════════════ */}
               <div className="bg-white rounded-2xl shadow-md p-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <Star size={20} style={{ color: "#2b6b62" }} />
+                  <Star size={20} style={{ color: "#C05824" }} />
                   <h3
                     className="text-xl font-bold"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.25 0.06 170)" }}
+                    style={{ fontFamily: "'Sora', sans-serif", color: "oklch(0.25 0.06 170)" }}
                   >
                     LifeMart Exclusive Savings
                   </h3>
@@ -925,10 +925,10 @@ export default function SavingsBlueprint() {
               ══════════════════════════════════════ */}
               <div className="bg-white rounded-2xl shadow-md p-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <Clipboard size={20} style={{ color: "#2b6b62" }} />
+                  <Clipboard size={20} style={{ color: "#C05824" }} />
                   <h3
                     className="text-xl font-bold"
-                    style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.25 0.06 170)" }}
+                    style={{ fontFamily: "'Sora', sans-serif", color: "oklch(0.25 0.06 170)" }}
                   >
                     How to Access Your Savings
                   </h3>
@@ -940,7 +940,7 @@ export default function SavingsBlueprint() {
                   {/* Step 1 */}
                   <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
                     <div className="flex items-start gap-3">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#2b6b62" }}>1</div>
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#C05824" }}>1</div>
                       <div>
                         <p className="font-semibold text-sm" style={{ color: "oklch(0.25 0.06 170)" }}>Print Your Coupon Checklist</p>
                         <p className="text-xs mt-1" style={{ color: "oklch(0.45 0 0)" }}>
@@ -952,7 +952,7 @@ export default function SavingsBlueprint() {
                   {/* Step 2 */}
                   <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
                     <div className="flex items-start gap-3">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#2b6b62" }}>2</div>
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#C05824" }}>2</div>
                       <div>
                         <p className="font-semibold text-sm" style={{ color: "oklch(0.25 0.06 170)" }}>Claim Your Store Discounts</p>
                         <p className="text-xs mt-1" style={{ color: "oklch(0.45 0 0)" }}>
@@ -964,12 +964,12 @@ export default function SavingsBlueprint() {
                   {/* Step 3 */}
                   <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
                     <div className="flex items-start gap-3">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#2b6b62" }}>3</div>
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#C05824" }}>3</div>
                       <div>
                         <p className="font-semibold text-sm" style={{ color: "oklch(0.25 0.06 170)" }}>Print Coupons from Our Coupons Page</p>
                         <p className="text-xs mt-1" style={{ color: "oklch(0.45 0 0)" }}>
                           Visit our{" "}
-                          <Link href="/coupons" className="underline font-semibold" style={{ color: "#2b6b62" }}>Coupons page</Link>{" "}
+                          <Link href="/coupons" className="underline font-semibold" style={{ color: "#C05824" }}>Coupons page</Link>{" "}
                           to find printable coupons for grocery stores, pharmacies, and retail shops. Print them before your next shopping trip to stack savings on top of your senior discounts.
                         </p>
                       </div>
@@ -978,12 +978,12 @@ export default function SavingsBlueprint() {
                   {/* Step 4 */}
                   <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
                     <div className="flex items-start gap-3">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#2b6b62" }}>4</div>
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#C05824" }}>4</div>
                       <div>
                         <p className="font-semibold text-sm" style={{ color: "oklch(0.25 0.06 170)" }}>Enroll in Benefit Programs</p>
                         <p className="text-xs mt-1" style={{ color: "oklch(0.45 0 0)" }}>
                           For each benefit program listed above under "Benefits You May Qualify For," visit our{" "}
-                          <Link href="/social-programs" className="underline font-semibold" style={{ color: "#2b6b62" }}>Benefits Hub</Link>{" "}
+                          <Link href="/social-programs" className="underline font-semibold" style={{ color: "#C05824" }}>Benefits Hub</Link>{" "}
                           for direct application links and eligibility details. Many programs can be applied for online or by calling 1-800-MEDICARE (1-800-633-4227).
                         </p>
                       </div>
@@ -992,12 +992,12 @@ export default function SavingsBlueprint() {
                   {/* Step 5 */}
                   <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
                     <div className="flex items-start gap-3">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#2b6b62" }}>5</div>
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#C05824" }}>5</div>
                       <div>
                         <p className="font-semibold text-sm" style={{ color: "oklch(0.25 0.06 170)" }}>Activate Your LifeMart Access</p>
                         <p className="text-xs mt-1" style={{ color: "oklch(0.45 0 0)" }}>
                           Go to{" "}
-                          <a href="https://www.care.com/lifemart/" target="_blank" rel="noopener noreferrer" className="underline font-semibold" style={{ color: "#2b6b62" }}>care.com/lifemart</a>{" "}
+                          <a href="https://www.care.com/lifemart/" target="_blank" rel="noopener noreferrer" className="underline font-semibold" style={{ color: "#C05824" }}>care.com/lifemart</a>{" "}
                           to create your account. Check with your employer's HR department first — many companies provide free LifeMart access as an employee benefit. Once enrolled, browse by category and click through to merchants for automatic discounts.
                         </p>
                       </div>
@@ -1006,7 +1006,7 @@ export default function SavingsBlueprint() {
                   {/* Step 6 */}
                   <div className="p-4 rounded-xl" style={{ backgroundColor: "oklch(0.97 0.010 80)" }}>
                     <div className="flex items-start gap-3">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#2b6b62" }}>6</div>
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold" style={{ backgroundColor: "#C05824" }}>6</div>
                       <div>
                         <p className="font-semibold text-sm" style={{ color: "oklch(0.25 0.06 170)" }}>Download Savings Apps</p>
                         <p className="text-xs mt-1" style={{ color: "oklch(0.45 0 0)" }}>
