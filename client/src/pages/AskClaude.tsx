@@ -22,10 +22,10 @@ function renderMarkdown(text: string): string {
     .replace(/^### (.+)$/gm, '<h3 class="text-lg font-bold mt-4 mb-2" style="font-family: \'Playfair Display\', serif; color: oklch(0.15 0 0)">$1</h3>')
     .replace(/^## (.+)$/gm, '<h2 class="text-xl font-bold mt-5 mb-2" style="font-family: \'Playfair Display\', serif; color: oklch(0.15 0 0)">$1</h2>')
     .replace(/^# (.+)$/gm, '<h1 class="text-2xl font-bold mt-5 mb-3" style="font-family: \'Playfair Display\', serif; color: oklch(0.15 0 0)">$1</h1>')
-    .replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold" style="color: oklch(0.30 0.04 50)">$1</strong>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold" style="color: oklch(0.35 0.08 170)">$1</strong>')
     .replace(/^[-*] (.+)$/gm, '<li class="ml-4 mb-1 flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style="background: oklch(0.45 0.08 175)"></span><span>$1</span></li>')
     .replace(/^\d+\. (.+)$/gm, '<li class="ml-4 mb-1">$1</li>')
-    .replace(/^---$/gm, '<hr class="my-4 border-t" style="border-color: oklch(0.88 0.02 75)" />')
+    .replace(/^---$/gm, '<hr class="my-4 border-t" style="border-color: oklch(0.85 0.03 170)" />')
     .replace(/\n{2,}/g, '</p><p class="mb-3 leading-relaxed">')
     .replace(/^/, '<p class="mb-3 leading-relaxed">')
     .replace(/$/, '</p>');
@@ -76,7 +76,7 @@ export default function AskClaude() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.25_0_0)] via-[oklch(0.30_0.06_42)] to-[oklch(0.22_0.03_50)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1e4d47] to-[oklch(0.22_0.03_50)]" />
         <div className="relative container py-12 md:py-16">
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-4 border border-white/20">
@@ -111,7 +111,7 @@ export default function AskClaude() {
                   <button
                     key={q}
                     onClick={() => sendMessage(q)}
-                    className="text-left text-sm px-4 py-3 rounded-xl border border-[oklch(0.90_0_0)] bg-white hover:bg-[oklch(0.95_0.015_80)] transition-colors text-[oklch(0.40_0.05_50)]"
+                    className="text-left text-sm px-4 py-3 rounded-xl border border-[oklch(0.90_0_0)] bg-white hover:bg-[oklch(0.95_0.01_170)] transition-colors text-[oklch(0.35_0.08_170)]"
                   >
                     {q}
                   </button>
@@ -165,7 +165,7 @@ export default function AskClaude() {
         {/* Input */}
         <div className="sticky bottom-4 bg-white rounded-2xl border border-[oklch(0.90_0_0)] shadow-lg p-2 flex items-center gap-2">
           <input
-            className="flex-1 outline-none text-sm text-[oklch(0.30_0.05_50)] placeholder:text-[oklch(0.65_0.02_60)] px-3 py-2"
+            className="flex-1 outline-none text-sm text-[oklch(0.25_0.05_170)] placeholder:text-[oklch(0.60_0.02_170)] px-3 py-2"
             placeholder="Ask about Medicare, disability benefits, retirement..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
