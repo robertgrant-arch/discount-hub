@@ -71,13 +71,12 @@ export default function AskClaude() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "oklch(0.98 0 0)" }}>
       <Navbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1e4d47] to-[oklch(0.22_0.03_50)]" />
-        <div className="relative container py-12 md:py-16">
+      <section className="" style={{ backgroundColor: "#1e4d47" }}>
+        <div className="max-w-4xl mx-auto px-6 py-16 text-center">
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-4 border border-white/20">
               <MessageCircle className="w-3.5 h-3.5" />
