@@ -122,7 +122,7 @@ export default function AskClaude() {
             messages.map((msg, i) => (
               <div key={i} className={`flex gap-3 ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                 {msg.role === "assistant" && (
-                  <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-1" style={{ background: "oklch(0.47 0.08 185)" }}>
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-1" style={{ background: "oklch(0.68 0.15 55)" }}>
                     <Bot className="w-4 h-4 text-white" />
                   </div>
                 )}
@@ -152,7 +152,7 @@ export default function AskClaude() {
           )}
           {loading && (
             <div className="flex gap-3">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: "oklch(0.47 0.08 185)" }}>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: "oklch(0.68 0.15 55)" }}>
                 <Bot className="w-4 h-4 text-white" />
               </div>
               <div className="bg-white border border-[oklch(0.88_0.02_75)] rounded-2xl rounded-bl-md px-5 py-4 shadow-sm">

@@ -160,7 +160,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                 type="submit"
                 disabled={loading}
                 className="w-full font-semibold"
-                style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
+                style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
               >
                 {loading ? (
                   <span className="flex items-center gap-2">
@@ -260,7 +260,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                 type="submit"
                 disabled={loading}
                 className="w-full font-semibold"
-                style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
+                style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
               >
                 {loading ? (
                   <span className="flex items-center gap-2">

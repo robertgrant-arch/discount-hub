@@ -137,7 +137,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
               <Link href="/pricing">
                 <button
                   className="text-xs font-semibold px-3 py-1.5 rounded-full text-white transition-opacity hover:opacity-90"
-                  style={{ background: "oklch(0.47 0.08 185)" }}
+                  style={{ background: "oklch(0.68 0.15 55)" }}
                 >
                   Unlock with {isSenior ? "Basic" : "Plus"}
                 </button>

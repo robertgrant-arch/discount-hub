@@ -172,7 +172,7 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
               <Link href="/pricing">
                 <button
                   className="text-xs font-semibold px-3 py-1 rounded-full text-white"
-                  style={{ background: "oklch(0.47 0.08 185)" }}
+                  style={{ background: "oklch(0.68 0.15 55)" }}
                 >
                   Unlock with {isSenior ? "Basic" : "Plus"}
                 </button>

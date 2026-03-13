@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.47 0.08 185)" }}>
+              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.68 0.15 55)" }}>
                 <Tag className="w-3.5 h-3.5 text-white" />
               </div>
               <span className="font-bold text-base" style={{ fontFamily: "'Playfair Display', serif" }}>

@@ -112,7 +112,7 @@ export default function Navbar() {
               <Link href="/" className="flex items-center gap-2 group shrink-0">
                 <div
                   className="w-8 h-8 rounded-lg flex items-center justify-center"
-                  style={{ background: "oklch(0.47 0.08 185)" }}
+                  style={{ background: "oklch(0.68 0.15 55)" }}
                 >
                   <Tag className="w-4 h-4 text-white" />
                 </div>
@@ -154,7 +154,7 @@ export default function Navbar() {
                     {link.icon && <link.icon className="w-3.5 h-3.5" />}
                     {link.label}
                     {link.badge && (
-                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.47 0.08 185)" }}>
+                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.68 0.15 55)" }}>
                         {link.badge}
                       </span>
                     )}
@@ -172,7 +172,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={openSignup}
-                    style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
+                    style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
                   >
                     Get Started Free or Sign In
                   </Button>
@@ -207,7 +207,7 @@ export default function Navbar() {
                   {link.icon && <link.icon className="w-4 h-4" />}
                   {link.label}
                   {link.badge && (
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.47 0.08 185)" }}>
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.68 0.15 55)" }}>
                       {link.badge}
                     </span>
                   )}
@@ -220,7 +220,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={() => { openSignup(); setMobileOpen(false); }}
-                    style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
+                    style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
                   >
                     Get Started Free or Sign In
                   </Button>

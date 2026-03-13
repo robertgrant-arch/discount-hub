@@ -213,7 +213,7 @@ export default function Coupons() {
             <Link href="/pricing">
               <button
                 className="w-full py-1.5 rounded-lg text-xs font-bold text-white"
-                style={{ background: "oklch(0.47 0.08 185)" }}
+                style={{ background: "oklch(0.68 0.15 55)" }}
               >
                 Upgrade from $4.99
               </button>

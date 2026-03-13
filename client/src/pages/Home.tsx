@@ -72,7 +72,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="font-semibold shadow-lg"
-                  style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
+                                      style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
                 >
                   Browse Discounts <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -132,7 +132,7 @@ export default function Home() {
               <Link href="/benefits-hub">
                 <div className="bg-white rounded-xl border border-[oklch(0.82_0.06_42)] p-4 hover:shadow-md transition-shadow cursor-pointer">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.47 0.08 185)" }}>
+                    <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.68 0.15 55)" }}>
                       <MapPin className="w-4.5 h-4.5 text-white" />
                     </div>
                     <div>
@@ -386,7 +386,7 @@ export default function Home() {
               <Button
                 size="lg"
                 className="font-semibold shadow-xl"
-                style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
+                style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
               >
                 See All Plans <ArrowRight className="w-4 h-4 ml-1" />
               </Button>

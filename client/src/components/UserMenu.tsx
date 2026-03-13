@@ -45,7 +45,7 @@ export default function UserMenu() {
         {/* Avatar */}
         <div
           className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
-          style={{ background: "oklch(0.47 0.08 185)" }}
+          style={{ background: "oklch(0.68 0.15 55)" }}
         >
           {initials}
         </div>

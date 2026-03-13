@@ -113,7 +113,7 @@ export default function Checkout() {
             A confirmation has been sent to <strong>{form.email}</strong>
           </p>
           <Link href="/discounts">
-            <Button size="lg" style={{ background: "oklch(0.47 0.08 185)", color: "white" }}>
+            <Button size="lg" style={{ background: "oklch(0.68 0.15 55)", color: "white" }}>
               Start Browsing Discounts →
             </Button>
           </Link>
@@ -137,7 +137,7 @@ export default function Checkout() {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl border border-[oklch(0.88_0.02_75)] p-6 shadow-sm sticky top-24">
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.47 0.08 185)" }}>
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.68 0.15 55)" }}>
                   <Tag className="w-4 h-4 text-white" />
                 </div>
                 <span className="font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -321,7 +321,7 @@ export default function Checkout() {
                   size="lg"
                   disabled={loading}
                   className="w-full font-semibold mt-2 shadow-md"
-                  style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
+                  style={{ background: "oklch(0.68 0.15 55)", color: "white" }}
                 >
                   {loading ? (
                     <span className="flex items-center gap-2">
