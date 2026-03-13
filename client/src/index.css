@@ -48,9 +48,9 @@
   --radius: 0.5rem;
 
   /* Brand palette — Healthcare Select */
-  --teal: oklch(0.45 0.08 175);
-  --teal-light: oklch(0.55 0.07 175);
-  --teal-dark: oklch(0.33 0.08 175);
+  --teal: oklch(0.46 0.06 170);
+  --teal-light: oklch(0.56 0.05 170);
+  --teal-dark: oklch(0.35 0.06 170);
   --cream: oklch(0.98 0 0);
   --cream-dark: oklch(0.96 0 0);
   --coral: oklch(0.68 0.15 55);
@@ -70,7 +70,7 @@
   --card-foreground: oklch(0.15 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.45 0.08 175);
+  --primary: oklch(0.46 0.06 170);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.96 0 0);
   --secondary-foreground: oklch(0.25 0 0);
@@ -82,12 +82,12 @@
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.90 0 0);
   --input: oklch(0.90 0 0);
-  --ring: oklch(0.45 0.08 175);
-  --chart-1: oklch(0.45 0.08 175);
+  --ring: oklch(0.46 0.06 170);
+  --chart-1: oklch(0.46 0.06 170);
   --chart-2: oklch(0.68 0.15 55);
-  --chart-3: oklch(0.55 0.07 175);
+  --chart-3: oklch(0.56 0.05 170);
   --chart-4: oklch(0.78 0.11 55);
-  --chart-5: oklch(0.33 0.08 175);
+  --chart-5: oklch(0.35 0.06 170);
 
   /* Accessibility: font scale */
   --font-scale: 1;
@@ -171,8 +171,8 @@
     letter-spacing: 0.02em;
   }
   .badge-senior {
-    background-color: oklch(0.93 0.02 175);
-    color: oklch(0.33 0.08 175);
+    background-color: oklch(0.93 0.02 170);
+    color: oklch(0.35 0.06 170);
   }
   .badge-disability {
     background-color: oklch(0.93 0.04 55);
@@ -190,7 +190,7 @@
     box-shadow: 0 20px 40px oklch(0 0 0 / 0.12);
   }
   .tier-card.featured {
-    background: linear-gradient(135deg, oklch(0.45 0.08 175), oklch(0.33 0.08 175));
+    background: linear-gradient(135deg, oklch(0.46 0.06 170), oklch(0.35 0.06 170));
     color: white;
   }
 }
@@ -209,7 +209,7 @@ html {
   background: oklch(0.96 0 0);
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.55 0.07 175);
+  background: oklch(0.56 0.05 170);
   border-radius: 3px;
 }
 
@@ -217,7 +217,7 @@ html {
 .high-contrast {
   --background: oklch(1 0 0);
   --foreground: oklch(0 0 0);
-  --primary: oklch(0.30 0.08 175);
+  --primary: oklch(0.30 0.06 170);
   --muted-foreground: oklch(0.2 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0 0 0);
