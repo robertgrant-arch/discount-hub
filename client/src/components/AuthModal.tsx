@@ -54,7 +54,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
     const result = await signup(signupName, signupEmail, signupPass);
     setLoading(false);
     if (result.success) {
-      toast.success("Account created! Welcome to DiscountHub.");
+      toast.success("Account created! Welcome to HealthCare Select Benefits Hub.");
       onClose();
     } else {
       toast.error(result.error || "Signup failed");
@@ -77,13 +77,13 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
         {/* Header */}
         <div
           className="px-8 pt-8 pb-6 text-center"
-          style={{ background: "linear-gradient(135deg, oklch(0.55 0.13 42), oklch(0.40 0.13 42))" }}
+          style={{ background: "linear-gradient(135deg, oklch(0.47 0.08 185), oklch(0.47 0.08 185))" }}
         >
           <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3">
             <Tag className="w-6 h-6 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
-            {tab === "login" ? "Welcome Back" : "Join DiscountHub"}
+            {tab === "login" ? "Welcome Back" : "Join HealthCare Select Benefits Hub"}
           </h2>
           <p className="text-white/75 text-sm mt-1">
             {tab === "login"
@@ -100,7 +100,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
               onClick={() => setTab(t)}
               className={`flex-1 py-3 text-sm font-semibold transition-colors border-b-2 -mb-px ${
                 tab === t
-                  ? "border-[oklch(0.55_0.13_42)] text-[oklch(0.55_0.13_42)]"
+                  ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.47 0.08 185)]"
                   : "border-transparent text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.35_0.04_50)]"
               }`}
             >
@@ -160,7 +160,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                 type="submit"
                 disabled={loading}
                 className="w-full font-semibold"
-                style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
               >
                 {loading ? (
                   <span className="flex items-center gap-2">
@@ -189,7 +189,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
 
               <p className="text-center text-xs text-[oklch(0.60_0.03_60)]">
                 Don't have an account?{" "}
-                <button type="button" onClick={() => setTab("signup")} className="font-semibold hover:underline" style={{ color: "oklch(0.55 0.13 42)" }}>
+                <button type="button" onClick={() => setTab("signup")} className="font-semibold hover:underline" style={{ color: "oklch(0.47 0.08 185)" }}>
                   Sign up free
                 </button>
               </p>
@@ -260,7 +260,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
                 type="submit"
                 disabled={loading}
                 className="w-full font-semibold"
-                style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
               >
                 {loading ? (
                   <span className="flex items-center gap-2">
@@ -272,7 +272,7 @@ export default function AuthModal({ open, onClose, defaultTab = "login" }: AuthM
 
               <p className="text-center text-xs text-[oklch(0.60_0.03_60)]">
                 Already have an account?{" "}
-                <button type="button" onClick={() => setTab("login")} className="font-semibold hover:underline" style={{ color: "oklch(0.55 0.13 42)" }}>
+                <button type="button" onClick={() => setTab("login")} className="font-semibold hover:underline" style={{ color: "oklch(0.47 0.08 185)" }}>
                   Sign in
                 </button>
               </p>

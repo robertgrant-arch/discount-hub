@@ -1,4 +1,5 @@
-/* DiscountHub Navbar — Warm Abundance design
+120
+/* HealthCare Select Benefits Hub Navbar — Warm Abundance design
  * Sticky top nav with auth-aware right side: login/signup or UserMenu
  * Nav shows priority-ordered links at ALL screen sizes, fitting as many as possible
  * Properly spaced and responsive
@@ -111,24 +112,24 @@ export default function Navbar() {
               <Link href="/" className="flex items-center gap-2 group shrink-0">
                 <div
                   className="w-8 h-8 rounded-lg flex items-center justify-center"
-                  style={{ background: "oklch(0.55 0.13 42)" }}
+                  style={{ background: "oklch(0.47 0.08 185)" }}
                 >
                   <Tag className="w-4 h-4 text-white" />
                 </div>
                 <span
                   className="font-bold text-lg tracking-tight hidden sm:inline"
-                  style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.22 0.02 50)" }}
+                  style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.35 0.08 185)" }}
                 >
-                  Discount<span style={{ color: "oklch(0.55 0.13 42)" }}>Hub</span>
+                  HealthCare Select Benefits <span style={{ color: "oklch(0.47 0.08 185)" }}>Hub</span>
                 </span>
               </Link>
 
               {/* Home link — always visible on the left */}
               <Link
                 href="/"
-                className={`text-sm font-medium transition-colors hover:text-[oklch(0.55_0.13_42)] whitespace-nowrap shrink-0 ${
+                className={`text-sm font-medium transition-colors hover:text-[oklch(0.47 0.08 185)] whitespace-nowrap shrink-0 ${
                   location === "/"
-                    ? "text-[oklch(0.55_0.13_42)]"
+                    ? "text-[oklch(0.47 0.08 185)]"
                     : "text-[oklch(0.45_0.03_60)]"
                 }`}
               >
@@ -144,16 +145,16 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-sm font-medium transition-colors hover:text-[oklch(0.55_0.13_42)] flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
+                    className={`text-sm font-medium transition-colors hover:text-[oklch(0.47 0.08 185)] flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
                       location === link.href
-                        ? "text-[oklch(0.55_0.13_42)]"
+                        ? "text-[oklch(0.47 0.08 185)]"
                         : "text-[oklch(0.45_0.03_60)]"
                     }`}
                   >
                     {link.icon && <link.icon className="w-3.5 h-3.5" />}
                     {link.label}
                     {link.badge && (
-                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.55 0.13 42)" }}>
+                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.47 0.08 185)" }}>
                         {link.badge}
                       </span>
                     )}
@@ -171,7 +172,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={openSignup}
-                    style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                    style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
                   >
                     Get Started Free or Sign In
                   </Button>
@@ -198,15 +199,15 @@ export default function Navbar() {
                   href={link.href}
                   className={`flex items-center gap-2.5 text-sm font-medium py-2.5 px-3 rounded-lg transition-colors ${
                     location === link.href
-                      ? "text-[oklch(0.55_0.13_42)] bg-[oklch(0.95_0.03_42)]"
-                      : "text-[oklch(0.45_0.03_60)] hover:text-[oklch(0.55_0.13_42)] hover:bg-[oklch(0.97_0.01_80)]"
+                      ? "text-[oklch(0.47 0.08 185)] bg-[oklch(0.95_0.03_42)]"
+                      : "text-[oklch(0.45_0.03_60)] hover:text-[oklch(0.47 0.08 185)] hover:bg-[oklch(0.97_0.01_80)]"
                   }`}
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.icon && <link.icon className="w-4 h-4" />}
                   {link.label}
                   {link.badge && (
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.55 0.13 42)" }}>
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ background: "oklch(0.47 0.08 185)" }}>
                       {link.badge}
                     </span>
                   )}
@@ -219,7 +220,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={() => { openSignup(); setMobileOpen(false); }}
-                    style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                    style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
                   >
                     Get Started Free or Sign In
                   </Button>

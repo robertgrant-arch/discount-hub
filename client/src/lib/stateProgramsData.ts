@@ -1,4 +1,4 @@
-/* stateProgramsData.ts — DiscountHub
+/* stateProgramsData.ts — HealthCare Select Benefits Hub
  * State & local social programs for seniors and disabled Americans
  * Compiled from research across all 50 states
  * Auto-generated — do not edit manually

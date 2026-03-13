@@ -46,7 +46,7 @@ export default function Checkout() {
         <Navbar />
         <div className="container py-16 text-center">
           <p className="text-[oklch(0.52_0.04_60)]">Invalid plan selected.</p>
-          <Link href="/pricing" className="text-sm font-medium mt-4 inline-block" style={{ color: "oklch(0.55 0.13 42)" }}>
+          <Link href="/pricing" className="text-sm font-medium mt-4 inline-block" style={{ color: "oklch(0.47 0.08 185)" }}>
             ← Back to pricing
           </Link>
         </div>
@@ -91,7 +91,7 @@ export default function Checkout() {
     setSuccess(true);
     setTier(tier);
     updateTier(tier); // persist to user account
-    toast.success(`Welcome to DiscountHub ${plan.name}!`);
+    toast.success(`Welcome to HealthCare Select Benefits Hub ${plan.name}!`);
   };
 
   if (success) {
@@ -107,13 +107,13 @@ export default function Checkout() {
           </h1>
               <PageHaiku lines={["One small step today", "Unlocks a world of savings", "Membership blooms bright"]} />
           <p className="text-[oklch(0.52_0.04_60)] mb-2">
-            Welcome to <strong>DiscountHub {plan.name}</strong>. Your membership is now active.
+            Welcome to <strong>HealthCare Select Benefits Hub {plan.name}</strong>. Your membership is now active.
           </p>
           <p className="text-sm text-[oklch(0.60_0.03_60)] mb-8">
             A confirmation has been sent to <strong>{form.email}</strong>
           </p>
           <Link href="/discounts">
-            <Button size="lg" style={{ background: "oklch(0.55 0.13 42)", color: "white" }}>
+            <Button size="lg" style={{ background: "oklch(0.47 0.08 185)", color: "white" }}>
               Start Browsing Discounts →
             </Button>
           </Link>
@@ -128,7 +128,7 @@ export default function Checkout() {
       <Navbar />
 
       <div className="container py-10 max-w-4xl mx-auto">
-        <Link href="/pricing" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.55_0.13_42)] mb-6 transition-colors">
+        <Link href="/pricing" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] mb-6 transition-colors">
           <ArrowLeft className="w-3.5 h-3.5" /> Back to pricing
         </Link>
 
@@ -137,11 +137,11 @@ export default function Checkout() {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl border border-[oklch(0.88_0.02_75)] p-6 shadow-sm sticky top-24">
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.55 0.13 42)" }}>
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.47 0.08 185)" }}>
                   <Tag className="w-4 h-4 text-white" />
                 </div>
                 <span className="font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  DiscountHub <span style={{ color: "oklch(0.55 0.13 42)" }}>{plan.name}</span>
+                  HealthCare Select Benefits Hub <span style={{ color: "oklch(0.47 0.08 185)" }}>{plan.name}</span>
                 </span>
               </div>
 
@@ -153,7 +153,7 @@ export default function Checkout() {
                     onClick={() => setBilling(b)}
                     className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-all border ${
                       billing === b
-                        ? "border-[oklch(0.55_0.13_42)] text-[oklch(0.40_0.13_42)] bg-[oklch(0.95_0.03_42)]"
+                        ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.40_0.13_42)] bg-[oklch(0.95_0.03_42)]"
                         : "border-[oklch(0.88_0.02_75)] text-[oklch(0.52_0.04_60)]"
                     }`}
                   >
@@ -177,7 +177,7 @@ export default function Checkout() {
 
               <div className="border-t border-[oklch(0.88_0.02_75)] pt-4 flex justify-between font-bold">
                 <span>Total today</span>
-                <span style={{ color: "oklch(0.55 0.13 42)" }}>${price.toFixed(2)}</span>
+                <span style={{ color: "oklch(0.47 0.08 185)" }}>${price.toFixed(2)}</span>
               </div>
 
               <ul className="mt-5 space-y-2">
@@ -321,7 +321,7 @@ export default function Checkout() {
                   size="lg"
                   disabled={loading}
                   className="w-full font-semibold mt-2 shadow-md"
-                  style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                  style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
                 >
                   {loading ? (
                     <span className="flex items-center gap-2">

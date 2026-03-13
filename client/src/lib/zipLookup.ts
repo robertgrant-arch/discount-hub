@@ -1,4 +1,4 @@
-/* zipLookup.ts — DiscountHub
+/* zipLookup.ts — HealthCare Select Benefits Hub
  * Zip code → state + city/county lookup utility
  * Uses the free Zippopotam.us API (no key required) with localStorage caching
  */

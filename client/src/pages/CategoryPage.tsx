@@ -28,7 +28,7 @@ export default function CategoryPage() {
         <Navbar />
         <div className="container py-16 text-center">
           <p className="text-[oklch(0.52_0.04_60)]">Category not found.</p>
-          <Link href="/discounts" className="text-sm font-medium mt-4 inline-block" style={{ color: "oklch(0.55 0.13 42)" }}>
+          <Link href="/discounts" className="text-sm font-medium mt-4 inline-block" style={{ color: "oklch(0.47 0.08 185)" }}>
             ← Back to all discounts
           </Link>
         </div>
@@ -66,7 +66,7 @@ export default function CategoryPage() {
           </>
         )}
         <div className="relative container py-10">
-          <Link href="/discounts" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.55_0.13_42)] mb-4 transition-colors">
+          <Link href="/discounts" className="inline-flex items-center gap-1.5 text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] mb-4 transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" /> Back to all discounts
           </Link>
           <h1 className="text-3xl font-bold text-[oklch(0.22_0.02_50)] mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -98,7 +98,7 @@ export default function CategoryPage() {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2.5 text-sm font-medium capitalize transition-colors border-b-2 -mb-px ${
                   activeTab === tab
-                    ? "border-[oklch(0.55_0.13_42)] text-[oklch(0.55_0.13_42)]"
+                    ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.47 0.08 185)]"
                     : "border-transparent text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.35_0.04_50)]"
                 }`}
               >

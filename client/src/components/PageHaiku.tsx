@@ -27,7 +27,7 @@ export default function PageHaiku({ lines, className = "" }: PageHaikuProps) {
         </p>
       </blockquote>
       <figcaption className="mt-2 pl-5 text-xs text-muted-foreground/50 tracking-widest uppercase">
-        — DiscountHub
+        — HealthCare Select Benefits Hub
       </figcaption>
     </figure>
   );

@@ -1,4 +1,4 @@
-/* monetizationData.ts — DiscountHub Revenue Programs
+/* monetizationData.ts — HealthCare Select Benefits Hub Revenue Programs
  * Affiliate links, pay-per-call numbers, and lead gen CTAs
  * Organized by site section for easy placement
  * NOTE: Replace placeholder phone numbers and affiliate URLs with your live tracked numbers/links

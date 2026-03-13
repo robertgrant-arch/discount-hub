@@ -1,4 +1,4 @@
-/* couponData.ts — DiscountHub Coupon Programs
+/* couponData.ts — HealthCare Select Benefits Hub Coupon Programs
  * Auto-generated from research data
  */
 

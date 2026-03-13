@@ -1,4 +1,4 @@
-# DiscountHub — Design Ideas
+# HealthCare Select Benefits Hub — Design Ideas
 
 ## Approach A: "Civic Trust" — Government-Inspired Clarity
 - **Design Movement**: American civic modernism meets fintech clarity

@@ -857,7 +857,7 @@ export default function SavingsBlueprint() {
                   </h3>
                 </div>
                 <p className="text-sm mb-4" style={{ color: "oklch(0.52 0.04 60)" }}>
-                  As a DiscountHub member, you also have access to LifeMart by Care.com — a members-only platform with 19,000+ savings opportunities from 1,300+ trusted brands.
+                  As a HealthCare Select Benefits Hub member, you also have access to LifeMart by Care.com — a members-only platform with 19,000+ savings opportunities from 1,300+ trusted brands.
                 </p>
                 <div className="rounded-xl p-4 mb-4" style={{ backgroundColor: "oklch(0.95 0.03 200)" }}>
                   <div className="flex items-start gap-2">
@@ -889,7 +889,7 @@ export default function SavingsBlueprint() {
                       <Star
                         size={18}
                         className="mt-0.5 shrink-0"
-                        style={{ color: "oklch(0.55 0.13 42)" }}
+                        style={{ color: "oklch(0.47 0.08 185)" }}
                       />
                       <div>
                         <p className="font-semibold text-sm" style={{ color: "oklch(0.30 0.04 55)" }}>
@@ -1024,7 +1024,7 @@ export default function SavingsBlueprint() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                     {[
                       "Valid photo ID showing your date of birth",
-                      "Printed coupons from DiscountHub Coupons page",
+                      "Printed coupons from HealthCare Select Benefits Hub Coupons page",
                       "AARP or membership cards (if applicable)",
                       "Smartphone with GoodRx & LifeMart apps installed",
                       "This printed Savings Blueprint for reference",

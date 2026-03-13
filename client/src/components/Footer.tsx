@@ -9,11 +9,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.55 0.13 42)" }}>
+              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.47 0.08 185)" }}>
                 <Tag className="w-3.5 h-3.5 text-white" />
               </div>
               <span className="font-bold text-base" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Discount<span style={{ color: "oklch(0.55 0.13 42)" }}>Hub</span>
+                Discount<span style={{ color: "oklch(0.47 0.08 185)" }}>Hub</span>
               </span>
             </Link>
             <p className="text-sm text-[oklch(0.52_0.04_60)] max-w-xs leading-relaxed">
@@ -34,7 +34,7 @@ export default function Footer() {
                 { href: "/medicare-guide", label: "Medicare Guide" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.55_0.13_42)] transition-colors">
+                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -55,7 +55,7 @@ export default function Footer() {
                 { href: "https://www.aplaceformom.com", label: "A Place for Mom" },
               ].map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.55_0.13_42)] transition-colors">
+                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] transition-colors">
                     {l.label} ↗
                   </a>
                 </li>
@@ -74,7 +74,7 @@ export default function Footer() {
                 { href: "/disclosures", label: "Affiliate Disclosures" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.55_0.13_42)] transition-colors">
+                  <Link href={l.href} className="text-sm text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.47 0.08 185)] transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -87,14 +87,14 @@ export default function Footer() {
         <div className="mt-8 p-4 rounded-xl bg-[oklch(0.93_0.02_80)] border border-[oklch(0.88_0.02_75)]">
           <p className="text-xs text-[oklch(0.52_0.04_60)] leading-relaxed text-center">
             <Shield className="w-3 h-3 inline mr-1" />
-            <strong>Advertising Disclosure:</strong> DiscountHub may earn a commission when you click certain links on this site, including affiliate links, pay-per-call numbers, and sponsored program listings. This does not affect our editorial independence or the programs we list. Government program information is provided for educational purposes only.{" "}
+            <strong>Advertising Disclosure:</strong> HealthCare Select Benefits Hub may earn a commission when you click certain links on this site, including affiliate links, pay-per-call numbers, and sponsored program listings. This does not affect our editorial independence or the programs we list. Government program information is provided for educational purposes only.{" "}
             <Link href="/disclosures" className="underline hover:text-[oklch(0.45_0.13_42)]">Full disclosure policy</Link>
           </p>
         </div>
 
         <div className="mt-6 pt-6 border-t border-[oklch(0.88_0.02_75)] flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[oklch(0.60_0.03_60)]">
-            © {new Date().getFullYear()} DiscountHub. All rights reserved.
+            © {new Date().getFullYear()} HealthCare Select Benefits Hub. All rights reserved.
           </p>
           <p className="text-xs text-[oklch(0.60_0.03_60)]">
             Discount information is provided for reference only. Always verify with the provider directly.

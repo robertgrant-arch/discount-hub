@@ -65,14 +65,14 @@ export default function Home() {
             </h1>
               <PageHaiku lines={["Golden years bring gifts", "Savings bloom like autumn leaves", "Wisdom finds the deals"]} />
             <p className="text-white/85 text-lg leading-relaxed mb-8">
-              Stop searching dozens of websites. DiscountHub aggregates {TOTAL_SENIOR}+ senior discounts and {TOTAL_DISABILITY}+ disability programs across restaurants, travel, healthcare, retail, and more.
+              Stop searching dozens of websites. HealthCare Select Benefits Hub aggregates {TOTAL_SENIOR}+ senior discounts and {TOTAL_DISABILITY}+ disability programs across restaurants, travel, healthcare, retail, and more.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/discounts">
                 <Button
                   size="lg"
                   className="font-semibold shadow-lg"
-                  style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                  style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
                 >
                   Browse Discounts <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -102,7 +102,7 @@ export default function Home() {
               { value: "10", label: "Categories", icon: ShoppingBag },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col items-center gap-1">
-                <stat.icon className="w-5 h-5 mb-1" style={{ color: "oklch(0.55 0.13 42)" }} />
+                <stat.icon className="w-5 h-5 mb-1" style={{ color: "oklch(0.47 0.08 185)" }} />
                 <span className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif", color: "oklch(0.22 0.02 50)" }}>
                   {stat.value}
                 </span>
@@ -119,7 +119,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
-                <MapPin className="w-5 h-5 text-[oklch(0.55_0.13_42)]" />
+                <MapPin className="w-5 h-5 text-[oklch(0.47 0.08 185)]" />
                 <h2 className="text-xl font-bold text-[oklch(0.22_0.02_50)]" style={{ fontFamily: "'Playfair Display', serif" }}>
                   Find Programs Near You
                 </h2>
@@ -132,7 +132,7 @@ export default function Home() {
               <Link href="/benefits-hub">
                 <div className="bg-white rounded-xl border border-[oklch(0.82_0.06_42)] p-4 hover:shadow-md transition-shadow cursor-pointer">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.55 0.13 42)" }}>
+                    <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "oklch(0.47 0.08 185)" }}>
                       <MapPin className="w-4.5 h-4.5 text-white" />
                     </div>
                     <div>
@@ -141,8 +141,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-[oklch(0.55_0.13_42)] font-semibold">283+ state & local programs</span>
-                    <ArrowRight className="w-4 h-4 text-[oklch(0.55_0.13_42)]" />
+                    <span className="text-xs text-[oklch(0.47 0.08 185)] font-semibold">283+ state & local programs</span>
+                    <ArrowRight className="w-4 h-4 text-[oklch(0.47 0.08 185)]" />
                   </div>
                 </div>
               </Link>
@@ -162,7 +162,7 @@ export default function Home() {
               Explore discounts across every area of daily life
             </p>
           </div>
-          <Link href="/discounts" className="hidden md:flex items-center gap-1 text-sm font-medium hover:underline" style={{ color: "oklch(0.55 0.13 42)" }}>
+          <Link href="/discounts" className="hidden md:flex items-center gap-1 text-sm font-medium hover:underline" style={{ color: "oklch(0.47 0.08 185)" }}>
             View all <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -203,7 +203,7 @@ export default function Home() {
       <section className="bg-white border-y border-[oklch(0.88_0.02_75)]">
         <div className="container py-16">
           <h2 className="text-3xl font-bold text-center text-[oklch(0.22_0.02_50)] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-            How DiscountHub Works
+            How HealthCare Select Benefits Hub Works
           </h2>
           <p className="text-center text-[oklch(0.52_0.04_60)] mb-12">Simple, fast, and always up to date</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -212,7 +212,7 @@ export default function Home() {
                 step: "1",
                 title: "Browse Categories",
                 desc: "Explore 10 categories covering every aspect of daily life — from dining and travel to healthcare and technology.",
-                color: "oklch(0.55 0.13 42)",
+                color: "oklch(0.47 0.08 185)",
               },
               {
                 step: "2",
@@ -224,7 +224,7 @@ export default function Home() {
                 step: "3",
                 title: "Access & Save",
                 desc: "Click directly to the provider's website or note how to claim your discount in-store. Save favorites with Premium.",
-                color: "oklch(0.55 0.13 42)",
+                color: "oklch(0.47 0.08 185)",
               },
             ].map((step) => (
               <div key={step.step} className="text-center">
@@ -248,7 +248,7 @@ export default function Home() {
       <section className="container py-14">
         <div
           className="rounded-2xl overflow-hidden relative"
-          style={{ background: "linear-gradient(135deg, oklch(0.55 0.13 42), oklch(0.40 0.10 42))" }}
+          style={{ background: "linear-gradient(135deg, oklch(0.47 0.08 185), oklch(0.40 0.10 42))" }}
         >
           <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-10" style={{ background: "radial-gradient(circle at 80% 50%, white 0%, transparent 70%)" }} />
           <div className="relative px-8 py-10 md:flex items-center justify-between gap-8">
@@ -273,7 +273,7 @@ export default function Home() {
             </div>
             <div className="shrink-0">
               <Link href="/coupons">
-                <Button size="lg" className="font-bold shadow-lg bg-white hover:bg-white/90" style={{ color: "oklch(0.40 0.13 42)" }}>
+                <Button size="lg" className="font-bold shadow-lg bg-white hover:bg-white/90" style={{ color: "oklch(0.47 0.08 185)" }}>
                   <Scissors className="w-4 h-4 mr-2" />
                   Browse Coupons
                 </Button>
@@ -305,7 +305,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
-              { label: "SSDI & SSI", desc: "Monthly cash benefits", icon: DollarSign, color: "oklch(0.55 0.13 42)", bg: "oklch(0.93 0.04 42)" },
+              { label: "SSDI & SSI", desc: "Monthly cash benefits", icon: DollarSign, color: "oklch(0.47 0.08 185)", bg: "oklch(0.93 0.04 42)" },
               { label: "Medicaid & Medicare", desc: "Health coverage guides", icon: HeartPulse, color: "oklch(0.50 0.15 15)", bg: "oklch(0.95 0.04 15)" },
               { label: "Housing & SNAP", desc: "Section 8, food assistance", icon: HomeIcon, color: "oklch(0.45 0.12 200)", bg: "oklch(0.92 0.04 200)" },
               { label: "ADA & Legal Rights", desc: "Protections & advocacy", icon: Scale, color: "oklch(0.35 0.08 250)", bg: "oklch(0.92 0.03 250)" },
@@ -386,7 +386,7 @@ export default function Home() {
               <Button
                 size="lg"
                 className="font-semibold shadow-xl"
-                style={{ background: "oklch(0.55 0.13 42)", color: "white" }}
+                style={{ background: "oklch(0.47 0.08 185)", color: "white" }}
               >
                 See All Plans <ArrowRight className="w-4 h-4 ml-1" />
               </Button>

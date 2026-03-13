@@ -15,13 +15,13 @@ interface CouponCardProps {
 }
 
 const AUDIENCE_STYLES = {
-  senior: { bg: "oklch(0.92 0.04 42)", text: "oklch(0.40 0.13 42)", label: "Senior" },
+  senior: { bg: "oklch(0.92 0.04 42)", text: "oklch(0.47 0.08 185)", label: "Senior" },
   disability: { bg: "oklch(0.88 0.04 140)", text: "oklch(0.28 0.09 140)", label: "Disability" },
   both: { bg: "oklch(0.90 0.04 80)", text: "oklch(0.35 0.06 70)", label: "Senior & Disability" },
 };
 
 const TYPE_COLORS: Record<string, string> = {
-  "Digital": "oklch(0.55 0.13 42)",
+  "Digital": "oklch(0.47 0.08 185)",
   "Printable": "oklch(0.32 0.09 140)",
   "Promo Code": "oklch(0.50 0.12 280)",
   "Loyalty Program": "oklch(0.45 0.10 200)",
@@ -57,7 +57,7 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
   };
 
   const audienceStyle = AUDIENCE_STYLES[item.audience] || AUDIENCE_STYLES.both;
-  const typeColor = Object.entries(TYPE_COLORS).find(([k]) => item.type.toLowerCase().includes(k.toLowerCase()))?.[1] || "oklch(0.55 0.13 42)";
+  const typeColor = Object.entries(TYPE_COLORS).find(([k]) => item.type.toLowerCase().includes(k.toLowerCase()))?.[1] || "oklch(0.47 0.08 185)";
 
   return (
     <div
@@ -97,7 +97,7 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
             <button
               onClick={handleFavorite}
               className={`p-1 rounded transition-colors ${
-                isFavorited ? "text-[oklch(0.55_0.13_42)]" : "text-[oklch(0.65_0.03_60)] hover:text-[oklch(0.55_0.13_42)]"
+                isFavorited ? "text-[oklch(0.47 0.08 185)]" : "text-[oklch(0.65_0.03_60)] hover:text-[oklch(0.47 0.08 185)]"
               }`}
               title="Save coupon"
             >
@@ -117,7 +117,7 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
         {/* Discount amount — always visible */}
         <div
           className="text-2xl font-extrabold mb-2 leading-tight"
-          style={{ color: "oklch(0.55 0.13 42)", fontFamily: "'Playfair Display', serif" }}
+          style={{ color: "oklch(0.47 0.08 185)", fontFamily: "'Playfair Display', serif" }}
         >
           {item.discount}
         </div>
@@ -148,7 +148,7 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
                 href={item.website}
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold transition-colors hover:underline"
-                style={{ color: "oklch(0.55 0.13 42)" }}
+                style={{ color: "oklch(0.47 0.08 185)" }}
               >
                 Get Coupon <ExternalLink className="w-3 h-3" />
               </a>
@@ -167,12 +167,12 @@ export default function CouponCard({ item, index, categoryId }: CouponCardProps)
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
               <div className="bg-white rounded-full p-1.5 shadow-md">
-                <Lock className="w-3.5 h-3.5" style={{ color: "oklch(0.55 0.13 42)" }} />
+                <Lock className="w-3.5 h-3.5" style={{ color: "oklch(0.47 0.08 185)" }} />
               </div>
               <Link href="/pricing">
                 <button
                   className="text-xs font-semibold px-3 py-1 rounded-full text-white"
-                  style={{ background: "oklch(0.55 0.13 42)" }}
+                  style={{ background: "oklch(0.47 0.08 185)" }}
                 >
                   Unlock with {isSenior ? "Basic" : "Plus"}
                 </button>

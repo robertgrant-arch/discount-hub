@@ -129,7 +129,7 @@ export default function Discounts() {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2.5 text-sm font-medium capitalize transition-colors border-b-2 -mb-px ${
                   activeTab === tab
-                    ? "border-[oklch(0.55_0.13_42)] text-[oklch(0.55_0.13_42)]"
+                    ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.47 0.08 185)]"
                     : "border-transparent text-[oklch(0.52_0.04_60)] hover:text-[oklch(0.35_0.04_50)]"
                 }`}
               >
@@ -199,7 +199,7 @@ export default function Discounts() {
                     <Link
                       href={`/discounts/${cat.id}`}
                       className="text-xs font-medium hover:underline"
-                      style={{ color: "oklch(0.55 0.13 42)" }}
+                      style={{ color: "oklch(0.47 0.08 185)" }}
                     >
                       View all {cat.items.length} →
                     </Link>
@@ -214,7 +214,7 @@ export default function Discounts() {
                       <Link href={`/discounts/${cat.id}`}>
                         <button
                           className="text-sm font-medium px-4 py-2 rounded-full border transition-colors hover:bg-[oklch(0.93_0.04_42)]"
-                          style={{ borderColor: "oklch(0.55 0.13 42)", color: "oklch(0.55 0.13 42)" }}
+                          style={{ borderColor: "oklch(0.47 0.08 185)", color: "oklch(0.47 0.08 185)" }}
                         >
                           +{cat.items.length - 6} more in {cat.category}
                         </button>

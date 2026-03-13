@@ -1,4 +1,4 @@
-/* SocialPrograms.tsx — DiscountHub Education Hub
+/* SocialPrograms.tsx — HealthCare Select Benefits Hub Education Hub
  * Warm Abundance design: terracotta/cream/forest palette, Playfair Display headings
  * 16 social programs across 8 categories for disabled Americans
  * Features: category filter, search, expandable program cards with full guides
@@ -481,7 +481,7 @@ export default function SocialPrograms() {
               onClick={() => setMainTab("federal")}
               className={`px-5 py-3 text-sm font-semibold border-b-2 transition-colors ${
                 mainTab === "federal"
-                  ? "border-[oklch(0.55_0.13_42)] text-[oklch(0.45_0.13_42)]"
+                  ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.45_0.13_42)]"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -491,12 +491,12 @@ export default function SocialPrograms() {
               onClick={() => setMainTab("state")}
               className={`px-5 py-3 text-sm font-semibold border-b-2 transition-colors flex items-center gap-1.5 ${
                 mainTab === "state"
-                  ? "border-[oklch(0.55_0.13_42)] text-[oklch(0.45_0.13_42)]"
+                  ? "border-[oklch(0.47 0.08 185)] text-[oklch(0.45_0.13_42)]"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
               State & Local Programs ({TOTAL_STATE_PROGRAMS}+)
-              <span className="text-[10px] font-bold bg-[oklch(0.55_0.13_42)] text-white px-1.5 py-0.5 rounded-full">NEW</span>
+              <span className="text-[10px] font-bold bg-[oklch(0.47 0.08 185)] text-white px-1.5 py-0.5 rounded-full">NEW</span>
             </button>
           </div>
         </div>

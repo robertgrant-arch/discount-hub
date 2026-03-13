@@ -1,4 +1,4 @@
-/* MonetizationBanner.tsx — DiscountHub
+/* MonetizationBanner.tsx — HealthCare Select Benefits Hub
  * Design: Warm Abundance — terracotta/cream/forest green, Playfair Display + DM Sans
  * Contextual affiliate, pay-per-call, and lead gen CTAs
  * Shows relevant programs based on the current page category
@@ -29,7 +29,7 @@ function AffiliateProgramCard({ program }: { program: AffiliateProgram }) {
     <a
       href={program.url}
       target="_blank" rel="noopener noreferrer"
-      className="group block border border-border rounded-lg p-4 hover:border-[oklch(0.55_0.13_42)] hover:shadow-md transition-all duration-200 bg-card"
+      className="group block border border-border rounded-lg p-4 hover:border-[oklch(0.47 0.08 185)] hover:shadow-md transition-all duration-200 bg-card"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
@@ -186,7 +186,7 @@ export default function MonetizationBanner({
         )}
         <p className="text-[10px] text-muted-foreground leading-relaxed border-t border-border pt-3">
           <Shield className="w-3 h-3 inline mr-1" />
-          <strong>Disclosure:</strong> DiscountHub may earn a commission when you click certain links. This does not affect our editorial independence.{" "}
+          <strong>Disclosure:</strong> HealthCare Select Benefits Hub may earn a commission when you click certain links. This does not affect our editorial independence.{" "}
           <a href="/disclosures" className="underline hover:text-foreground">Learn more</a>
         </p>
       </aside>
@@ -198,7 +198,7 @@ export default function MonetizationBanner({
     <section className="rounded-xl border border-border bg-card p-5 space-y-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Star className="w-4 h-4 text-[oklch(0.55_0.13_42)]" />
+          <Star className="w-4 h-4 text-[oklch(0.47 0.08 185)]" />
           <h3 className="font-semibold text-sm text-foreground">
             {mapping?.headline || "Recommended Programs & Services"}
           </h3>
@@ -232,7 +232,7 @@ export default function MonetizationBanner({
 
       <p className="text-[10px] text-muted-foreground leading-relaxed border-t border-border pt-3">
         <Shield className="w-3 h-3 inline mr-1" />
-        <strong>Disclosure:</strong> DiscountHub may earn a commission when you click certain links on this page. This does not affect our editorial independence or the programs we list.{" "}
+        <strong>Disclosure:</strong> HealthCare Select Benefits Hub may earn a commission when you click certain links on this page. This does not affect our editorial independence or the programs we list.{" "}
         <a href="/disclosures" className="underline hover:text-foreground">Full disclosure policy</a>
       </p>
     </section>

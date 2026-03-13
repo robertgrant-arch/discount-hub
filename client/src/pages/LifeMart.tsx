@@ -231,7 +231,7 @@ export default function LifeMart() {
               </h1>
               <PageHaiku lines={["Exclusive doors open", "Savings bloom in every aisle", "Members find the way"]} />
               <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-2xl">
-                LifeMart by Care.com is a members-only discount platform with 19,000+ savings opportunities from 1,300+ trusted brands — covering travel, entertainment, electronics, health, senior care, and more. DiscountHub members get a guided overview of every program.
+                LifeMart by Care.com is a members-only discount platform with 19,000+ savings opportunities from 1,300+ trusted brands — covering travel, entertainment, electronics, health, senior care, and more. HealthCare Select Benefits Hub members get a guided overview of every program.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -274,7 +274,7 @@ export default function LifeMart() {
             <div className="flex items-start gap-3">
               <Info className="w-4 h-4 mt-0.5 shrink-0" style={{ color: "oklch(0.40 0.12 200)" }} />
               <p className="text-sm" style={{ color: "oklch(0.35 0.08 200)" }}>
-                <strong>About LifeMart Access:</strong> LifeMart is a closed, members-only platform operated by Care.com. DiscountHub provides a complete directory of all LifeMart programs and links you directly to the LifeMart portal. To unlock full LifeMart access, visit{" "}
+                <strong>About LifeMart Access:</strong> LifeMart is a closed, members-only platform operated by Care.com. HealthCare Select Benefits Hub provides a complete directory of all LifeMart programs and links you directly to the LifeMart portal. To unlock full LifeMart access, visit{" "}
                 <a href="https://www.care.com/lifemart/" target="_blank" rel="noopener noreferrer" className="underline font-semibold">care.com/lifemart</a>{" "}
                 and sign up or access through your employer benefits.
               </p>
@@ -393,7 +393,7 @@ export default function LifeMart() {
             {/* Upgrade prompt for free users */}
             {!isPlus && (
               <div className="mt-6 rounded-xl border-2 border-dashed border-[oklch(0.82_0.06_42)] bg-[oklch(0.97_0.02_42)] p-6 text-center">
-                <Lock className="w-8 h-8 mx-auto mb-3" style={{ color: "oklch(0.55 0.13 42)" }} />
+                <Lock className="w-8 h-8 mx-auto mb-3" style={{ color: "oklch(0.47 0.08 185)" }} />
                 <p className="font-semibold text-foreground mb-1">Unlock All LifeMart Programs</p>
                 <p className="text-sm text-muted-foreground mb-4">Upgrade to Plus or Premium to see all {currentCategory.programs.length} programs in this category plus full access to all 19,000+ LifeMart savings opportunities.</p>
                 <Link href="/pricing">
@@ -487,7 +487,7 @@ export default function LifeMart() {
                 Become a LifeMart Partner
               </h2>
               <p className="text-white/70 text-sm leading-relaxed mb-6">
-                DiscountHub is growing. When we reach our membership milestone, we plan to negotiate a direct LifeMart partnership — giving all DiscountHub Premium members seamless, one-click access to all 19,000+ LifeMart savings opportunities as part of their membership. Join Premium today and be among the first to benefit.
+                HealthCare Select Benefits Hub is growing. When we reach our membership milestone, we plan to negotiate a direct LifeMart partnership — giving all HealthCare Select Benefits Hub Premium members seamless, one-click access to all 19,000+ LifeMart savings opportunities as part of their membership. Join Premium today and be among the first to benefit.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link href="/pricing">

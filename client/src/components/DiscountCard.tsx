@@ -60,7 +60,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
             onClick={handleFavorite}
             className={`p-1.5 rounded-lg transition-colors ${
               isFavorited
-                ? "text-[oklch(0.55_0.13_42)] bg-[oklch(0.95_0.03_42)]"
+                ? "text-[oklch(0.47 0.08 185)] bg-[oklch(0.95_0.03_42)]"
                 : "text-[oklch(0.65_0.03_60)] hover:bg-[oklch(0.95_0.015_80)]"
             }`}
             title="Save to favorites"
@@ -84,7 +84,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
         </h3>
 
         {/* Discount amount — always visible */}
-        <div className="text-xl font-bold mb-2" style={{ color: "oklch(0.55 0.13 42)", fontFamily: "'Playfair Display', serif" }}>
+        <div className="text-xl font-bold mb-2" style={{ color: "oklch(0.47 0.08 185)", fontFamily: "'Playfair Display', serif" }}>
           {item.discount}
         </div>
 
@@ -114,7 +114,7 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
                 href={item.website}
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-medium transition-colors hover:underline"
-                style={{ color: "oklch(0.55 0.13 42)" }}
+                style={{ color: "oklch(0.47 0.08 185)" }}
               >
                 Visit Website <ExternalLink className="w-3 h-3" />
               </a>
@@ -132,12 +132,12 @@ export default function DiscountCard({ item, index, categoryId }: DiscountCardPr
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
               <div className="bg-white rounded-full p-2 shadow-md">
-                <Lock className="w-4 h-4" style={{ color: "oklch(0.55 0.13 42)" }} />
+                <Lock className="w-4 h-4" style={{ color: "oklch(0.47 0.08 185)" }} />
               </div>
               <Link href="/pricing">
                 <button
                   className="text-xs font-semibold px-3 py-1.5 rounded-full text-white transition-opacity hover:opacity-90"
-                  style={{ background: "oklch(0.55 0.13 42)" }}
+                  style={{ background: "oklch(0.47 0.08 185)" }}
                 >
                   Unlock with {isSenior ? "Basic" : "Plus"}
                 </button>

@@ -31,7 +31,7 @@ const TIER_STYLES: Record<string, { bg: string; text: string; border: string; bt
     btn: "text-white hover:opacity-90",
   },
   premium: {
-    bg: "bg-gradient-to-br from-[oklch(0.55_0.13_42)] to-[oklch(0.40_0.13_42)]",
+    bg: "bg-gradient-to-br from-[oklch(0.47 0.08 185)] to-[oklch(0.40_0.13_42)]",
     text: "text-white",
     border: "border-transparent",
     btn: "bg-white text-[oklch(0.40_0.13_42)] hover:bg-white/90",
@@ -40,7 +40,7 @@ const TIER_STYLES: Record<string, { bg: string; text: string; border: string; bt
 
 const TIER_ACCENT: Record<string, string> = {
   free: "oklch(0.60 0.03 60)",
-  basic: "oklch(0.55 0.13 42)",
+  basic: "oklch(0.47 0.08 185)",
   plus: "oklch(0.32 0.09 140)",
   premium: "white",
 };
@@ -150,7 +150,7 @@ export default function Pricing() {
               >
                 {plan.id === "premium" && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 bg-[oklch(0.55_0.13_42)] text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                    <span className="inline-flex items-center gap-1 bg-[oklch(0.47 0.08 185)] text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                       <Zap className="w-3 h-3" /> Most Popular
                     </span>
                   </div>
@@ -236,7 +236,7 @@ export default function Pricing() {
                 <tr className="border-b border-[oklch(0.88_0.02_75)]">
                   <th className="text-left px-6 py-4 text-[oklch(0.35_0.04_50)] font-semibold">Feature</th>
                   {PLANS.map((p) => (
-                    <th key={p.id} className="px-4 py-4 text-center font-semibold" style={{ color: TIER_ACCENT[p.id] === "white" ? "oklch(0.40 0.13 42)" : TIER_ACCENT[p.id] }}>
+                    <th key={p.id} className="px-4 py-4 text-center font-semibold" style={{ color: TIER_ACCENT[p.id] === "white" ? "oklch(0.47 0.08 185)" : TIER_ACCENT[p.id] }}>
                       {p.name}
                     </th>
                   ))}

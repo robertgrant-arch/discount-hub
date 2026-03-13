@@ -8,9 +8,9 @@ import { LogOut, User, Tag, ChevronDown, Crown } from "lucide-react";
 
 const TIER_LABELS: Record<string, { label: string; color: string; bg: string }> = {
   free: { label: "Free", color: "oklch(0.52 0.04 60)", bg: "oklch(0.93 0.01 80)" },
-  basic: { label: "Basic", color: "oklch(0.40 0.13 42)", bg: "oklch(0.93 0.04 42)" },
+  basic: { label: "Basic", color: "oklch(0.47 0.08 185)", bg: "oklch(0.93 0.04 42)" },
   plus: { label: "Plus", color: "oklch(0.28 0.09 140)", bg: "oklch(0.88 0.04 140)" },
-  premium: { label: "Premium ✦", color: "oklch(0.40 0.13 42)", bg: "oklch(0.93 0.06 75)" },
+  premium: { label: "Premium ✦", color: "oklch(0.47 0.08 185)", bg: "oklch(0.93 0.06 75)" },
 };
 
 export default function UserMenu() {
@@ -45,7 +45,7 @@ export default function UserMenu() {
         {/* Avatar */}
         <div
           className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
-          style={{ background: "oklch(0.55 0.13 42)" }}
+          style={{ background: "oklch(0.47 0.08 185)" }}
         >
           {initials}
         </div>
@@ -82,7 +82,7 @@ export default function UserMenu() {
               onClick={() => setOpen(false)}
               className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-[oklch(0.40_0.04_50)] hover:bg-[oklch(0.97_0.01_80)] transition-colors"
             >
-              <Tag className="w-4 h-4" style={{ color: "oklch(0.55 0.13 42)" }} />
+              <Tag className="w-4 h-4" style={{ color: "oklch(0.47 0.08 185)" }} />
               Browse Discounts
             </Link>
 
@@ -91,9 +91,9 @@ export default function UserMenu() {
                 href="/pricing"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors hover:bg-[oklch(0.97_0.01_80)]"
-                style={{ color: "oklch(0.40 0.13 42)" }}
+                style={{ color: "oklch(0.47 0.08 185)" }}
               >
-                <Crown className="w-4 h-4" style={{ color: "oklch(0.55 0.13 42)" }} />
+                <Crown className="w-4 h-4" style={{ color: "oklch(0.47 0.08 185)" }} />
                 Upgrade Plan
               </Link>
             )}

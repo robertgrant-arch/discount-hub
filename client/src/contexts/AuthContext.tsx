@@ -1,4 +1,4 @@
-/* AuthContext — DiscountHub authentication
+/* AuthContext — HealthCare Select Benefits Hub authentication
  * Client-side auth with localStorage persistence
  * Pre-loaded Premium owner account: admin@discounthub.com / DiscountHub2024!
  */

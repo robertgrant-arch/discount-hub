@@ -1,5 +1,5 @@
 /**
- * api/findhelp.ts — Findhelp API Proxy for DiscountHub
+ * api/findhelp.ts — Findhelp API Proxy for HealthCare Select Benefits Hub
  * 
  * Vercel serverless function that proxies requests to the Findhelp API.
  * Searches for local social care programs by ZIP code and optional category.
@@ -59,7 +59,7 @@ export interface FindhelpErrorResponse {
   message: string;
 }
 
-// ── Category mapping: Findhelp → DiscountHub ─────────────────────────
+// ── Category mapping: Findhelp → HealthCare Select Benefits Hub ─────────────────────────
 
 const FINDHELP_CATEGORIES = [
   'Food',

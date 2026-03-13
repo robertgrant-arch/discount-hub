@@ -1,4 +1,4 @@
-/* MedicareGuide.tsx — DiscountHub
+/* MedicareGuide.tsx — HealthCare Select Benefits Hub
  * High-value Medicare Open Enrollment Guide page
  * Design: Warm Abundance — terracotta/cream/forest green
  * Monetization: Medicare affiliate CTAs + pay-per-call throughout
@@ -22,7 +22,7 @@ const ENROLLMENT_PERIODS = [
     name: "Initial Enrollment Period (IEP)",
     dates: "3 months before your 65th birthday through 3 months after",
     description: "Your first opportunity to enroll in Medicare. Missing this window can result in permanent late enrollment penalties.",
-    color: "oklch(0.55_0.13_42)",
+    color: "oklch(0.47 0.08 185)",
     bg: "oklch(0.93_0.04_42)",
   },
   {
@@ -457,7 +457,7 @@ export default function MedicareGuide() {
                       </div>
                       <div className="bg-muted/50 rounded-lg px-3 py-2">
                         <p className="text-xs text-muted-foreground">
-                          <Star className="w-3 h-3 inline mr-1 text-[oklch(0.55_0.13_42)]" />
+                          <Star className="w-3 h-3 inline mr-1 text-[oklch(0.47 0.08 185)]" />
                           <strong>Best for:</strong> {plan.bestFor}
                         </p>
                       </div>
@@ -523,7 +523,7 @@ export default function MedicareGuide() {
                       key={r.name}
                       href={r.url}
                       target="_blank" rel="noopener noreferrer"
-                      className="flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-[oklch(0.55_0.13_42)] hover:shadow-sm transition-all group"
+                      className="flex items-start gap-3 p-4 rounded-lg border border-border bg-card hover:border-[oklch(0.47 0.08 185)] hover:shadow-sm transition-all group"
                     >
                       <ExternalLink className="w-4 h-4 text-muted-foreground mt-0.5 shrink-0 group-hover:text-[oklch(0.45_0.13_42)]" />
                       <div>

@@ -22,7 +22,7 @@ interface Badge {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-const STORAGE_KEY = "discounthub_tracker";
+const STORAGE_KEY = "HealthCare Select Benefits Hub_tracker";
 
 function loadData(): TrackerData | null {
   try {
@@ -262,7 +262,7 @@ export default function SavingsTracker() {
             className="text-sm font-semibold mt-0.5"
             style={{ color: "oklch(0.92 0.015 80)" }}
           >
-            DiscountHub Tracker
+            HealthCare Select Benefits Hub Tracker
           </p>
         </div>
         <TrendingUp size={20} style={{ color: "oklch(0.70 0.08 75)" }} />
@@ -342,7 +342,7 @@ export default function SavingsTracker() {
           </div>
         </div>
 
-        {/* Days using DiscountHub */}
+        {/* Days using HealthCare Select Benefits Hub */}
         <div
           className="text-center py-2 px-4 rounded-xl mb-5 text-xs font-medium"
           style={{
@@ -350,7 +350,7 @@ export default function SavingsTracker() {
             color: "oklch(0.48 0.06 60)",
           }}
         >
-          🗓️ Using DiscountHub for{" "}
+          🗓️ Using HealthCare Select Benefits Hub for{" "}
           <strong style={{ color: "oklch(0.35 0.06 55)" }}>
             {totalDays} day{totalDays !== 1 ? "s" : ""}
           </strong>

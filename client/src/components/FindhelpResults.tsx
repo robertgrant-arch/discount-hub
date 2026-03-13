@@ -1,5 +1,5 @@
 /**
- * FindhelpResults.tsx — DiscountHub
+ * FindhelpResults.tsx — HealthCare Select Benefits Hub
  * Displays local community programs from the Findhelp network.
  * Integrates into the State & Local Programs tab alongside static programs.
  * Design: Warm Abundance — terracotta/cream/forest green

@@ -456,7 +456,7 @@ function YesNo({
               ? v === "yes"
                 ? "bg-[oklch(0.40_0.10_140)] text-white border-[oklch(0.40_0.10_140)]"
                 : "bg-[oklch(0.50_0.15_15)] text-white border-[oklch(0.50_0.15_15)]"
-              : "bg-background border-border text-muted-foreground hover:border-[oklch(0.55_0.13_42)]"
+              : "bg-background border-border text-muted-foreground hover:border-[oklch(0.47 0.08 185)]"
           }`}
         >
           {v === "yes" ? "Yes" : "No"}
