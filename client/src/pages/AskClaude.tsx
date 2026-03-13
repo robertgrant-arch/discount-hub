@@ -180,7 +180,7 @@ export default function AskClaude() {
             <Send className="w-4 h-4 text-white" />
           </button>
         </div>
-        <p className="text-center text-xs text-[oklch(0.60_0.02_60)] mt-3">
+        <p className="text-center text-xs text-[oklch(0.55_0.02_170)] mt-3">
           AI assistant for informational purposes only. Not a substitute for professional advice.
         </p>
       </section>
