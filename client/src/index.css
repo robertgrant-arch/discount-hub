@@ -1,6 +1,6 @@
-/* DiscountHub — "Warm Abundance" Design System
- * Movement: Modern lifestyle editorial meets SaaS product
- * Palette: Terracotta (#C4622D), Cream (#FDF6EC), Forest Green (#2D5016)
+/* The HealthCare Select Benefits Hub — "Healthcare Teal" Design System
+ * Movement: Clean healthcare professional meets modern SaaS
+ * Palette: Teal (#2B6B6B), Coral (#E8854A), Cream (#FDF5EE)
  * Typography: Playfair Display (headings) + DM Sans (body)
  * Layout: Asymmetric editorial grid, masonry-style listings
  */
@@ -34,9 +34,9 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-terracotta: var(--terracotta);
+  --color-teal: var(--teal);
   --color-cream: var(--cream);
-  --color-forest: var(--forest);
+  --color-coral: var(--coral);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -46,40 +46,47 @@
 
 :root {
   --radius: 0.5rem;
-  /* Brand palette */
-  --terracotta: oklch(0.55 0.13 42);
-  --terracotta-light: oklch(0.72 0.09 42);
-  --terracotta-dark: oklch(0.40 0.13 42);
-  --cream: oklch(0.98 0.015 80);
-  --cream-dark: oklch(0.93 0.02 80);
-  --forest: oklch(0.32 0.09 140);
-  --forest-light: oklch(0.48 0.09 140);
+  /* Brand palette — Healthcare Select */
+  --teal: oklch(0.47 0.08 185);
+  --teal-light: oklch(0.58 0.07 185);
+  --teal-dark: oklch(0.35 0.08 185);
+  --cream: oklch(0.98 0.01 80);
+  --cream-dark: oklch(0.93 0.015 80);
+  --coral: oklch(0.68 0.15 55);
+  --coral-light: oklch(0.78 0.11 55);
+
+  /* Legacy aliases for components still using old names */
+  --terracotta: var(--teal);
+  --terracotta-light: var(--teal-light);
+  --terracotta-dark: var(--teal-dark);
+  --forest: var(--coral);
+  --forest-light: var(--coral-light);
 
   /* Semantic tokens */
-  --background: oklch(0.98 0.012 80);
+  --background: oklch(0.98 0.008 80);
   --foreground: oklch(0.22 0.02 50);
-  --card: oklch(1 0.008 80);
+  --card: oklch(1 0.005 80);
   --card-foreground: oklch(0.22 0.02 50);
-  --popover: oklch(1 0.008 80);
+  --popover: oklch(1 0.005 80);
   --popover-foreground: oklch(0.22 0.02 50);
-  --primary: oklch(0.55 0.13 42);
+  --primary: oklch(0.47 0.08 185);
   --primary-foreground: oklch(0.99 0.005 80);
-  --secondary: oklch(0.93 0.02 80);
+  --secondary: oklch(0.93 0.015 80);
   --secondary-foreground: oklch(0.35 0.04 50);
-  --muted: oklch(0.95 0.015 80);
+  --muted: oklch(0.95 0.01 80);
   --muted-foreground: oklch(0.52 0.04 60);
-  --accent: oklch(0.32 0.09 140);
+  --accent: oklch(0.68 0.15 55);
   --accent-foreground: oklch(0.99 0.005 80);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.88 0.02 75);
-  --input: oklch(0.88 0.02 75);
-  --ring: oklch(0.55 0.13 42);
-  --chart-1: oklch(0.55 0.13 42);
-  --chart-2: oklch(0.32 0.09 140);
-  --chart-3: oklch(0.72 0.09 42);
-  --chart-4: oklch(0.48 0.09 140);
-  --chart-5: oklch(0.40 0.13 42);
+  --border: oklch(0.88 0.015 80);
+  --input: oklch(0.88 0.015 80);
+  --ring: oklch(0.47 0.08 185);
+  --chart-1: oklch(0.47 0.08 185);
+  --chart-2: oklch(0.68 0.15 55);
+  --chart-3: oklch(0.58 0.07 185);
+  --chart-4: oklch(0.78 0.11 55);
+  --chart-5: oklch(0.35 0.08 185);
 
   /* Accessibility: font scale */
   --font-scale: 1;
@@ -145,7 +152,7 @@
     position: absolute;
     inset: 0;
     backdrop-filter: blur(6px);
-    background: linear-gradient(to bottom, transparent 0%, oklch(0.98 0.012 80 / 0.7) 40%, oklch(0.98 0.012 80 / 0.95) 100%);
+    background: linear-gradient(to bottom, transparent 0%, oklch(0.98 0.008 80 / 0.7) 40%, oklch(0.98 0.008 80 / 0.95) 100%);
     pointer-events: none;
     z-index: 10;
   }
@@ -162,12 +169,12 @@
     letter-spacing: 0.02em;
   }
   .badge-senior {
-    background-color: oklch(0.92 0.04 42);
-    color: oklch(0.40 0.13 42);
+    background-color: oklch(0.90 0.03 185);
+    color: oklch(0.35 0.08 185);
   }
   .badge-disability {
-    background-color: oklch(0.88 0.04 140);
-    color: oklch(0.28 0.09 140);
+    background-color: oklch(0.90 0.06 55);
+    color: oklch(0.50 0.15 55);
   }
 
   /* Membership tier card */
@@ -181,7 +188,7 @@
     box-shadow: 0 20px 40px oklch(0 0 0 / 0.12);
   }
   .tier-card.featured {
-    background: linear-gradient(135deg, oklch(0.55 0.13 42), oklch(0.40 0.13 42));
+    background: linear-gradient(135deg, oklch(0.47 0.08 185), oklch(0.35 0.08 185));
     color: white;
   }
 }
@@ -197,10 +204,10 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: oklch(0.95 0.015 80);
+  background: oklch(0.95 0.01 80);
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.72 0.09 42);
+  background: oklch(0.58 0.07 185);
   border-radius: 3px;
 }
 
@@ -208,7 +215,7 @@ html {
 .high-contrast {
   --background: oklch(1 0 0);
   --foreground: oklch(0 0 0);
-  --primary: oklch(0.35 0.13 42);
+  --primary: oklch(0.30 0.08 185);
   --muted-foreground: oklch(0.2 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0 0 0);
