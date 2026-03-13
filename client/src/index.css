@@ -1,12 +1,14 @@
-/* The HealthCare Select Benefits Hub — Clean Modern Design System
- * Movement: Clean healthcare professional meets modern SaaS
- * Palette: Teal (#2B6B62), Coral (#E8854A) for CTAs only, White backgrounds
- * Typography: DM Sans (all text — clean, modern sans-serif)
- * Layout: Asymmetric editorial grid, masonry-style listings
+/* Healthcare Select Benefits Hub — Official HCS Brand Design System
+ * Brand Colors from 25-HCS-BrandBook.pdf
+ * Deep Sea Green #0E5659 | Red Fox #C05824 | Canvas #FCF3EA
+ * Blue Green #4CC0AE | Peach Orange #EF7B48
+ * Fonts: Sora Bold (headers) + Manrope (body)
  */
-
 @import "tailwindcss";
 @import "tw-animate-css";
+
+/* HCS Brand Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -47,47 +49,80 @@
 :root {
   --radius: 0.5rem;
 
-  /* Brand palette — Healthcare Select */
-  --teal: oklch(0.46 0.06 170);
-  --teal-light: oklch(0.56 0.05 170);
-  --teal-dark: oklch(0.35 0.06 170);
-  --cream: oklch(0.98 0 0);
-  --cream-dark: oklch(0.96 0 0);
-  --coral: oklch(0.68 0.15 55);
-  --coral-light: oklch(0.78 0.11 55);
+  /* ═══════════════════════════════════════════
+   * HCS Official Brand Palette (BrandBook 2025)
+   * ═══════════════════════════════════════════ */
 
-  /* Legacy aliases for components still using old names */
-  --terracotta: var(--teal);
-  --terracotta-light: var(--teal-light);
-  --terracotta-dark: var(--teal-dark);
-  --forest: var(--coral);
-  --forest-light: var(--coral-light);
+  /* Deep Sea Green — primary brand color */
+  --hcs-deep-sea:        #0E5659;
+  --hcs-deep-sea-dark:   #0a3f42;
+  --hcs-deep-sea-light:  #1a7a7e;
 
-  /* Semantic tokens */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.15 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.46 0.06 170);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.96 0 0);
-  --secondary-foreground: oklch(0.25 0 0);
-  --muted: oklch(0.96 0 0);
-  --muted-foreground: oklch(0.45 0 0);
-  --accent: oklch(0.68 0.15 55);
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
+  /* Red Fox — CTA / action color */
+  --hcs-red-fox:         #C05824;
+  --hcs-red-fox-light:   #d4703a;
+  --hcs-red-fox-dark:    #9e4519;
+
+  /* Canvas — warm light background */
+  --hcs-canvas:          #FCF3EA;
+  --hcs-canvas-dark:     #f5e8d4;
+
+  /* Blue Green — secondary accent */
+  --hcs-blue-green:      #4CC0AE;
+  --hcs-blue-green-light:#6dcfbf;
+  --hcs-blue-green-dark: #339988;
+
+  /* Peach Orange — tertiary accent */
+  --hcs-peach:           #EF7B48;
+
+  /* Neutral greys */
+  --hcs-grey-light:      #F4F4F4;
+  --hcs-grey-dark:       #373737;
+  --hcs-black:           #000000;
+
+  /* ═══════════════════════════════════════════
+   * Semantic tokens mapped to HCS brand
+   * ═══════════════════════════════════════════ */
+
+  /* Legacy aliases kept for backward compat */
+  --teal:              #0E5659;
+  --teal-light:        #1a7a7e;
+  --teal-dark:         #0a3f42;
+  --cream:             #FCF3EA;
+  --cream-dark:        #f5e8d4;
+  --coral:             #C05824;
+  --coral-light:       #d4703a;
+  --terracotta:        var(--teal);
+  --terracotta-light:  var(--teal-light);
+  --terracotta-dark:   var(--teal-dark);
+  --forest:            var(--coral);
+  --forest-light:      var(--coral-light);
+
+  /* Semantic design tokens */
+  --background:            #F4F4F4;
+  --foreground:            #373737;
+  --card:                  #ffffff;
+  --card-foreground:       #373737;
+  --popover:               #ffffff;
+  --popover-foreground:    #373737;
+  --primary:               #0E5659;
+  --primary-foreground:    #ffffff;
+  --secondary:             #FCF3EA;
+  --secondary-foreground:  #0E5659;
+  --muted:                 #F4F4F4;
+  --muted-foreground:      #6b6b6b;
+  --accent:                #C05824;
+  --accent-foreground:     #ffffff;
+  --destructive:           oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.90 0 0);
-  --input: oklch(0.90 0 0);
-  --ring: oklch(0.46 0.06 170);
-  --chart-1: oklch(0.46 0.06 170);
-  --chart-2: oklch(0.68 0.15 55);
-  --chart-3: oklch(0.56 0.05 170);
-  --chart-4: oklch(0.78 0.11 55);
-  --chart-5: oklch(0.35 0.06 170);
+  --border:                #e0e0e0;
+  --input:                 #e0e0e0;
+  --ring:                  #0E5659;
+  --chart-1:               #0E5659;
+  --chart-2:               #C05824;
+  --chart-3:               #4CC0AE;
+  --chart-4:               #EF7B48;
+  --chart-5:               #0a3f42;
 
   /* Accessibility: font scale */
   --font-scale: 1;
@@ -99,11 +134,13 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope', 'Open Sans', sans-serif;
+    color: #373737;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Sora', 'Open Sans', sans-serif;
     font-weight: 700;
+    color: #373737;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -154,7 +191,7 @@
     position: absolute;
     inset: 0;
     backdrop-filter: blur(6px);
-    background: linear-gradient(to bottom, transparent 0%, oklch(1 0 0 / 0.7) 40%, oklch(1 0 0 / 0.95) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(244,244,244,0.7) 40%, rgba(244,244,244,0.95) 100%);
     pointer-events: none;
     z-index: 10;
   }
@@ -167,16 +204,16 @@
     border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 600;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope', sans-serif;
     letter-spacing: 0.02em;
   }
   .badge-senior {
-    background-color: oklch(0.93 0.02 170);
-    color: oklch(0.35 0.06 170);
+    background-color: #e8f5f5;
+    color: #0E5659;
   }
   .badge-disability {
-    background-color: oklch(0.93 0.04 55);
-    color: oklch(0.50 0.15 55);
+    background-color: #fde8dc;
+    color: #C05824;
   }
 
   /* Membership tier card */
@@ -187,10 +224,10 @@
   }
   .tier-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px oklch(0 0 0 / 0.12);
+    box-shadow: 0 20px 40px rgba(14, 86, 89, 0.12);
   }
   .tier-card.featured {
-    background: linear-gradient(135deg, oklch(0.46 0.06 170), oklch(0.35 0.06 170));
+    background: linear-gradient(135deg, #0E5659, #0a3f42);
     color: white;
   }
 }
@@ -206,22 +243,22 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: oklch(0.96 0 0);
+  background: #F4F4F4;
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.56 0.05 170);
+  background: #4CC0AE;
   border-radius: 3px;
 }
 
 /* ===== Accessibility: High-Contrast Mode ===== */
 .high-contrast {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0 0 0);
-  --primary: oklch(0.30 0.06 170);
-  --muted-foreground: oklch(0.2 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0 0 0);
-  --border: oklch(0.3 0 0);
+  --background: #ffffff;
+  --foreground: #000000;
+  --primary: #0a3f42;
+  --muted-foreground: #222222;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --border: #333333;
 }
 .high-contrast img {
   filter: contrast(1.2);
