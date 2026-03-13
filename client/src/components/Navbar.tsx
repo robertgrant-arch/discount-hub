@@ -1,5 +1,5 @@
 /* Healthcare Select Benefits Hub Navbar — Official HCS Brand
- * HCS Deep Sea Green #0E5659 navbar | Red Fox #C05824 accents
+ * White navbar with black HealthCare Select text
  * Sora font for logo | Responsive priority nav
  */
 import { Link, useLocation } from "wouter";
@@ -43,6 +43,7 @@ export default function Navbar() {
   });
   const navRef = useRef<HTMLElement>(null);
   const [visibleCount, setVisibleCount] = useState(prioritySorted.length);
+
   const calcVisible = useCallback(() => {
     const nav = navRef.current;
     if (!nav) return;
@@ -64,6 +65,7 @@ export default function Navbar() {
     });
     setVisibleCount(count);
   }, []);
+
   useEffect(() => {
     const nav = navRef.current;
     if (!nav) return;
@@ -88,48 +90,49 @@ export default function Navbar() {
       >
         Skip to main content
       </a>
-      <header className="sticky top-0 z-50 shadow-md" style={{ backgroundColor: "#0E5659" }}>
+
+      <header className="sticky top-0 z-50 shadow-md" style={{ backgroundColor: "#FFFFFF" }}>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Left: Logo + nav */}
             <div className="flex items-center gap-3 sm:gap-4 md:gap-6 min-w-0 flex-1">
               {/* HCS Logo mark + wordmark */}
               <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-                {/* HCS Cross logo mark */}
-<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-              {/* HCS Official Logo Mark */}
-              {/* Top row */}
-              <rect x="0" y="0" width="11" height="11" rx="1" fill="#0E5659"/>
-              <rect x="13" y="0" width="11" height="11" rx="1" fill="#0E5659"/>
-              <rect x="25" y="0" width="11" height="11" rx="1" fill="#4CC0AE"/>
-              {/* Middle row */}
-              <rect x="0" y="13" width="11" height="11" rx="1" fill="#0E5659"/>
-              <rect x="13" y="13" width="11" height="11" rx="2" fill="#0E5659"/>
-              <circle cx="18" cy="18" r="3.5" fill="none" stroke="white" strokeWidth="1.5"/>
-              <rect x="25" y="13" width="11" height="11" rx="1" fill="#4CC0AE"/>
-              {/* Bottom row */}
-              <rect x="0" y="25" width="11" height="11" rx="1" fill="#C05824"/>
-              <rect x="13" y="25" width="11" height="11" rx="1" fill="#0E5659"/>
-              <rect x="25" y="25" width="11" height="11" rx="1" fill="#4CC0AE"/>
-            </svg>
+                {/* HCS Cross logo mark */}<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0"> {/* HCS Official Logo Mark */}
+                  {/* Top row */}
+                  <rect x="0" y="0" width="11" height="11" rx="1" fill="#0E5659"/>
+                  <rect x="13" y="0" width="11" height="11" rx="1" fill="#0E5659"/>
+                  <rect x="25" y="0" width="11" height="11" rx="1" fill="#4CC0AE"/>
+                  {/* Middle row */}
+                  <rect x="0" y="13" width="11" height="11" rx="1" fill="#0E5659"/>
+                  <rect x="13" y="13" width="11" height="11" rx="2" fill="#0E5659"/>
+                  <circle cx="18" cy="18" r="3.5" fill="none" stroke="#0E5659" strokeWidth="1.5"/>
+                  <rect x="25" y="13" width="11" height="11" rx="1" fill="#4CC0AE"/>
+                  {/* Bottom row */}
+                  <rect x="0" y="25" width="11" height="11" rx="1" fill="#C05824"/>
+                  <rect x="13" y="25" width="11" height="11" rx="1" fill="#0E5659"/>
+                  <rect x="25" y="25" width="11" height="11" rx="1" fill="#4CC0AE"/>
+                </svg>
                 <span
                   className="font-bold text-base tracking-tight hidden sm:inline leading-tight"
-                  style={{ fontFamily: "'Sora', 'Open Sans', sans-serif", color: "white" }}
+                  style={{ fontFamily: "'Sora', 'Open Sans', sans-serif", color: "#000000" }}
                 >
                   HealthCare Select{" "}
-                  <span style={{ color: "rgba(255,255,255,0.75)" }}>Benefits Hub</span>
+                  <span style={{ color: "rgba(0,0,0,0.55)" }}>Benefits Hub</span>
                 </span>
               </Link>
+
               {/* Home link */}
               <Link
                 href="/"
-                className={`text-sm font-medium transition-colors hover:text-white whitespace-nowrap shrink-0 ${
-                  location === "/" ? "text-white" : "text-white/70"
+                className={`text-sm font-medium transition-colors hover:text-black whitespace-nowrap shrink-0 ${
+                  location === "/" ? "text-black" : "text-gray-600"
                 }`}
                 style={{ fontFamily: "'Manrope', sans-serif" }}
               >
                 Home
               </Link>
+
               {/* Priority nav links */}
               <nav
                 ref={navRef}
@@ -139,8 +142,8 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-sm font-medium transition-colors hover:text-white flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
-                      location === link.href ? "text-white" : "text-white/70"
+                    className={`text-sm font-medium transition-colors hover:text-black flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
+                      location === link.href ? "text-black" : "text-gray-600"
                     }`}
                     style={{ fontFamily: "'Manrope', sans-serif" }}
                   >
@@ -158,6 +161,7 @@ export default function Navbar() {
                 ))}
               </nav>
             </div>
+
             {/* Right: auth + hamburger */}
             <div className="flex items-center gap-3 sm:gap-4 shrink-0 ml-4">
               <div className="hidden sm:flex items-center">
@@ -167,7 +171,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={openSignup}
-                    className="border border-white/40 text-white bg-transparent hover:bg-white/15"
+                    className="border border-gray-300 text-gray-700 bg-transparent hover:bg-gray-100"
                     style={{ fontFamily: "'Manrope', sans-serif" }}
                   >
                     Get Started Free or Sign In
@@ -175,7 +179,7 @@ export default function Navbar() {
                 )}
               </div>
               <button
-                className="p-2 rounded-md hover:bg-white/10 transition-colors text-white"
+                className="p-2 rounded-md hover:bg-gray-100 transition-colors text-gray-700"
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label="Toggle menu"
               >
@@ -183,17 +187,18 @@ export default function Navbar() {
               </button>
             </div>
           </div>
+
           {/* Expanded menu */}
           {mobileOpen && (
-            <div className="border-t border-white/20 py-4 space-y-1">
+            <div className="border-t border-gray-200 py-4 space-y-1">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={`flex items-center gap-2.5 text-sm font-medium py-2.5 px-3 rounded-lg transition-colors ${
                     location === link.href
-                      ? "text-white bg-white/20"
-                      : "text-white/75 hover:text-white hover:bg-white/10"
+                      ? "text-black bg-gray-100"
+                      : "text-gray-600 hover:text-black hover:bg-gray-50"
                   }`}
                   style={{ fontFamily: "'Manrope', sans-serif" }}
                   onClick={() => setMobileOpen(false)}
@@ -217,7 +222,7 @@ export default function Navbar() {
                   <Button
                     size="sm"
                     onClick={() => { openSignup(); setMobileOpen(false); }}
-                    className="border border-white/40 text-white bg-transparent hover:bg-white/15"
+                    className="border border-gray-300 text-gray-700 bg-transparent hover:bg-gray-100"
                   >
                     Get Started Free or Sign In
                   </Button>
@@ -227,6 +232,7 @@ export default function Navbar() {
           )}
         </div>
       </header>
+
       <AuthModal
         open={authModal.open}
         onClose={() => setAuthModal((s) => ({ ...s, open: false }))}
