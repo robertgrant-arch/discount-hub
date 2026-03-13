@@ -418,7 +418,7 @@ export default function SavingsBlueprint() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <Calculator size={34} style={{ color: "oklch(0.75 0.08 170)" }} />
             <h1
-              className="text-4xl md:text-5xl font-bold text-white"
+              className="text-3xl md:text-4xl font-bold text-white"
               style={{ fontFamily: "'Sora', sans-serif" }}
             >
               My Savings Blueprint
