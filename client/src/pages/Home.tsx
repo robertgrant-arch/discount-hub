@@ -32,7 +32,7 @@ const CATEGORY_UNSPLASH: Record<string, string> = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(0.98_0_0)]">
+    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
       <Navbar />
 
       {/* Hero */}
@@ -44,7 +44,7 @@ export default function Home() {
                 `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663319813187/Mm4cCnjCEhGr2U6GXNthjR/hero-banner-ZwjnkZuUe9WpiFKL3Afqhv.webp)`,
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0E5659]/85 via-[#0E5659]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.15_0.04_175/0.82)] via-[oklch(0.15_0.04_175/0.55)] to-transparent" />
         <div className="relative container py-24 md:py-32">
           <div className="max-w-xl">
                           <Link href="/ask-claude">
@@ -312,7 +312,7 @@ export default function Home() {
               { label: "ADA & Legal Rights", desc: "Protections & advocacy", icon: Scale, color: "oklch(0.35 0.08 250)", bg: "oklch(0.92 0.03 250)" },
             ].map((item) => (
               <Link key={item.label} href="/social-programs">
-                <div className="group p-4 rounded-xl border border-[oklch(0.90_0_0)] bg-[oklch(0.98_0_0)] hover:shadow-md transition-all cursor-pointer">
+                <div className="group p-4 rounded-xl border border-[oklch(0.90_0_0)] bg-[oklch(1_0_0)] hover:shadow-md transition-all cursor-pointer">
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center mb-2.5" style={{ background: item.bg }}>
                     <item.icon className="w-4.5 h-4.5" style={{ color: item.color }} />
                   </div>
