@@ -36,6 +36,12 @@ const TIER_STYLES: Record<string, { bg: string; text: string; border: string; bt
         border: "border-[#C05824]",
         btn: "bg-[#C05824] text-white hover:bg-[#a84b1e]",
     },
+
+  };
+
+  const TIER_ACCENT: Record<string, string> = {
+  free: "oklch(0.35 0.04 50)",
+  basic: "oklch(0.40 0.08 175)",
   plus: "oklch(0.32 0.09 140)",
   premium: "#C05824",
 };
