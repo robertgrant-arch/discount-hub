@@ -249,7 +249,7 @@ function MedicarePlanLookup() {
               <a
                 href="https://www.selectquote.com/medicare"
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-[oklch(0.45_0.08_175)] hover:bg-[oklch(0.38_0.08_175)] text-white font-semibold px-4 py-2 rounded-lg transition-colors text-xs"
+                className="inline-flex items-center gap-1.5 bg-white hover:bg-gray-100 text-[#0E5659)] text-white font-semibold px-4 py-2 rounded-lg transition-colors text-xs"
               >
                 Compare Plans — SelectQuote Senior <ExternalLink className="w-3.5 h-3.5" />
               </a>
@@ -347,7 +347,7 @@ export default function MedicareGuide() {
               <a
                 href="https://www.selectquote.com/medicare"
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[oklch(0.45_0.08_175)] hover:bg-[oklch(0.38_0.08_175)] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-[#0E5659)] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 Compare Medicare Plans Free — SelectQuote
                 <ExternalLink className="w-4 h-4" />
@@ -478,7 +478,7 @@ export default function MedicareGuide() {
                   <a
                     href="https://www.selectquote.com/medicare"
                     target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[oklch(0.45_0.08_175)] hover:bg-[oklch(0.38_0.08_175)] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+                    className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-[#0E5659)] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
                   >
                     Compare Plans — SelectQuote Senior <ExternalLink className="w-4 h-4" />
                   </a>
