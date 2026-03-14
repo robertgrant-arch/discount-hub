@@ -36,7 +36,15 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="" style={{ backgroundColor: "#0E5659" }}>        
+      <section className="relative overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage:
+                `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663319813187/Mm4cCnjCEhGr2U6GXNthjR/hero-banner-ZwjnkZuUe9WpiFKL3Afqhv.webp)`,
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0E5659]/85 via-[#0E5659]/60 to-transparent" />
         <div className="relative container py-24 md:py-32">
           <div className="max-w-xl">
                           <Link href="/ask-claude">
