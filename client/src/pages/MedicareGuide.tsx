@@ -207,7 +207,7 @@ function MedicarePlanLookup() {
           <CreditCard className="w-5 h-5 text-white" />
         </div>
         <div>
-          <h2 className="font-['Playfair_Display'] text-xl font-bold text-foreground">Look Up My Current Medicare Plan</h2>
+          <h2 className="  text-xl font-bold text-foreground">Look Up My Current Medicare Plan</h2>
               <PageHaiku lines={["Medicare guides light", "Through the maze of health and care", "Peace for aging hearts"]} />
           <p className="text-xs text-muted-foreground">Enter your Medicare ID to see your current coverage details</p>
         </div>
@@ -327,7 +327,7 @@ export default function MedicareGuide() {
       <main className="flex-1">
 
         {/* Hero */}
-        <section className="bg-[oklch(0.96_0.02_42)] border-b border-border py-12 md:py-16">
+        <section className="bg-[#0E5659] border-b border-border py-12 md:py-16">
           <div className="container max-w-5xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-xs font-bold uppercase tracking-widest text-[oklch(0.45_0.08_175)] bg-[oklch(0.90_0_0)] px-3 py-1 rounded-full">
@@ -337,7 +337,7 @@ export default function MedicareGuide() {
                 <Clock className="w-3 h-3" /> AEP: Oct 15 – Dec 7
               </span>
             </div>
-            <h1 className="font-['Playfair_Display'] text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
               The Complete Medicare<br />Open Enrollment Guide
             </h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mb-8">
@@ -381,7 +381,7 @@ export default function MedicareGuide() {
 
               {/* Enrollment Periods */}
               <section>
-                <h2 className="font-['Playfair_Display'] text-2xl font-bold text-foreground mb-2">
+                <h2 className="  text-2xl font-bold text-foreground mb-2">
                   Medicare Enrollment Periods
                 </h2>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -418,7 +418,7 @@ export default function MedicareGuide() {
 
               {/* Plan Types */}
               <section>
-                <h2 className="font-['Playfair_Display'] text-2xl font-bold text-foreground mb-2">
+                <h2 className="  text-2xl font-bold text-foreground mb-2">
                   Understanding Medicare Plan Types
                 </h2>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -468,7 +468,7 @@ export default function MedicareGuide() {
 
               {/* Inline CTA */}
               <div className="rounded-xl bg-[oklch(0.95_0.04_15)] border border-[oklch(0.85_0.06_15)] p-6 text-center">
-                <h3 className="font-['Playfair_Display'] text-xl font-bold text-foreground mb-2">
+                <h3 className="  text-xl font-bold text-foreground mb-2">
                   Not Sure Which Plan Is Right for You?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-5">
@@ -497,7 +497,7 @@ export default function MedicareGuide() {
 
               {/* FAQs */}
               <section>
-                <h2 className="font-['Playfair_Display'] text-2xl font-bold text-foreground mb-6">
+                <h2 className="  text-2xl font-bold text-foreground mb-6">
                   Frequently Asked Questions
                 </h2>
                 <div className="space-y-3">
@@ -509,7 +509,7 @@ export default function MedicareGuide() {
 
               {/* Official Resources */}
               <section>
-                <h2 className="font-['Playfair_Display'] text-2xl font-bold text-foreground mb-4">
+                <h2 className="  text-2xl font-bold text-foreground mb-4">
                   Official Medicare Resources
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
