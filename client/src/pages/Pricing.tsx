@@ -153,26 +153,26 @@ export default function Pricing() {
 
                 <div className="mb-4">
                   <h3
-                    className={`text-xl font-bold mb-1 ${plan.id === "premium" ? "text-white" : "text-[oklch(0.15_0.04_175)]"}`}
+                    className={`text-xl font-bold mb-1 ${plan.id === "premium" ? "text-gray-900" : "text-[oklch(0.15_0.04_175)]"}`}
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
                     {plan.name}
                   </h3>
                   <div className="flex items-end gap-1">
                     <span
-                      className={`text-4xl font-bold ${plan.id === "premium" ? "text-white" : "text-[oklch(0.15_0.04_175)]"}`}
+                      className={`text-4xl font-bold ${plan.id === "premium" ? "text-gray-900" : "text-[oklch(0.15_0.04_175)]"}`}
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
                       ${price}
                     </span>
                     {plan.price > 0 && (
-                      <span className={`text-sm mb-1.5 ${plan.id === "premium" ? "text-white/70" : "text-[oklch(0.45_0_0)]"}`}>
+                      <span className={`text-sm mb-1.5 ${plan.id === "premium" ? "text-gray-500" : "text-[oklch(0.45_0_0)]"}`}>
                         /mo
                       </span>
                     )}
                   </div>
                   {billing === "yearly" && plan.price > 0 && (
-                    <p className={`text-xs mt-0.5 ${plan.id === "premium" ? "text-white/70" : "text-[oklch(0.45_0_0)]"}`}>
+                    <p className={`text-xs mt-0.5 ${plan.id === "premium" ? "text-gray-500" : "text-[oklch(0.45_0_0)]"}`}>
                       Billed ${plan.yearlyPrice}/year
                     </p>
                   )}
@@ -185,7 +185,7 @@ export default function Pricing() {
                         className="w-4 h-4 mt-0.5 shrink-0"
                         style={{ color: accentColor }}
                       />
-                      <span className={`text-sm ${plan.id === "premium" ? "text-white/90" : "text-[oklch(0.40_0.04_50)]"}`}>
+                      <span className={`text-sm ${plan.id === "premium" ? "text-gray-700" : "text-[oklch(0.40_0.04_50)]"}`}>
                         {f}
                       </span>
                     </li>
@@ -194,7 +194,7 @@ export default function Pricing() {
 
                 {isCurrent ? (
                   <div className={`text-center text-sm font-semibold py-2.5 rounded-xl border ${
-                    plan.id === "premium" ? "border-white/30 text-white" : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)]"
+                    plan.id === "premium" ? "border-[#C05824] text-[#C05824]" : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)]"
                   }`}>
                     Current Plan
                   </div>
