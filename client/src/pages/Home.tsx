@@ -32,18 +32,11 @@ const CATEGORY_UNSPLASH: Record<string, string> = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
+    <div className="min-h-screen flex flex-col bg-[oklch(0.98_0_0)]">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663319813187/Mm4cCnjCEhGr2U6GXNthjR/hero-banner-ZwjnkZuUe9WpiFKL3Afqhv.webp)`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.15_0.04_175/0.82)] via-[oklch(0.15_0.04_175/0.55)] to-transparent" />
+      <section className="" style={{ backgroundColor: "#0E5659" }}>        
         <div className="relative container py-24 md:py-32">
           <div className="max-w-xl">
                           <Link href="/ask-claude">
@@ -305,13 +298,13 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
-              { label: "SSDI & SSI", desc: "Monthly cash benefits", icon: DollarSign, color: "oklch(0.45 0.08 175)", bg: "oklch(0.93 0.04 42)" },
-              { label: "Medicaid & Medicare", desc: "Health coverage guides", icon: HeartPulse, color: "oklch(0.50 0.15 15)", bg: "oklch(0.95 0.04 15)" },
+              { label: "SSDI & SSI", desc: "Monthly cash benefits", icon: DollarSign, color: "oklch(0.45 0.08 175)", bg: "oklch(0.95 0.02 175)" },
+              { label: "Medicaid & Medicare", desc: "Health coverage guides", icon: HeartPulse, color: "oklch(0.45 0.08 175)", bg: "oklch(0.95 0.02 175)" },
               { label: "Housing & SNAP", desc: "Section 8, food assistance", icon: HomeIcon, color: "oklch(0.45 0.12 200)", bg: "oklch(0.92 0.04 200)" },
               { label: "ADA & Legal Rights", desc: "Protections & advocacy", icon: Scale, color: "oklch(0.35 0.08 250)", bg: "oklch(0.92 0.03 250)" },
             ].map((item) => (
               <Link key={item.label} href="/social-programs">
-                <div className="group p-4 rounded-xl border border-[oklch(0.90_0_0)] bg-[oklch(1_0_0)] hover:shadow-md transition-all cursor-pointer">
+                <div className="group p-4 rounded-xl border border-[oklch(0.90_0_0)] bg-[oklch(0.98_0_0)] hover:shadow-md transition-all cursor-pointer">
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center mb-2.5" style={{ background: item.bg }}>
                     <item.icon className="w-4.5 h-4.5" style={{ color: item.color }} />
                   </div>
