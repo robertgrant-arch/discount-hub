@@ -119,7 +119,7 @@ const CATEGORIES: LifeMartCategory[] = [
     id: "senior-care",
     label: "Senior & Pet Care",
     icon: Users,
-    color: "oklch(0.45 0.13 42)",
+    color: "#0E5659",
     bgColor: "oklch(0.96 0.03 42)",
     programs: [
       { brand: "Brookdale Senior Living", discount: "Member savings", description: "Assisted living, memory care, and independent living with exclusive member rates", url: "https://www.care.com/lifemart/", featured: true },
@@ -216,9 +216,9 @@ export default function LifeMart() {
       <main className="flex-1">
 
         {/* ─── Hero ─── */}
-        <section className="relative overflow-hidden bg-[oklch(0.18_0_0)] text-white py-14 md:py-20">
+        <section className="relative overflow-hidden bg-[#0E5659] text-white py-14 md:py-20">
           <div className="absolute inset-0 opacity-10"
-            style={{ backgroundImage: "radial-gradient(circle at 20% 50%, oklch(0.65 0.15 42) 0%, transparent 60%), radial-gradient(circle at 80% 20%, oklch(0.55 0.12 200) 0%, transparent 50%)" }} />
+            style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #4CC0AE 0%, transparent 60%), radial-gradient(circle at 80% 20%, oklch(0.55 0.12 200) 0%, transparent 50%)" }} />
           <div className="container relative z-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold mb-5 backdrop-blur-sm">
@@ -227,7 +227,7 @@ export default function LifeMart() {
               </div>
               <h1 className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold leading-tight mb-4">
                 LifeMart Exclusive<br />
-                <span style={{ color: "oklch(0.75 0.12 42)" }}>Member Savings</span>
+                <span style={{ color: "#EF7B48" }}>Member Savings</span>
               </h1>
               <PageHaiku lines={["Exclusive doors open", "Savings bloom in every aisle", "Members find the way"]} />
               <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-2xl">
@@ -239,7 +239,7 @@ export default function LifeMart() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
-                  style={{ background: "oklch(0.55 0.15 42)", color: "white" }}
+                  style={{ background: "#C05824", color: "white" }}
                 >
                   Access LifeMart <ExternalLink className="w-4 h-4" />
                 </a>
@@ -255,12 +255,12 @@ export default function LifeMart() {
         </section>
 
         {/* ─── Stats Bar ─── */}
-        <section className="border-b border-border bg-[oklch(0.97_0.02_42)]">
+        <section className="border-b border-border bg-[#FCF3EA]">
           <div className="container py-5">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {LIFEMART_STATS.map((s) => (
                 <div key={s.label} className="text-center">
-                  <p className="font-['Playfair_Display'] text-2xl font-bold" style={{ color: "oklch(0.45 0.13 42)" }}>{s.value}</p>
+                  <p className="font-['Playfair_Display'] text-2xl font-bold" style={{ color: "#0E5659" }}>{s.value}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">{s.label}</p>
                 </div>
               ))}
@@ -345,7 +345,7 @@ export default function LifeMart() {
                   >
                     {prog.featured && (
                       <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full"
-                        style={{ background: "oklch(0.96 0.04 42)", color: "oklch(0.45 0.13 42)" }}>
+                        style={{ background: "oklch(0.96 0.04 42)", color: "#0E5659" }}>
                         <Star className="w-2.5 h-2.5 fill-current" /> Featured
                       </span>
                     )}
@@ -392,13 +392,13 @@ export default function LifeMart() {
 
             {/* Upgrade prompt for free users */}
             {!isPlus && (
-              <div className="mt-6 rounded-xl border-2 border-dashed border-[oklch(0.82_0.06_42)] bg-[oklch(0.97_0.02_42)] p-6 text-center">
+              <div className="mt-6 rounded-xl border-2 border-dashed border-[oklch(0.82_0.06_42)] bg-[#FCF3EA] p-6 text-center">
                 <Lock className="w-8 h-8 mx-auto mb-3" style={{ color: "oklch(0.45 0.08 175)" }} />
                 <p className="font-semibold text-foreground mb-1">Unlock All LifeMart Programs</p>
                 <p className="text-sm text-muted-foreground mb-4">Upgrade to Plus or Premium to see all {currentCategory.programs.length} programs in this category plus full access to all 19,000+ LifeMart savings opportunities.</p>
                 <Link href="/pricing">
                   <button className="inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-lg text-sm text-white transition-colors"
-                    style={{ background: "oklch(0.45 0.13 42)" }}>
+                    style={{ background: "#0E5659" }}>
                     View Plans — from $9.99/mo <ArrowRight className="w-4 h-4" />
                   </button>
                 </Link>
@@ -421,7 +421,7 @@ export default function LifeMart() {
                     title: "Through Your Employer",
                     desc: "Many employers offer LifeMart as a free employee benefit through ADP or other HR platforms. Check your employee benefits portal or ask your HR department.",
                     icon: Users,
-                    color: "oklch(0.45 0.13 42)",
+                    color: "#0E5659",
                   },
                   {
                     step: "2",
@@ -480,7 +480,7 @@ export default function LifeMart() {
             <div className="max-w-2xl mx-auto text-center rounded-2xl p-8 border-2"
               style={{ background: "oklch(0.18 0.04 42)", borderColor: "oklch(0.30 0.06 42)" }}>
               <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4"
-                style={{ background: "oklch(0.45 0.13 42)" }}>
+                style={{ background: "#0E5659" }}>
                 <Star className="w-6 h-6 text-white" />
               </div>
               <h2 className="font-['Playfair_Display'] text-2xl font-bold text-white mb-3">
@@ -492,7 +492,7 @@ export default function LifeMart() {
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link href="/pricing">
                   <button className="inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-lg text-sm text-white transition-colors"
-                    style={{ background: "oklch(0.55 0.15 42)" }}>
+                    style={{ background: "#C05824" }}>
                     Get Premium Access <ArrowRight className="w-4 h-4" />
                   </button>
                 </Link>
