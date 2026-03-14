@@ -31,18 +31,13 @@ const TIER_STYLES: Record<string, { bg: string; text: string; border: string; bt
     btn: "text-white hover:opacity-90",
   },
   premium: {
-    bg: "bg-gradient-to-br from-[oklch(0.45 0.08 175)] to-[oklch(0.40_0.08_175)]",
-    text: "text-white",
-    border: "border-transparent",
-    btn: "bg-white text-[oklch(0.40_0.08_175)] hover:bg-white/90",
-  },
-};
-
-const TIER_ACCENT: Record<string, string> = {
-  free: "oklch(0.60 0.03 60)",
-  basic: "oklch(0.45 0.08 175)",
+        bg: "bg-white",
+        text: "text-gray-900",
+        border: "border-[#C05824]",
+        btn: "bg-[#C05824] text-white hover:bg-[#a84b1e]",
+    },
   plus: "oklch(0.32 0.09 140)",
-  premium: "white",
+  premium: "#C05824",
 };
 
 const COMPARISON_FEATURES = [
