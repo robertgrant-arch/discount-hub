@@ -354,7 +354,7 @@ export default function MedicareGuide() {
               </a>
               <a
                 href="tel:18005550001"
-                className="inline-flex items-center gap-2 bg-[oklch(0.55_0.15_15)] hover:bg-[oklch(0.48_0.15_15)] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 Speak with a Medicare Specialist
@@ -484,7 +484,7 @@ export default function MedicareGuide() {
                   </a>
                   <a
                     href="tel:18005550001"
-                    className="inline-flex items-center gap-2 bg-[oklch(0.55_0.15_15)] hover:bg-[oklch(0.48_0.15_15)] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+                    className="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
                   >
                     <Phone className="w-4 h-4" /> 1-800-555-0001
                   </a>
