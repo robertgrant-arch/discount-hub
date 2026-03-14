@@ -70,7 +70,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                 {program.category}
               </span>
               <h3
-                className="text-lg font-bold text-[oklch(0.15_0.04_175)] leading-snug"
+                className="text-lg font-bold text-[#0E5659] leading-snug"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
                 {program.program_name}
@@ -94,7 +94,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
               <a
                 href={`tel:${program.contact.phone.replace(/\D/g, '')}`}
                 onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-[oklch(0.95_0.015_80)] text-[oklch(0.40_0.04_50)] hover:bg-[oklch(0.90_0.02_80)] transition-colors"
+                className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-[#FCF3EA] text-[#374151] hover:bg-[#f0e6d9] transition-colors"
               >
                 <Phone className="w-3 h-3" /> {program.contact.phone}
               </a>
@@ -132,7 +132,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                 className={`flex items-center gap-1.5 px-4 py-2.5 text-xs font-semibold transition-colors border-b-2 -mb-px ${
                   activeTab === tab.id
                     ? "border-current"
-                    : "border-transparent text-[oklch(0.45_0_0)] hover:text-[oklch(0.35_0.04_50)]"
+                    : "border-transparent text-[oklch(0.45_0_0)] hover:text-[#0E5659]"
                 }`}
                 style={activeTab === tab.id ? { color: meta.color, borderColor: meta.color } : {}}
               >
@@ -147,18 +147,18 @@ function ProgramCard({ program }: { program: SocialProgram }) {
             {activeTab === "overview" && (
               <div className="space-y-5">
                 <div>
-                  <h4 className="text-sm font-bold text-[oklch(0.15_0.04_175)] mb-2 flex items-center gap-1.5">
+                  <h4 className="text-sm font-bold text-[#0E5659] mb-2 flex items-center gap-1.5">
                     <Info className="w-4 h-4" style={{ color: meta.color }} /> About This Program
                   </h4>
-                  <p className="text-sm text-[oklch(0.40_0.04_50)] leading-relaxed">{program.overview}</p>
+                  <p className="text-sm text-[#374151] leading-relaxed">{program.overview}</p>
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-bold text-[oklch(0.15_0.04_175)] mb-2 flex items-center gap-1.5">
+                  <h4 className="text-sm font-bold text-[#0E5659] mb-2 flex items-center gap-1.5">
                     <CheckCircle2 className="w-4 h-4" style={{ color: meta.color }} /> What You Receive
                   </h4>
                   <div
-                    className="rounded-xl p-4 text-sm text-[oklch(0.35_0.04_50)] leading-relaxed"
+                    className="rounded-xl p-4 text-sm text-[#0E5659] leading-relaxed"
                     style={{ background: meta.bg }}
                   >
                     {program.benefits}
@@ -166,12 +166,12 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-bold text-[oklch(0.15_0.04_175)] mb-2 flex items-center gap-1.5">
+                  <h4 className="text-sm font-bold text-[#0E5659] mb-2 flex items-center gap-1.5">
                     <Users className="w-4 h-4" style={{ color: meta.color }} /> Eligibility Requirements
                   </h4>
                   <ul className="space-y-1.5">
                     {program.eligibility.map((req, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-[oklch(0.40_0.04_50)]">
+                      <li key={i} className="flex items-start gap-2 text-sm text-[#374151]">
                         <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 shrink-0" style={{ color: meta.color }} />
                         {req}
                       </li>
@@ -181,12 +181,12 @@ function ProgramCard({ program }: { program: SocialProgram }) {
 
                 {program.key_rules.length > 0 && (
                   <div>
-                    <h4 className="text-sm font-bold text-[oklch(0.15_0.04_175)] mb-2 flex items-center gap-1.5">
+                    <h4 className="text-sm font-bold text-[#0E5659] mb-2 flex items-center gap-1.5">
                       <ShieldCheck className="w-4 h-4" style={{ color: meta.color }} /> Key Rules & Deadlines
                     </h4>
                     <ul className="space-y-1.5">
                       {program.key_rules.map((rule, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[oklch(0.40_0.04_50)]">
+                        <li key={i} className="flex items-start gap-2 text-sm text-[#374151]">
                           <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: meta.color }} />
                           {rule}
                         </li>
@@ -213,10 +213,10 @@ function ProgramCard({ program }: { program: SocialProgram }) {
 
                 {program.related_programs.length > 0 && (
                   <div>
-                    <h4 className="text-sm font-bold text-[oklch(0.15_0.04_175)] mb-2">Related Programs</h4>
+                    <h4 className="text-sm font-bold text-[#0E5659] mb-2">Related Programs</h4>
                     <div className="flex flex-wrap gap-2">
                       {program.related_programs.map((prog, i) => (
-                        <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-[oklch(0.93_0.02_80)] text-[oklch(0.40_0.04_50)]">
+                        <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-[oklch(0.93_0.02_80)] text-[#374151]">
                           {prog}
                         </span>
                       ))}
@@ -230,7 +230,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
             {activeTab === "apply" && (
               <div className="space-y-5">
                 <div>
-                  <h4 className="text-sm font-bold text-[oklch(0.15_0.04_175)] mb-3 flex items-center gap-1.5">
+                  <h4 className="text-sm font-bold text-[#0E5659] mb-3 flex items-center gap-1.5">
                     <ClipboardList className="w-4 h-4" style={{ color: meta.color }} /> Step-by-Step Application Guide
                   </h4>
                   {program.how_to_apply.steps.length > 0 ? (
@@ -243,7 +243,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                           >
                             {i + 1}
                           </div>
-                          <p className="text-sm text-[oklch(0.40_0.04_50)] leading-relaxed">{step}</p>
+                          <p className="text-sm text-[#374151] leading-relaxed">{step}</p>
                         </li>
                       ))}
                     </ol>
@@ -276,7 +276,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                     >
                       <Phone className="w-5 h-5 shrink-0 text-[oklch(0.45_0_0)]" />
                       <div>
-                        <p className="text-xs font-bold text-[oklch(0.35_0.04_50)]">Call to Apply</p>
+                        <p className="text-xs font-bold text-[#0E5659]">Call to Apply</p>
                         <p className="text-xs text-[oklch(0.45_0_0)]">{program.how_to_apply.phone}</p>
                         {program.how_to_apply.tty && (
                           <p className="text-xs text-[oklch(0.60_0.03_60)]">TTY: {program.how_to_apply.tty}</p>
@@ -287,7 +287,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                 </div>
 
                 {program.contact.hours && (
-                  <p className="text-xs text-[oklch(0.55_0.03_60)] bg-[oklch(0.97_0.01_80)] rounded-lg px-3 py-2">
+                  <p className="text-xs text-[oklch(0.55_0.03_60)] bg-[#FCF3EA] rounded-lg px-3 py-2">
                     <span className="font-semibold">Hours:</span> {program.contact.hours}
                   </p>
                 )}
@@ -298,10 +298,10 @@ function ProgramCard({ program }: { program: SocialProgram }) {
             {activeTab === "update" && (
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-sm font-bold text-[oklch(0.15_0.04_175)] mb-2 flex items-center gap-1.5">
+                  <h4 className="text-sm font-bold text-[#0E5659] mb-2 flex items-center gap-1.5">
                     <RefreshCw className="w-4 h-4" style={{ color: meta.color }} /> How to Update Your Information
                   </h4>
-                  <div className="text-sm text-[oklch(0.40_0.04_50)] leading-relaxed whitespace-pre-line bg-[oklch(0.98_0.008_80)] rounded-xl p-4 border border-[oklch(0.90_0_0)]">
+                  <div className="text-sm text-[#374151] leading-relaxed whitespace-pre-line bg-[oklch(0.98_0.008_80)] rounded-xl p-4 border border-[oklch(0.90_0_0)]">
                     {program.how_to_update_info || "Contact the agency directly to report changes to your income, address, household size, or other relevant information. Timely reporting helps prevent overpayments and ensures you receive the correct benefit amount."}
                   </div>
                 </div>
@@ -329,7 +329,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                         href={program.contact.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-xl border border-[oklch(0.90_0_0)] text-[oklch(0.40_0.04_50)] hover:bg-[oklch(0.95_0.01_80)]"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-xl border border-[oklch(0.90_0_0)] text-[#374151] hover:bg-[oklch(0.95_0.01_80)]"
                       >
                         <Globe className="w-4 h-4" /> Update Online
                       </a>
@@ -342,7 +342,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
             {/* Official Links tab */}
             {activeTab === "links" && (
               <div className="space-y-3">
-                <h4 className="text-sm font-bold text-[oklch(0.15_0.04_175)] mb-3 flex items-center gap-1.5">
+                <h4 className="text-sm font-bold text-[#0E5659] mb-3 flex items-center gap-1.5">
                   <Link2 className="w-4 h-4" style={{ color: meta.color }} /> Official Government Resources
                 </h4>
                 {program.official_links.length > 0 ? (
@@ -353,7 +353,7 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2.5 p-3 rounded-xl border border-[oklch(0.90_0_0)] bg-white hover:bg-[oklch(0.97_0.01_80)] hover:border-[oklch(0.80_0.03_75)] transition-all group"
+                        className="flex items-center gap-2.5 p-3 rounded-xl border border-[oklch(0.90_0_0)] bg-white hover:bg-[#FCF3EA] hover:border-[oklch(0.80_0.03_75)] transition-all group"
                       >
                         <div
                           className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
@@ -376,15 +376,15 @@ function ProgramCard({ program }: { program: SocialProgram }) {
                 {/* Contact block */}
                 {(program.contact.phone || program.contact.website) && (
                   <div className="mt-4 pt-4 border-t border-[oklch(0.90_0_0)]">
-                    <h5 className="text-xs font-bold text-[oklch(0.40_0.04_50)] mb-2 uppercase tracking-wider">Direct Contact</h5>
+                    <h5 className="text-xs font-bold text-[#374151] mb-2 uppercase tracking-wider">Direct Contact</h5>
                     <div className="flex flex-wrap gap-2">
                       {program.contact.phone && (
-                        <a href={`tel:${program.contact.phone.replace(/\D/g, '')}`} className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-[oklch(0.95_0.015_80)] text-[oklch(0.40_0.04_50)]">
+                        <a href={`tel:${program.contact.phone.replace(/\D/g, '')}`} className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-[#FCF3EA] text-[#374151]">
                           <Phone className="w-3 h-3" /> {program.contact.phone}
                         </a>
                       )}
                       {program.contact.tty && (
-                        <span className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-[oklch(0.95_0.015_80)] text-[oklch(0.40_0.04_50)]">
+                        <span className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-[#FCF3EA] text-[#374151]">
                           TTY: {program.contact.tty}
                         </span>
                       )}
@@ -437,7 +437,7 @@ export default function SocialPrograms() {
       {/* Page hero */}
       <div
         className="relative border-b border-[oklch(0.90_0_0)]"
-        style={{ background: "linear-gradient(135deg, oklch(0.15 0 0) 0%, oklch(0.30 0.06 175) 100%)" }}
+        style={{ background: "linear-gradient(135deg, #0E5659 0%, #0a3f42 100%)" }}
       >
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
         <div className="relative container py-12">
@@ -481,7 +481,7 @@ export default function SocialPrograms() {
               onClick={() => setMainTab("federal")}
               className={`px-5 py-3 text-sm font-semibold border-b-2 transition-colors ${
                 mainTab === "federal"
-                  ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45_0.08_175)]"
+                  ? "border-[#0E5659] text-[#0E5659]"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -491,12 +491,12 @@ export default function SocialPrograms() {
               onClick={() => setMainTab("state")}
               className={`px-5 py-3 text-sm font-semibold border-b-2 transition-colors flex items-center gap-1.5 ${
                 mainTab === "state"
-                  ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45_0.08_175)]"
+                  ? "border-[#0E5659] text-[#0E5659]"
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
               State & Local Programs ({TOTAL_STATE_PROGRAMS}+)
-              <span className="text-[10px] font-bold bg-[oklch(0.45 0.08 175)] text-white px-1.5 py-0.5 rounded-full">NEW</span>
+              <span className="text-[10px] font-bold bg-[#0E5659] text-white px-1.5 py-0.5 rounded-full">NEW</span>
             </button>
           </div>
         </div>
@@ -512,7 +512,7 @@ export default function SocialPrograms() {
                 placeholder="Search programs..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="pl-9 bg-[oklch(0.97_0.01_80)] border-[oklch(0.90_0_0)] h-9 text-sm"
+                className="pl-9 bg-[#FCF3EA] border-[oklch(0.90_0_0)] h-9 text-sm"
               />
             </div>
             <div className="flex items-center gap-1.5 flex-wrap">
@@ -520,8 +520,8 @@ export default function SocialPrograms() {
                 onClick={() => setActiveCategory("all")}
                 className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all border ${
                   activeCategory === "all"
-                    ? "bg-[oklch(0.15_0.04_175)] text-white border-[oklch(0.15_0.04_175)]"
-                    : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)] hover:border-[oklch(0.72_0.04_60)]"
+                    ? "bg-[#0E5659] text-white border-[#0E5659]"
+                    : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)] hover:border-[#4CC0AE]"
                 }`}
               >
                 All ({TOTAL_SOCIAL_PROGRAMS})
@@ -537,7 +537,7 @@ export default function SocialPrograms() {
                     className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all border ${
                       activeCategory === cat
                         ? "text-white border-transparent"
-                        : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)] hover:border-[oklch(0.72_0.04_60)]"
+                        : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)] hover:border-[#4CC0AE]"
                     }`}
                     style={activeCategory === cat ? { background: meta.color } : {}}
                   >
@@ -598,7 +598,7 @@ export default function SocialPrograms() {
                   >
                     <IconComp className="w-4.5 h-4.5" style={{ color: meta.color }} />
                   </div>
-                  <p className="text-sm font-bold text-[oklch(0.15_0.04_175)] leading-snug" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                  <p className="text-sm font-bold text-[#0E5659] leading-snug" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                     {cat}
                   </p>
                   <p className="text-xs text-[oklch(0.55_0.03_60)] mt-0.5">{count} program{count !== 1 ? "s" : ""}</p>
@@ -626,7 +626,7 @@ export default function SocialPrograms() {
                   return (
                     <>
                       <IconComp className="w-5 h-5" style={{ color: meta.color }} />
-                      <h2 className="text-xl font-bold text-[oklch(0.15_0.04_175)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                      <h2 className="text-xl font-bold text-[#0E5659]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                         {activeCategory}
                       </h2>
                       <span className="text-xs text-[oklch(0.60_0.03_60)] bg-[oklch(0.93_0.02_80)] px-2 py-0.5 rounded-full">
@@ -644,9 +644,9 @@ export default function SocialPrograms() {
         )}
 
         {/* Bottom disclaimer */}
-        <div className="mt-10 p-5 rounded-xl bg-[oklch(0.95_0.015_80)] border border-[oklch(0.90_0_0)] text-center">
+        <div className="mt-10 p-5 rounded-xl bg-[#FCF3EA] border border-[oklch(0.90_0_0)] text-center">
           <p className="text-xs text-[oklch(0.45_0_0)] leading-relaxed max-w-2xl mx-auto">
-            <span className="font-semibold text-[oklch(0.40_0.04_50)]">Disclaimer:</span> The information on this page is provided for educational purposes and is sourced from official government websites. Program rules, benefit amounts, and eligibility requirements may change. Always verify current information directly with the relevant agency before making decisions.
+            <span className="font-semibold text-[#374151]">Disclaimer:</span> The information on this page is provided for educational purposes and is sourced from official government websites. Program rules, benefit amounts, and eligibility requirements may change. Always verify current information directly with the relevant agency before making decisions.
           </p>
         </div>
         </div>{/* end main col */}
