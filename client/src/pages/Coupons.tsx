@@ -67,13 +67,13 @@ export default function Coupons() {
   const totalVisible = filteredData.reduce((acc, cat) => acc + cat.items.length, 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[oklch(1_0_0)]">
+    <div className="min-h-screen flex flex-col bg-[oklch(0.98_0_0)]">
       <Navbar />
 
       {/* Page header */}
       <div
             className="relative border-b border-[oklch(0.90_0_0)]"
-            style={{ background: "oklch(0.96 0.03 75)" }}
+            style={{ background: "#0E5659" }}
           >
             <div className="hidden" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
             <div className="relative container py-12">
