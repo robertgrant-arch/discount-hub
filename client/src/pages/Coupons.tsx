@@ -152,9 +152,8 @@ export default function Coupons() {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px ${
                   activeTab === tab
-                    ? "border-[oklch(0.45 0.08 175)] text-[oklch(0.45 0.08 175)]"
-                    : "border-transparent text-[oklch(0.45_0_0)] hover:text-[oklch(0.35_0.04_50)]"
-                }`}
+                ? "border-white text-white"
+                : "border-transparent text-white/70 hover:text-white"                }`}
               >
                 {tab === "all" ? "All Coupons" : tab === "senior" ? "Senior Coupons" : "Disability Coupons"}
               </button>
@@ -240,7 +239,7 @@ export default function Coupons() {
                         return <IconComp className="w-4 h-4" style={{ color: "oklch(0.45 0.08 175)" }} />;
                       })()}
                       <h2
-                        className="text-xl font-bold text-[oklch(0.15_0.04_175)]"
+                        className="text-xl font-bold text-white"
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
                         {cat.category}
