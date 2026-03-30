@@ -88,7 +88,7 @@ export default function Coupons() {
                 >
                   Coupons & Savings Deals
                 </h1>
-                <p className="text-white/80 text-base leading-relaxed mb-6">
+            <p className="text-white/90 text-base leading-relaxed mb-6">
                   {totalVisible} coupons across {filteredData.length} categories — printable, digital, and promo codes for seniors and disabled Americans.
                 </p>
                 {/* Quick stat pills */}
