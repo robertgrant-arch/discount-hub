@@ -340,7 +340,7 @@ export default function MedicareGuide() {
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
               The Complete Medicare<br />Open Enrollment Guide
             </h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mb-8">
+                    <p className="text-white/85 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
               Everything you need to know about Medicare enrollment periods, plan types, and how to choose the right coverage. Compare plans for free with licensed agents.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -360,7 +360,7 @@ export default function MedicareGuide() {
                 Speak with a Medicare Specialist
               </a>
             </div>
-            <p className="text-xs text-muted-foreground mt-3">
+        <p className="text-xs text-white/60 mt-3">
               <Shield className="w-3 h-3 inline mr-1" />
               Free service. You'll be connected to a licensed Medicare agent. <a href="/disclosures" className="underline">Disclosure</a>
             </p>
