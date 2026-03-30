@@ -132,8 +132,8 @@ export default function Coupons() {
                   onClick={() => setTypeFilter(t)}
                   className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all border ${
                     typeFilter === t
-                      ? "border-[oklch(0.45 0.08 175)] bg-[oklch(0.93_0_0)] text-[oklch(0.40_0.08_175)]"
-                      : "border-[oklch(0.90_0_0)] text-[oklch(0.45_0_0)] hover:border-[oklch(0.72_0.04_60)]"
+                      ? "border-[oklch(0.45 0.08 175)] bg-[oklch(0.93_0_0)] text-[oklch(0.20_0.10_175)]"
+                      : "border-[oklch(0.90_0_0)] text-[oklch(0.25_0_0)] hover:border-[oklch(0.72_0.04_60)]"
                   }`}
                 >
                   {t}
@@ -165,7 +165,7 @@ export default function Coupons() {
       <div className="container py-8 flex gap-8">
         {/* Sidebar */}
         <aside className="hidden lg:block w-52 shrink-0">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-[oklch(0.45_0_0)] mb-3">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-[oklch(0.25_0_0)] mb-3">
             Categories
           </h3>
           <nav className="space-y-1">
@@ -173,8 +173,8 @@ export default function Coupons() {
               onClick={() => setActiveCategory("all")}
               className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-2 ${
                 activeCategory === "all"
-                  ? "bg-[oklch(0.93_0_0)] text-[oklch(0.40_0.08_175)] font-medium"
-                  : "text-[oklch(0.45_0.03_60)] hover:bg-[oklch(0.95_0.015_80)]"
+                  ? "bg-[oklch(0.93_0_0)] text-[oklch(0.20_0.10_175)] font-medium"
+                  : "text-[oklch(0.25_0.03_60)] hover:bg-[oklch(0.95_0.015_80)]"
               }`}
             >
               <SlidersHorizontal className="w-3.5 h-3.5" />
@@ -188,8 +188,8 @@ export default function Coupons() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-2 ${
                     activeCategory === cat.id
-                      ? "bg-[oklch(0.93_0_0)] text-[oklch(0.40_0.08_175)] font-medium"
-                      : "text-[oklch(0.45_0.03_60)] hover:bg-[oklch(0.95_0.015_80)]"
+                      ? "bg-[oklch(0.93_0_0)] text-[oklch(0.20_0.10_175)] font-medium"
+                      : "text-[oklch(0.25_0.03_60)] hover:bg-[oklch(0.95_0.015_80)]"
                   }`}
                 >
                   <IconComp className="w-3.5 h-3.5 shrink-0" />
@@ -223,7 +223,7 @@ export default function Coupons() {
         {/* Main content */}
         <main className="flex-1 min-w-0">
           {filteredData.length === 0 ? (
-            <div className="text-center py-16 text-[oklch(0.45_0_0)]">
+            <div className="text-center py-16 text-[oklch(0.25_0_0)]">
               <Scissors className="w-10 h-10 mx-auto mb-3 opacity-30" />
               <p className="font-medium">No coupons found</p>
               <p className="text-sm mt-1">Try adjusting your search or filters</p>
