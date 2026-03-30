@@ -227,10 +227,10 @@ export default function LifeMart() {
               </div>
               <h1 className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold leading-tight mb-4">
                 LifeMart Exclusive<br />
-                <span style={{ color: "#EF7B48" }}>Member Savings</span>
+                <span style={{ color: "#FFB088" }}>Member Savings</span>
               </h1>
               <PageHaiku lines={["Exclusive doors open", "Savings bloom in every aisle", "Members find the way"]} />
-              <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-2xl">
+              <p className="text-white/90 text-lg leading-relaxed mb-8 max-w-2xl">
                 LifeMart by Care.com is a members-only discount platform with 19,000+ savings opportunities from 1,300+ trusted brands — covering travel, entertainment, electronics, health, senior care, and more. HealthCare Select Benefits Hub members get a guided overview of every program.
               </p>
               <div className="flex flex-wrap gap-3">
